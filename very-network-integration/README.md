@@ -9,7 +9,6 @@
 
 **A revolutionary blockchain-based Move-to-Earn game built for the Very Network hackathon**
 
-[🚀 Quick Start](#-quick-start) • [📱 Mobile Integration](#-mobile-integration) • [🐍 Python Backend](#-python-backend) • [🎮 Game Features](#-game-features) • [📖 Documentation](#-documentation)
 
 </div>
 
