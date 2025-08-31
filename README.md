@@ -11,7 +11,7 @@
 
 *Turn outdoor activity into strategic territory battles while earning VERY tokens*
 
-🎥 **[Demo Video](#-demo-video)** | 📱 **[Try the App](#-getting-started)** | 🌐 **[Landing Page](#-landing-page)** | 📚 **[Documentation](https://www.notion.so/Complete-Technical-Architecture-Data-Flow-25eda6675e0c80228517e6003ed156c7)**
+🎥 **[Demo Video](#-demo-video)** | 📱 **[Try the App](#-getting-started)** | 🌐 **[Landing Page](https://strideon.vercel.app/)** | 📚 **[Documentation](https://www.notion.so/Complete-Technical-Architecture-Data-Flow-25eda6675e0c80228517e6003ed156c7)**
 
 </div>
 
