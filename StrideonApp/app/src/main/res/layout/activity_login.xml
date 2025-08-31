@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@color/back"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/BackBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/left_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        app:tint="@color/txt_d"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome\nback, Buddy!"
+            android:fontFamily="@font/lufga_semibold"
+            android:textSize="35sp"
+            android:textColor="@color/txt_d"/>
+
+        <LinearLayout
+            android:id="@+id/emailGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center_vertical"
+            android:padding="15sp">
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/filled_email"
+                app:tint="@color/nstxt"/>
+
+            <EditText
+                android:id="@+id/inpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:background="@color/back"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/txt_d"
+                android:singleLine="true"
+                android:fontFamily="@font/lufga_regular"
+                android:hint="Enter your email"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:padding="15sp">
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/filled_lock"
+                app:tint="@color/nstxt"/>
+
+            <EditText
+                android:id="@+id/inpPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:background="@color/back"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/txt_d"
+                android:singleLine="true"
+                android:fontFamily="@font/lufga_regular"
+                android:hint="Enter your password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/edit_text_border"
+            android:text="Continue"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/lufga_semibold"
+            android:textSize="15sp"
+            android:backgroundTint="@color/signature_green"
+            android:padding="15sp"/>
+
+        <TextView
+            android:id="@+id/orTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/lufga_regular"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="@color/nstxt"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/forgotPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/lufga_regular"
+            android:text="Forgot Password"
+            android:textAlignment="gravity"
+            android:gravity="right"
+            android:visibility="gone"
+            android:textColor="@color/txt_d"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/login_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center"
+            android:padding="15sp">
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/google_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:background="@color/back"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/txt_d"
+                android:fontFamily="@font/lufga_semibold"
+                android:text="Continue with Google"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_apple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:visibility="gone"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center"
+            android:padding="15sp">
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/apple_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:background="@color/back"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/txt_d"
+                android:fontFamily="@font/lufga_semibold"
+                android:text="Continue with Apple"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/back"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10sp"
+        android:paddingBottom="30sp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not a member?"
+            android:fontFamily="@font/lufga_regular"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/txt_d"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:fontFamily="@font/lufga_bold"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginLeft="5sp"
+            android:textColor="@color/signature_green"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

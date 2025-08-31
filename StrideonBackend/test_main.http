@@ -1,0 +1,178 @@
+# StrideOn Game Server — HTTP tests (use with VS Code/JetBrains HTTP Client or REST Client)
+# Set the base URL and JWT before running.
+# Env vars (HTTP client variables):
+# @host = http://127.0.0.1:8000
+# @jwt = <SUPABASE_JWT>
+# @city = Chandigarh
+# @lat = 30.7333
+# @lng = 76.7794
+
+### Health
+GET {{host}}/health
+Accept: application/json
+
+### Root
+GET {{host}}/
+Accept: application/json
+
+### Auth: create Wepin nonce
+POST {{host}}/auth/nonce
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Profiles: me
+GET {{host}}/profiles/me
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Profiles: update
+PATCH {{host}}/profiles/me
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "username": "runner1",
+  "city": "{{city}}"
+}
+
+### Sessions: create
+POST {{host}}/sessions
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "city": "{{city}}"
+}
+
+### Sessions: mine
+GET {{host}}/sessions/mine
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Sessions: end (replace :id with actual session id)
+PATCH {{host}}/sessions/:id/end
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Presence: update (Redis)
+POST {{host}}/presence
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "lat": {{lat}},
+  "lng": {{lng}},
+  "h3_res": 9,
+  "city": "{{city}}"
+}
+
+### Presence: nearby
+GET {{host}}/presence/nearby?city={{city}}&lat={{lat}}&lng={{lng}}&radius_m=1000
+Accept: application/json
+
+### GPS: ingest point (Redis stream). Replace :session_id
+POST {{host}}/gps/ingest
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "session_id": ":session_id",
+  "lat": {{lat}},
+  "lng": {{lng}},
+  "h3_res": 9,
+  "city": "{{city}}"
+}
+
+### Claims: create (replace :session_id)
+POST {{host}}/claims
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "session_id": ":session_id",
+  "area_m2": 123.45,
+  "h3_cells": ["8928308280fffff", "8928308280bffff"]
+}
+
+### Claims: mine
+GET {{host}}/claims/mine
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Banked results: create (replace :session_id)
+POST {{host}}/bank
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "session_id": ":session_id",
+  "city": "{{city}}",
+  "area_m2": 200.5,
+  "score": 150
+}
+
+### Banked results: mine
+GET {{host}}/bank/mine
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Leaderboard daily (optional filters)
+GET {{host}}/leaderboard/daily?city={{city}}
+Accept: application/json
+
+### Powerups: catalog
+GET {{host}}/powerups
+Accept: application/json
+
+### Inventory: mine
+GET {{host}}/inventory
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Powerups: use one (replace powerup_id and session_id)
+POST {{host}}/powerups/use
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "powerup_id": "shield",
+  "session_id": ":session_id",
+  "metadata": {"source": "test"}
+}
+
+### Trail Management: get trail state (replace :session_id)
+GET {{host}}/trails/:session_id
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Session State: get enhanced session state (replace :session_id)
+GET {{host}}/sessions/:session_id/state
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Trail Cells: get H3 cells and polygon (replace :session_id)
+GET {{host}}/trails/:session_id/cells
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Cut Events: get my cuts history
+GET {{host}}/cuts/mine?limit=20
+Authorization: Bearer {{jwt}}
+Accept: application/json
+
+### Cut Events: get recent cuts system-wide
+GET {{host}}/cuts/recent?limit=10&city={{city}}
+Accept: application/json
+
+
+### Very Network: health
+GET {{host}}/verynet/health
+Accept: application/json
+
+### Very Network: leaderboard
+GET {{host}}/verynet/leaderboard?count=10
+Accept: application/json
+
+### Very Network: player score (sample address)
+GET {{host}}/verynet/score/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Accept: application/json
