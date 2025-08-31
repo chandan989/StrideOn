@@ -514,6 +514,92 @@ GOOGLE_MAPS_API_KEY=your-google-maps-api-key
 JWT_SECRET_KEY=your-jwt-secret-key
 ENCRYPTION_KEY=your-encryption-key
 ```
+#### Mobile Device Requirements
+- **Android 10+** (API level 29+) or **iOS 14+**
+- **4GB RAM minimum**, 6GB recommended
+- **GPS capability** with high accuracy mode
+- **2GB free storage** space
+- **Stable internet connection** (4G/5G/WiFi)
+- **Battery optimization disabled** for background location
+
+#### Development Environment Requirements
+- **Android Studio Hedgehog+** (2023.1.1 or later)
+- **Kotlin 1.9.0+** and **Java 17+**
+- **Gradle 8.0+**
+- **Python 3.11+** (for backend development)
+- **Redis 7.0+** (for local development)
+- **PostgreSQL 15+** (or Supabase account)
+- **Node.js 18+** (for Very Network integration)
+- **Docker** (for containerized deployment)
+
+### Complete Installation Process
+
+#### 1. Clone Repository
+```bash
+# Clone the main repository
+git clone https://github.com/your-org/strideon.git
+cd strideon
+
+# Clone submodules
+git submodule update --init --recursive
+```
+
+#### 2. Backend Setup (Python FastAPI)
+
+```bash
+# Navigate to backend directory
+cd StrideonBackend
+
+# Create virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install additional development tools
+pip install pytest pytest-asyncio black flake8 mypy
+
+# Copy environment template
+cp .env.example .env
+
+# Edit environment variables
+nano .env
+```
+
+**Required Environment Variables:**
+```env
+# Supabase Configuration
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+# Redis Configuration
+REDIS_URL=redis://localhost:6379/0
+REDIS_PASSWORD=your_redis_password
+
+# Blockchain Configuration
+SIGNIFY_RPC_URL=https://rpc.signify.network
+SIGNIFY_CHAIN_ID=1337
+VERY_TOKEN_CONTRACT=0x1234567890123456789012345678901234567890
+SIGNIFY_PRIVATE_KEY=your_private_key
+
+# Wepin Wallet
+WEPIN_APP_ID=your-wepin-app-id
+WEPIN_PROJECT_ID=your-wepin-project-id
+WEPIN_SECRET_KEY=your-wepin-secret
+
+# VeryChat
+VERYCHAT_API_KEY=your-verychat-api-key
+VERYCHAT_APP_ID=your-verychat-app-id
+
+# Google Maps API
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key
+
+# Security
+JWT_SECRET_KEY=your-jwt-secret-key
+ENCRYPTION_KEY=your-encryption-key
+```
 
 #### 3. Database Setup
 
@@ -761,6 +847,23 @@ curl -X POST -H "Content-Type: application/json" \
 # Check contract deployment
 python scripts/verify_contracts.py
 ```
+
+### First Run Experience
+
+#### For Users:
+1. **Download & Install** the Android app from Google Play Store
+2. **Grant Location Permissions** for precise GPS tracking
+3. **Create Account** with email/phone/social login
+4. **Setup Wallet** - Automatic Wepin wallet creation
+5. **Complete Tutorial** - Interactive gameplay guide
+6. **Start Playing** - Draw your first territory claim
+
+#### For Developers:
+1. **Use mock location** if testing indoors
+2. **Start with a small loop** (50-100 meter radius)
+3. **Practice power-up usage** in safe environment
+4. **Join practice guild** for team features
+5. **Monitor logs** for debugging
 
 ---
 
