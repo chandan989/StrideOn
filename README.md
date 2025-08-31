@@ -20,8 +20,6 @@ Turn outdoor activity into strategic territory battles while earning VERY tokens
 
 ## 🎥 Demo Video
 
-![Demo Video Placeholder](./screenshots/video-placeholder.png)
-
 [Video showcase of the complete gameplay loop - trail drawing, territory claiming, and real-time multiplayer interactions]
 
 *What you'll see in the demo:*
