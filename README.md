@@ -18,50 +18,26 @@ Turn outdoor activity into strategic territory battles while earning VERY tokens
 
 ---
 
-## 🎥 Demo Video
-
-[Video showcase of the complete gameplay loop - trail drawing, territory claiming, and real-time multiplayer interactions]
-
-*What you'll see in the demo:*
-- Real-time GPS trail drawing on H3 hex grid overlay
-- Territory claiming through loop closure mechanics
-- Live multiplayer presence with nearby runners
-- Power-up activation and strategic gameplay
-- VERY token earning and banking system
-- VeryChat integration for guild coordination
-
----
-
 ## 📸 Screenshots Gallery
 
 <div align="center">
 
-| Map & Territory View | Trail Drawing | Leaderboard & Stats |
-|:-------------------:|:-------------:|:-------------------:|
-| ![Map View](/screenshots/map-view.png) | ![Trail Drawing](./screenshots/trail-drawing.png) | ![Leaderboard](./screenshots/leaderboard.png) |
-| H3 hex grid overlay with claimed territories | Live trail creation during movement | Daily rankings and player stats |
+| Welcome Screen | Login | Registration |
+|:--------------:|:-----:|:------------:|
+| ![Welcome Screen](/Screenshots/welcome.png) | ![Login](/Screenshots/login.png) | ![Registration](/Screenshots/Register.png) |
+| App welcome interface | User authentication | Account creation |
 
-| Power-ups Shop | Wallet Integration | Guild System |
-|:--------------:|:-----------------:|:------------:|
-| ![Power-ups](./screenshots/powerups.png) | ![Wallet](./screenshots/wallet.png) | ![Guilds](./screenshots/guilds.png) |
-| Strategic power-up marketplace | Wepin wallet integration | VeryChat guild coordination |
+| Home Dashboard | Map View | Power-ups |
+|:-------------:|:--------:|:---------:|
+| ![Home](/Screenshots/Home.png) | ![Map](/Screenshots/Map.png) | ![Power-ups](/Screenshots/Powerups.png) |
+| Main game dashboard | H3 hex grid overlay | Strategic power-up system |
+
+| Power-ups Detail | System Architecture |
+|:----------------:|:-------------------:|
+| ![Power-ups Detail](/Screenshots/Powerups2.png) | ![Architecture](/Screenshots/architecture.png) |
+| Power-up details | Complete system architecture |
 
 </div>
-
----
-
-## 🌐 Landing Page
-
-![Landing Page](./screenshots/landing-page.png)
-
-*Visit our landing page:* [strideon.game](https://strideon.vercel.app/)
-
-Features:
-- Interactive demo of gameplay mechanics
-- Real-time global leaderboards
-- Community statistics and city coverage
-- Download links for all platforms
-- Developer resources and API documentation
 
 ---
 
@@ -80,7 +56,6 @@ StrideOn is a *decentralized, move-to-earn game* where your physical movement be
 
 Movement → GPS Tracking → H3 Grid Mapping → Trail Creation → Loop Detection → Territory Claim → VERY Rewards
 
-
 ---
 
 ## 🏗 Complete System Architecture
@@ -89,13 +64,13 @@ Movement → GPS Tracking → H3 Grid Mapping → Trail Creation → Loop Detect
 
 **[View Full Architecture on Figma](https://www.figma.com/board/TDvmb7NZhGjIIskTa9DAgy/StrideOn?node-id=0-1&t=XZz5CEsqnGmjazmq-1)**
 
-![Architecture Overview](./screenshots/architecture-overview.png)
+![Architecture Overview](/Screenshots/architecture.png)
 
 </div>
 
 ### System Architecture Diagram
 
-mermaid
+```mermaid
 graph TB
     subgraph "Mobile App Layer"
         A[Android App<br/>Kotlin + Google Maps] --> B[GPS Tracking<br/>Foreground Service]
@@ -147,7 +122,7 @@ graph TB
     style R fill:#e8f5e8
     style X fill:#ffebee
     style AA fill:#f1f8e9
-
+```
 
 ### Speed-First Design Philosophy
 - *Off-chain Game Loop*: Sub-150ms response time for real-time gameplay
@@ -168,7 +143,7 @@ graph TB
 - *Neighbor Consistency*: Efficient pathfinding and collision detection
 - *Spatial Optimization*: Fast proximity queries and regional sharding
 
-python
+```python
 # H3 Grid Implementation Example
 def snap_gps_to_h3(lat: float, lng: float, resolution: int = 9) -> str:
     """Convert GPS coordinates to H3 hex cell"""
@@ -178,7 +153,7 @@ def snap_gps_to_h3(lat: float, lng: float, resolution: int = 9) -> str:
 def detect_loop_closure(trail: List[str], owned_territory: Set[str]) -> bool:
     """Check if trail intersects owned territory for loop closure"""
     return any(cell in owned_territory for cell in trail)
-
+```
 
 ### 🏃‍♂ Real-Time Territory Control
 
@@ -190,7 +165,7 @@ def detect_loop_closure(trail: List[str], owned_territory: Set[str]) -> bool:
 - *Area Calculation*: Precise territory measurement using flood-fill algorithms
 
 *Cut Mechanics & Interception:*
-python
+```python
 def check_trail_intersection(trail_a: List[H3Cell], trail_b: List[H3Cell]) -> bool:
     """Real-time collision detection between player trails"""
     for segment_a in get_segments(trail_a):
@@ -198,7 +173,7 @@ def check_trail_intersection(trail_a: List[H3Cell], trail_b: List[H3Cell]) -> bo
             if segments_intersect(segment_a, segment_b):
                 return True
     return False
-
+```
 
 ### ⚡ Strategic Power-ups System
 
@@ -211,18 +186,10 @@ def check_trail_intersection(trail_a: List[H3Cell], trail_b: List[H3Cell]) -> bo
 | 🔥 *Burn* | Destroy rival territory | Instant | 200 VERY | Aggressive takeover |
 
 ### 🏆 Competitive Elements
-
-*Daily Leaderboards:*
-- City-wide rankings with real-time updates
-- Multiple categories: Area Claimed, Distance Traveled, Cuts Made
-- Seasonal tournaments with special rewards
-- Guild-based team competitions
-
-*Achievement System:*
-- Territory Conqueror: Claim 1000+ hex cells
-- Speed Demon: Maintain 15+ km/h for 30 minutes
-- Master Interceptor: Successfully cut 100+ rival trails
-- Guild Leader: Coordinate 50+ team victories
+- *Daily Leaderboards*: City-wide rankings with real-time updates
+- *Multiple Categories*: Area Claimed, Distance Traveled, Cuts Made
+- *Seasonal Tournaments*: Special rewards and global competitions
+- *Guild-based Team Competitions*: Coordinate with VeryChat integration
 
 ### 💰 Advanced Token Economics
 
@@ -246,18 +213,17 @@ def check_trail_intersection(trail_a: List[H3Cell], trail_b: List[H3Cell]) -> bo
 ### Signify Mainnet Deployment
 
 *Network Specifications:*
-yaml
+```yaml
 Network: Signify Mainnet
 RPC URL: https://rpc.signify.network
 Chain ID: 1337
 Block Time: 12 seconds
 Gas Price: 20 Gwei average
 Explorer: https://scan.signify.network
-
+```
 
 *Smart Contract Architecture:*
-
-solidity
+```solidity
 // Core StrideOn Settlement Contract
 contract StrideOnSettlement {
     struct PlayerClaim {
@@ -292,7 +258,7 @@ contract StrideOnSettlement {
         emit DailySettlement(merkleRoot, getTotalRewards(amounts));
     }
 }
-
+```
 
 ### Very Network Features
 
@@ -313,7 +279,7 @@ contract StrideOnSettlement {
 ### Guild System Architecture
 
 *Guild Formation & Management:*
-typescript
+```typescript
 interface Guild {
   id: string;
   name: string;
@@ -323,7 +289,7 @@ interface Guild {
   strategies: BattlePlan[];
   chatChannel: VeryChat.Channel;
 }
-
+```
 
 *Social Gaming Features:*
 - *Territory Wars*: Guild vs Guild battles for city districts
@@ -362,8 +328,7 @@ interface Guild {
 - *Database*: Room for local caching and offline queue
 
 *Key Components:*
-
-kotlin
+```kotlin
 // GPS Trail Manager
 class TrailManager @Inject constructor(
     private val locationProvider: LocationProvider,
@@ -390,7 +355,7 @@ class TrailManager @Inject constructor(
         }
     }
 }
-
+```
 
 *Anti-cheat Measures:*
 - *Motion Sensor Validation*: Accelerometer + gyroscope data correlation
@@ -402,8 +367,7 @@ class TrailManager @Inject constructor(
 ### Backend Architecture (Python FastAPI)
 
 *High-Performance Server Design:*
-
-python
+```python
 # Real-time Game Server
 class GameServer:
     def __init__(self):
@@ -434,11 +398,10 @@ class GameServer:
         await self.websocket_manager.broadcast_to_region(
             h3_cell, {"type": "position_update", "user": user_id, "cell": h3_cell}
         )
-
+```
 
 *Redis Data Structures:*
-
-python
+```python
 # Game State Storage Patterns
 REDIS_PATTERNS = {
     # Active game state (hot data)
@@ -457,166 +420,69 @@ REDIS_PATTERNS = {
     # Regional pub/sub
     "channel:region:{h3_parent}": "PUB/SUB for regional updates"
 }
-
-
-### Database Schema (Supabase/PostgreSQL)
-
-*Complete Entity Relationship Model:*
-
-sql
--- Enhanced schema with all game features
-CREATE EXTENSION IF NOT EXISTS vector;
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
--- User profiles with wallet integration
-CREATE TABLE profiles (
-  user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-  username TEXT UNIQUE NOT NULL,
-  avatar_url TEXT,
-  city TEXT NOT NULL,
-  wepin_user_id TEXT,
-  wepin_address TEXT,
-  reputation_score INTEGER DEFAULT 1000,
-  total_area_claimed NUMERIC DEFAULT 0,
-  total_cuts_made INTEGER DEFAULT 0,
-  guild_id UUID REFERENCES guilds(id),
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Game sessions
-CREATE TABLE sessions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES profiles(user_id) ON DELETE CASCADE,
-  city TEXT NOT NULL,
-  started_at TIMESTAMPTZ DEFAULT NOW(),
-  ended_at TIMESTAMPTZ,
-  status session_status DEFAULT 'active',
-  final_score INTEGER DEFAULT 0,
-  area_claimed NUMERIC DEFAULT 0,
-  distance_traveled NUMERIC DEFAULT 0
-);
-
--- Territory claims (finalized results)
-CREATE TABLE claims (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  session_id UUID NOT NULL REFERENCES sessions(id) ON DELETE CASCADE,
-  user_id UUID NOT NULL REFERENCES profiles(user_id) ON DELETE CASCADE,
-  area_m2 NUMERIC NOT NULL,
-  h3_cells TEXT[] NOT NULL,
-  center_lat DOUBLE PRECISION,
-  center_lng DOUBLE PRECISION,
-  claimed_at TIMESTAMPTZ DEFAULT NOW(),
-  banked_at TIMESTAMPTZ,
-  very_tokens_earned INTEGER DEFAULT 0
-);
-
--- Power-up system
-CREATE TABLE powerups (
-  id SERIAL PRIMARY KEY,
-  name TEXT UNIQUE NOT NULL,
-  description TEXT,
-  effect_type TEXT NOT NULL,
-  effect_value NUMERIC,
-  duration_seconds INTEGER,
-  cost_very INTEGER NOT NULL,
-  cooldown_seconds INTEGER DEFAULT 0
-);
-
-CREATE TABLE user_powerups (
-  user_id UUID REFERENCES profiles(user_id) ON DELETE CASCADE,
-  powerup_id INTEGER REFERENCES powerups(id),
-  quantity INTEGER DEFAULT 0,
-  acquired_at TIMESTAMPTZ DEFAULT NOW(),
-  PRIMARY KEY (user_id, powerup_id)
-);
-
--- Guild system
-CREATE TABLE guilds (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name TEXT UNIQUE NOT NULL,
-  description TEXT,
-  leader_id UUID REFERENCES profiles(user_id),
-  max_members INTEGER DEFAULT 50,
-  treasury_very INTEGER DEFAULT 0,
-  total_territory NUMERIC DEFAULT 0,
-  verychat_channel_id TEXT,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Daily leaderboards with enhanced metrics
-CREATE TABLE leaderboard_daily (
-  id BIGSERIAL PRIMARY KEY,
-  day DATE NOT NULL,
-  city TEXT NOT NULL,
-  user_id UUID NOT NULL REFERENCES profiles(user_id) ON DELETE CASCADE,
-  area_score INTEGER DEFAULT 0,
-  cut_score INTEGER DEFAULT 0,
-  distance_score INTEGER DEFAULT 0,
-  total_score INTEGER DEFAULT 0,
-  rank INTEGER,
-  very_tokens_earned INTEGER DEFAULT 0,
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  UNIQUE(day, city, user_id)
-);
-
--- Indexes for performance
-CREATE INDEX idx_profiles_city ON profiles(city);
-CREATE INDEX idx_profiles_wepin ON profiles(wepin_address) WHERE wepin_address IS NOT NULL;
-CREATE INDEX idx_claims_user_banked ON claims(user_id, banked_at);
-CREATE INDEX idx_claims_h3_cells ON claims USING GIN(h3_cells);
-CREATE INDEX idx_leaderboard_day_city_score ON leaderboard_daily(day, city, total_score DESC);
-
+```
 
 ---
 
-## 🚀 Getting Started & Installation
+## 🚀 Complete Installation Guide
 
 ### System Requirements
 
-*Mobile Device:*
-- Android 10+ (API level 29+)
-- 4GB RAM minimum, 6GB recommended
-- GPS capability with high accuracy mode
-- 2GB free storage space
-- Stable internet connection (4G/5G/WiFi)
+#### Mobile Device Requirements
+- **Android 10+** (API level 29+) or **iOS 14+**
+- **4GB RAM minimum**, 6GB recommended
+- **GPS capability** with high accuracy mode
+- **2GB free storage** space
+- **Stable internet connection** (4G/5G/WiFi)
+- **Battery optimization disabled** for background location
 
-*Development Environment:*
-- Android Studio Hedgehog+ (2023.1.1 or later)
-- Kotlin 1.9.0+
-- Gradle 8.0+
-- Python 3.11+ (for backend development)
-- Redis 7.0+ (for local development)
-- PostgreSQL 15+ (or Supabase account)
+#### Development Environment Requirements
+- **Android Studio Hedgehog+** (2023.1.1 or later)
+- **Kotlin 1.9.0+** and **Java 17+**
+- **Gradle 8.0+**
+- **Python 3.11+** (for backend development)
+- **Redis 7.0+** (for local development)
+- **PostgreSQL 15+** (or Supabase account)
+- **Node.js 18+** (for Very Network integration)
+- **Docker** (for containerized deployment)
 
-### Quick Start Guide
+### Complete Installation Process
 
-*1. Download & Install*
-bash
-# Clone the repository
+#### 1. Clone Repository
+```bash
+# Clone the main repository
 git clone https://github.com/your-org/strideon.git
 cd strideon
 
-# Install backend dependencies
+# Clone submodules
+git submodule update --init --recursive
+```
+
+#### 2. Backend Setup (Python FastAPI)
+
+```bash
+# Navigate to backend directory
+cd StrideonBackend
+
+# Create virtual environment
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 
-# Install Android dependencies (in Android Studio)
-./gradlew build
+# Install additional development tools
+pip install pytest pytest-asyncio black flake8 mypy
 
-
-*2. Environment Configuration*
-bash
 # Copy environment template
 cp .env.example .env
 
-# Edit .env with your credentials
+# Edit environment variables
 nano .env
+```
 
-
-*Required Environment Variables:*
-env
+**Required Environment Variables:**
+```env
 # Supabase Configuration
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
@@ -624,126 +490,283 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 # Redis Configuration
 REDIS_URL=redis://localhost:6379/0
+REDIS_PASSWORD=your_redis_password
 
 # Blockchain Configuration
 SIGNIFY_RPC_URL=https://rpc.signify.network
 SIGNIFY_CHAIN_ID=1337
 VERY_TOKEN_CONTRACT=0x1234567890123456789012345678901234567890
+SIGNIFY_PRIVATE_KEY=your_private_key
 
 # Wepin Wallet
 WEPIN_APP_ID=your-wepin-app-id
 WEPIN_PROJECT_ID=your-wepin-project-id
+WEPIN_SECRET_KEY=your-wepin-secret
 
 # VeryChat
 VERYCHAT_API_KEY=your-verychat-api-key
 VERYCHAT_APP_ID=your-verychat-app-id
 
+# Google Maps API
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key
 
-*3. Database Setup*
-sql
--- Run in Supabase SQL Editor
--- Copy and paste the complete schema from the Database Schema section above
+# Security
+JWT_SECRET_KEY=your-jwt-secret-key
+ENCRYPTION_KEY=your-encryption-key
+```
 
+#### 3. Database Setup
 
-*4. Start Development Servers*
-bash
-# Terminal 1: Redis Server
+```bash
+# Install PostgreSQL (Ubuntu/Debian)
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# Create database and user
+sudo -u postgres psql
+CREATE DATABASE strideon_db;
+CREATE USER strideon_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE strideon_db TO strideon_user;
+\q
+
+# Run database migrations
+cd StrideonBackend
+python scripts/setup_database.py
+```
+
+**Database Schema Setup:**
+```sql
+-- Run in Supabase SQL Editor or PostgreSQL
+-- Copy and paste the complete schema from schema.sql
+```
+
+#### 4. Redis Setup
+
+```bash
+# Install Redis (Ubuntu/Debian)
+sudo apt update
+sudo apt install redis-server
+
+# Configure Redis
+sudo nano /etc/redis/redis.conf
+# Set: requirepass your_redis_password
+# Set: maxmemory 2gb
+# Set: maxmemory-policy allkeys-lru
+
+# Start Redis
+sudo systemctl start redis-server
+sudo systemctl enable redis-server
+
+# Test Redis connection
+redis-cli -a your_redis_password ping
+```
+
+#### 5. Android App Setup
+
+```bash
+# Navigate to Android app directory
+cd StrideonApp
+
+# Open in Android Studio
+# File -> Open -> Select StrideonApp folder
+
+# Configure local.properties
+echo "sdk.dir=$ANDROID_HOME" > local.properties
+echo "MAPS_API_KEY=your-google-maps-api-key" >> local.properties
+
+# Build project
+./gradlew build
+
+# Run on device/emulator
+./gradlew installDebug
+```
+
+**Android Configuration:**
+```gradle
+// app/build.gradle
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.strideon.app"
+        minSdk 29
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+}
+
+dependencies {
+    // Core dependencies
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.compose:compose-bom:2024.02.00'
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
+    
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    
+    // Database
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+    
+    // Dependency Injection
+    implementation 'com.google.dagger:hilt-android:2.50'
+    kapt 'com.google.dagger:hilt-compiler:2.50'
+}
+```
+
+#### 6. Very Network Integration Setup
+
+```bash
+# Navigate to Very Network integration
+cd very-network-integration
+
+# Install Node.js dependencies
+npm install
+
+# Configure environment
+cp .env.example .env
+nano .env
+```
+
+**Very Network Configuration:**
+```env
+# Very Network Configuration
+VERY_NETWORK_RPC_URL=https://rpc.very.network
+VERY_NETWORK_CHAIN_ID=1234
+VERY_TOKEN_CONTRACT=0x...
+VERY_BRIDGE_CONTRACT=0x...
+
+# Cross-chain Bridge
+BRIDGE_PRIVATE_KEY=your_bridge_private_key
+BRIDGE_GAS_LIMIT=500000
+BRIDGE_CONFIRMATION_BLOCKS=12
+
+# Liquidity Pool
+LIQUIDITY_POOL_ADDRESS=0x...
+POOL_REWARDS_CONTRACT=0x...
+```
+
+#### 7. Start All Services
+
+```bash
+# Terminal 1: Start Redis
 redis-server
 
-# Terminal 2: Python Backend
+# Terminal 2: Start PostgreSQL
+sudo systemctl start postgresql
+
+# Terminal 3: Start Backend Server
+cd StrideonBackend
+source .venv/bin/activate
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 
-# Terminal 3: Android App (in Android Studio)
-# Open project and run on device/emulator
+# Terminal 4: Start Very Network Bridge
+cd very-network-integration
+npm run start:bridge
 
+# Terminal 5: Start Android App (in Android Studio)
+# Run on device/emulator
+```
+
+#### 8. Verification & Testing
+
+```bash
+# Test backend API
+curl http://localhost:8000/health
+curl http://localhost:8000/api/v1/status
+
+# Test database connection
+python scripts/test_db_connection.py
+
+# Test Redis connection
+python scripts/test_redis_connection.py
+
+# Test blockchain connection
+python scripts/test_blockchain_connection.py
+
+# Run automated tests
+pytest tests/ -v
+```
 
 ### First Run Experience
 
-*Demo Mode Setup:*
-1. *Location Permissions*: Grant precise location access
-2. *Mock Location* (for indoor testing): Enable developer options
-3. *Create Account*: Sign up with email/phone/social login
-4. *Wallet Setup*: Automatic Wepin wallet creation
-5. *Tutorial*: Interactive gameplay guide
-6. *First Trail*: Draw your initial territory claim
+#### For Users:
+1. **Download & Install** the Android app from Google Play Store
+2. **Grant Location Permissions** for precise GPS tracking
+3. **Create Account** with email/phone/social login
+4. **Setup Wallet** - Automatic Wepin wallet creation
+5. **Complete Tutorial** - Interactive gameplay guide
+6. **Start Playing** - Draw your first territory claim
 
-*Testing Gameplay:*
-- Use mock location if testing indoors
-- Start with a small loop (50-100 meter radius)
-- Practice power-up usage in safe environment
-- Join practice guild for team features
+#### For Developers:
+1. **Use mock location** if testing indoors
+2. **Start with a small loop** (50-100 meter radius)
+3. **Practice power-up usage** in safe environment
+4. **Join practice guild** for team features
+5. **Monitor logs** for debugging
 
----
+### Troubleshooting
 
-## 🧪 Development & Testing
+#### Common Issues:
 
-### Testing Strategy
+**Backend Connection Issues:**
+```bash
+# Check if services are running
+sudo systemctl status redis-server
+sudo systemctl status postgresql
+ps aux | grep uvicorn
 
-*Unit Tests:*
-python
-# Test H3 operations
-def test_h3_operations():
-    assert h3.latlng_to_cell(30.7333, 76.7794, 9) == "892830829bfffff"
-    assert len(h3.grid_disk("892830829bfffff", 1)) == 7  # hex + 6 neighbors
+# Check ports
+netstat -tulpn | grep :8000
+netstat -tulpn | grep :6379
+netstat -tulpn | grep :5432
+```
 
-# Test loop closure detection
-def test_loop_closure():
-    trail = ["892830829bfffff", "892830829afffff", "89283082abfffff"]
-    owned = {"892830829bfffff"}
-    assert detect_loop_closure(trail, owned) == True
+**Android Build Issues:**
+```bash
+# Clean and rebuild
+./gradlew clean
+./gradlew build
 
+# Check dependencies
+./gradlew dependencies
 
-*Integration Tests:*
-python
-# Test real-time WebSocket communication
-async def test_websocket_updates():
-    async with websockets.connect("ws://localhost:8000/ws") as websocket:
-        # Send GPS update
-        await websocket.send(json.dumps({
-            "type": "gps_update",
-            "lat": 30.7333,
-            "lng": 76.7794
-        }))
-        
-        # Receive position broadcast
-        response = await websocket.recv()
-        assert json.loads(response)["type"] == "position_update"
+# Update Gradle wrapper
+./gradlew wrapper --gradle-version 8.5
+```
 
+**Database Issues:**
+```bash
+# Reset database
+python scripts/reset_database.py
 
-*Load Testing:*
-bash
-# Simulate 1000 concurrent players
-python scripts/load_test.py --players 1000 --duration 300 --city chandigarh
+# Run migrations
+python scripts/migrate_database.py
 
+# Check connection
+python scripts/test_db_connection.py
+```
 
-*Field Testing:*
-- Small cohorts in Chandigarh neighborhoods
-- GPS accuracy validation in various environments
-- Battery usage optimization testing
-- Network connectivity edge cases
+**Blockchain Issues:**
+```bash
+# Check network connectivity
+curl -X POST -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+  https://rpc.signify.network
 
-### Performance Benchmarks
-
-*Target Metrics:*
-- API Response Time: <150ms average
-- WebSocket Latency: <50ms for regional updates
-- Battery Usage: <5% additional drain per hour
-- Memory Usage: <200MB on Android device
-- Concurrent Users: 1000+ players per city region
-
-*Monitoring Dashboard:*
-- Real-time active user count
-- Average API latency per endpoint
-- Redis memory usage and hit rates
-- Database query performance
-- Blockchain transaction success rates
+# Check contract deployment
+python scripts/verify_contracts.py
+```
 
 ---
 
-## 🔮 Future Roadmap & Development Phases
+## 🔮 Development Roadmap
 
-### Phase 1: MVP Foundation (Completed ✅)
-*Duration*: August 2025
+### Phase 1: MVP Foundation ✅
 - ✅ Android app with H3 hex grid overlay
 - ✅ Basic trail drawing and loop closure
 - ✅ Real-time multiplayer presence system  
@@ -753,251 +776,42 @@ python scripts/load_test.py --players 1000 --duration 300 --city chandigarh
 - ✅ Redis-first architecture for sub-150ms latency
 
 ### Phase 2: Enhanced Gameplay (Q4 2025)
-*Features in Development:*
 - 🔄 Advanced power-up system with strategic depth
 - 🔄 Guild wars and territory battles
 - 🔄 Cross-city tournaments with global leaderboards
 - 🔄 NFT achievement badges and collectibles
 - 🔄 Augmented reality trail visualization
 - 🔄 Machine learning anti-cheat system
-- 🔄 Advanced analytics dashboard for players
 
 ### Phase 3: Platform Expansion (Q1 2026)
-*Scaling Initiatives:*
 - ⏳ iOS app release with feature parity
 - ⏳ Multi-city deployment (25+ major cities globally)
 - ⏳ Fitness tracker integrations (Apple Health, Google Fit, Garmin)
 - ⏳ Corporate wellness partnerships
 - ⏳ Layer 2 scaling solutions for reduced gas fees
-- ⏳ Cross-chain bridge to Ethereum mainnet
-- ⏳ Mobile AR features using ARCore/ARKit
-
-### Phase 4: Ecosystem Evolution (Q2 2026)
-*Platform Features:*
-- ⏳ Custom map creation tools for new cities
-- ⏳ Developer SDK for third-party game integration
-- ⏳ StrideOn token utility in partner applications
-- ⏳ Fully decentralized governance (DAO)
-- ⏳ AI-powered coaching and training recommendations
-- ⏳ Weather and environmental data integration
-- ⏳ Social impact initiatives (charity runs, environmental causes)
-
-### Phase 5: Global Gaming Platform (Q3 2026)
-*Vision Realization:*
-- ⏳ 100+ cities with localized gameplay features
-- ⏳ Professional eSports tournaments
-- ⏳ University partnerships for campus competitions
-- ⏳ Government collaborations for urban planning
-- ⏳ Climate change awareness campaigns
-- ⏳ International gaming league with broadcast coverage
-- ⏳ Real-world prizes and experiences for top players
 
 ---
 
-## 📊 Performance Analytics & KPIs
+## 📊 Performance Analytics
 
-### Technical Performance Metrics
+### Current Status
+- **Active Players**: 15,847 globally
+- **Cities Covered**: 5 (Chandigarh, Delhi, Mumbai, Bangalore, Hyderabad)
+- **Daily Active Users**: 8,234
+- **Average Session Duration**: 28 minutes
+- **API Response Time**: 127ms average
+- **WebSocket Latency**: 43ms average
+- **Uptime**: 99.94% (last 30 days)
 
-*Real-time Dashboard:*
-yaml
-Current Status:
-  Active Players: 15,847 globally
-  Cities Covered: 5 (Chandigarh, Delhi, Mumbai, Bangalore, Hyderabad)
-  Daily Active Users: 8,234
-  Average Session Duration: 28 minutes
-  API Response Time: 127ms average
-  WebSocket Latency: 43ms average
-  Uptime: 99.94% (last 30 days)
-
-
-*Game Economy Metrics:*
-- *Total VERY Distributed*: 2.4M tokens
-- *Average Daily Earnings*: 45 VERY per active player
-- *Territory Claimed*: 847,293 hex cells across all cities
-- *Successful Cuts*: 156,842 interceptions
-- *Power-up Usage*: 89,456 activations this month
-- *Guild Participation*: 73% of active players in guilds
-
-### User Engagement Statistics
-
-*Player Behavior Analysis:*
-- *Retention Rate*: 78% Day 1, 45% Day 7, 32% Day 30
-- *Average Steps per Session*: 3,247 steps
-- *Peak Activity Hours*: 6-8 AM (32%), 5-7 PM (41%)
-- *Most Active Cities*: Chandigarh (38%), Delhi (24%), Mumbai (18%)
-- *Guild Participation Growth*: +15% month-over-month
-- *Power-up Purchase Rate*: 2.3 purchases per active player weekly
-
-*Health Impact Metrics:*
-- *Average Daily Activity Increase*: 23% compared to pre-app usage
-- *Weekly Distance Covered*: 127 million meters collectively
-- *Calories Burned*: 8.9M calories estimated across all players
-- *Community Events*: 47 organized runs and meetups
+### Game Economy Metrics
+- **Total VERY Distributed**: 2.4M tokens
+- **Average Daily Earnings**: 45 VERY per active player
+- **Territory Claimed**: 847,293 hex cells across all cities
+- **Successful Cuts**: 156,842 interceptions
+- **Power-up Usage**: 89,456 activations this month
+- **Guild Participation**: 73% of active players in guilds
 
 ---
-
-## 🛠 Advanced Development Setup
-
-### Complete Backend Infrastructure
-
-*Python FastAPI Server Configuration:*
-
-python
-# app.py - Complete game server implementation
-from fastapi import FastAPI, WebSocket, HTTPException, Depends
-from fastapi.middleware.cors import CORSMiddleware
-import asyncio
-import json
-import redis.asyncio as redis
-from supabase import create_client, Client
-import h3
-from typing import Dict, List, Set
-import logging
-from datetime import datetime, timezone
-
-# Initialize core services
-app = FastAPI(title="StrideOn Game Server", version="2.0.0")
-redis_client = redis.Redis.from_url(os.environ["REDIS_URL"])
-supabase: Client = create_client(
-    os.environ["SUPABASE_URL"],
-    os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-)
-
-# WebSocket connection manager
-class ConnectionManager:
-    def __init__(self):
-        self.active_connections: Dict[str, WebSocket] = {}
-        self.city_channels: Dict[str, Set[str]] = {}
-    
-  
-   
-
-### Mobile App Integration (Android)
-
-*Complete Kotlin Implementation:*
-
-kotlin
-// MainActivity.kt - Main game activity
-class MainActivity : ComponentActivity() {
-    private lateinit var gameViewModel: GameViewModel
-    private lateinit var locationManager: LocationManager
-    private lateinit var websocketClient: WebSocketClient
-    private lateinit var walletManager: WepinWalletManager
-    
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        
-        // Initialize components
-        gameViewModel = ViewModelProvider(this)[GameViewModel::class.java]
-        locationManager = LocationManager(this)
-        websocketClient = WebSocketClient()
-        walletManager = WepinWalletManager(this)
-        
-        setContent {
-            StrideOnTheme {
-                GameScreen(
-                    viewModel = gameViewModel,
-                    locationManager = locationManager,
-                    websocketClient = websocketClient
-                )
-            }
-        }
-    }
-}
-
-// GameViewModel.kt - Main game state management
-@HiltViewModel
-class GameViewModel @Inject constructor(
-    private val gameRepository: GameRepository,
-    private val h3Service: H3Service,
-    private val webSocketService: WebSocketService
-) : ViewModel() {
-    
-    private val _gameState = MutableStateFlow(GameState.IDLE)
-    val gameState = _gameState.asStateFlow()
-    
-    private val _currentTrail = MutableStateFlow<List<H3Cell>>(emptyList())
-    val currentTrail = _currentTrail.asStateFlow()
-    
-    private val _ownedTerritory = MutableStateFlow<Set<H3Cell>>(emptySet())
-    val ownedTerritory = _ownedTerritory.asStateFlow()
-    
-    private val _nearbyPlayers = MutableStateFlow<List<Player>>(emptyList())
-    val nearbyPlayers = _nearbyPlayers.asStateFlow()
-    
-    private val _powerUps = MutableStateFlow<List<PowerUp>>(emptyList())
-    val powerUps = _powerUps.asStateFlow()
-    
-    private var currentSession: GameSession? = null
-    
-    fun startGameSession(city: String) {
-        viewModelScope.launch {
-            try {
-                val session = gameRepository.startSession(city)
-                currentSession = session
-                _gameState.value = GameState.ACTIVE
-                
-                // Connect to WebSocket
-                webSocketService.connect(session.userId, city)
-                
-                // Start location tracking
-                startLocationTracking()
-                
-            } catch (e: Exception) {
-                _gameState.value = GameState.ERROR
-                Log.e("GameViewModel", "Failed to start session", e)
-            }
-        }
-    }
-    
-    private fun startLocationTracking() {
-        viewModelScope.launch {
-            LocationProvider.locationUpdates
-                .distinctUntilChanged()
-                .collect { location ->
-                    processLocationUpdate(location)
-                }
-        }
-    }
-    
-    private suspend fun processLocationUpdate(location: Location) {
-        val h3Cell = h3Service.latLngToCell(location.latitude, location.longitude)
-        
-        // Add to current trail
-        val updatedTrail = _currentTrail.value + h3Cell
-        _currentTrail.value = updatedTrail
-        
-        // Send to server
-        currentSession?.let { session ->
-            webSocketService.sendGpsUpdate(
-                sessionId = session.id,
-                lat = location.latitude,
-                lng = location.longitude
-            )
-        }
-        
-        // Check for loop closure
-        if (checkLoopClosure(h3Cell)) {
-            processLoopClosure()
-        }
-    }
-    
-    private fun checkLoopClosure(newCell: H3Cell): Boolean {
-        return newCell in _ownedTerritory.value && _currentTrail.value.isNotEmpty()
-    }
-    
-    private suspend fun processLoopClosure() {
-        try {
-            val trail = _currentTrail.value
-            val claimResult = gameRepository.processLoopClosure(
-                sessionId = currentSession?.id ?: return,
-                trail = trail
-            )
-            
-            if (claimResult.success) {
-                // Update owned territory
-                val newTerritory = _ownedTerritory.value + claimResult.claimedCells
-                _ownedTerritory.value = newTerritory# StrideOn — The City Is Your Arena
 
 ## 📚 Documentation & Resources
 
@@ -1006,12 +820,6 @@ class GameViewModel @Inject constructor(
 - 🎨 *[Figma Architecture Board](https://www.figma.com/board/TDvmb7NZhGjIIskTa9DAgy/StrideOn)* - Visual system overview
 - 🔗 *[API Documentation](#)* - Backend endpoint reference
 - 📱 *[Mobile Integration Guide](#)* - Android development setup
-
-### Smart Contract Documentation
-- 📄 *[Contract ABIs](./contracts/abis/)* - Interface definitions
-- 🔐 *[Security Audits](#)* - Third-party security reviews
-- 💰 *[Tokenomics Paper](#)* - Economic model details
-- 🏛 *[Governance Docs](#)* - DAO implementation plan
 
 ### Community Resources
 - 💬 *[Discord Server](#)* - Developer and player community
@@ -1052,5 +860,4 @@ Join thousands of players earning VERY tokens while staying active!
 Built with ❤ by the StrideOn team for the global fitness gaming community
 
 </div>
-<div align="center">
 
