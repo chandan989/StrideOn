@@ -38,7 +38,7 @@ Turn outdoor activity into strategic territory battles while earning VERY tokens
 
 | Map & Territory View | Trail Drawing | Leaderboard & Stats |
 |:-------------------:|:-------------:|:-------------------:|
-| ![Map View](./screenshots/map-view.png) | ![Trail Drawing](./screenshots/trail-drawing.png) | ![Leaderboard](./screenshots/leaderboard.png) |
+| ![Map View](/screenshots/map-view.png) | ![Trail Drawing](./screenshots/trail-drawing.png) | ![Leaderboard](./screenshots/leaderboard.png) |
 | H3 hex grid overlay with claimed territories | Live trail creation during movement | Daily rankings and player stats |
 
 | Power-ups Shop | Wallet Integration | Guild System |
