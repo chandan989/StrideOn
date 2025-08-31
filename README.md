@@ -54,7 +54,7 @@ Turn outdoor activity into strategic territory battles while earning VERY tokens
 
 ![Landing Page](./screenshots/landing-page.png)
 
-*Visit our landing page:* [strideon.game](https://strideon.game)
+*Visit our landing page:* [strideon.game](https://strideon.vercel.app/)
 
 Features:
 - Interactive demo of gameplay mechanics
