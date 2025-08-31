@@ -1,5 +1,7 @@
 # StrideOn — Hackathon MVP (End-to-End Guide)
 
+![StrideOn Home](Screenshots/Home.png)
+
 StrideOn is a decentralized running game where real-world joggers conquer and defend territories by moving through them, powered by GPS + H3 grids and optionally settled on-chain (Very Network). This README is a complete hackathon guide to run the entire stack locally and demo the MVP.
 
 Date: 2025-08-31
@@ -14,6 +16,8 @@ Date: 2025-08-31
 - Android client: map, trail drawing, loop closure visualization, presence/leaderboard screens (mock-first for reliability).
 - Backend (FastAPI): health, profiles, presence, sessions, trails/claims, optional on-chain reads; Redis for hot path; Supabase/Postgres for durable data.
 - Verychain: StrideonScores contract and utilities for future settlement and read-only endpoints during the hackathon.
+
+![Architecture Diagram](Screenshots/architecture.png)
 
 ASCII Diagram
 - Android <-> FastAPI (HTTP/WebSocket planned)
@@ -95,7 +99,28 @@ Android:
 - LeaderboardActivity currently uses mock UI for stability; network responses are logged for validation.
 
 ## Screenshots
-- Home.png (root) shows an example home/landing visual; include in your demo deck.
+
+- Welcome screen
+
+![Welcome](Screenshots/welcome.png)
+
+- Login and Register
+
+![Login](Screenshots/login.png)
+
+![Register](Screenshots/Register.png)
+
+- Home and Map
+
+![Home](Screenshots/Home.png)
+
+![Map](Screenshots/Map.png)
+
+- Power-ups UI
+
+![Power-ups](Screenshots/Powerups.png)
+
+![Power-ups 2](Screenshots/Powerups2.png)
 
 ## Subproject READMEs
 - Backend: StrideonBackend/README.md (detailed setup, env, endpoints)

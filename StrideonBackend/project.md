@@ -877,7 +877,7 @@ Migration notes (if you previously created SQL tables for hot-path data):
 
 Env setup
 - REDIS_URL=redis://<host>:<port>/<db>
-- Postgres/Supabase as per your environment; run db/schema.sql in Supabase SQL editor.
+- Postgres/Supabase as per your environment; run StrideonBackend/schema.sql in Supabase SQL editor.
 
 
 ## Running with Docker
