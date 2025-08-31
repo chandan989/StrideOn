@@ -1,6 +1,16 @@
 # StrideOn — Hackathon MVP (End-to-End Guide)
 
-![StrideOn Home](Screenshots/Home.png)
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 16px;">
+      <img src="Screenshots/Home.png" alt="StrideOn Home" width="560" />
+    </td>
+    <td style="vertical-align: top;">
+      <p><strong>StrideOn at a glance.</strong> A decentralized running game where your real-world jog becomes a strategic battle for territory. This guide walks you through running the FastAPI backend, the Android app, and the optional Very Network integration so you can demo the MVP quickly during a hackathon.</p>
+      <p><em>Tip:</em> If you’re short on time, start the backend with Docker, run the app on an emulator using 10.0.2.2, and use the mock leaderboard/presence to showcase the loop-closure and claim visualization.</p>
+    </td>
+  </tr>
+</table>
 
 StrideOn is a decentralized running game where real-world joggers conquer and defend territories by moving through them, powered by GPS + H3 grids and optionally settled on-chain (Very Network). This README is a complete hackathon guide to run the entire stack locally and demo the MVP.
 
@@ -17,7 +27,7 @@ Date: 2025-08-31
 - Backend (FastAPI): health, profiles, presence, sessions, trails/claims, optional on-chain reads; Redis for hot path; Supabase/Postgres for durable data.
 - Verychain: StrideonScores contract and utilities for future settlement and read-only endpoints during the hackathon.
 
-![Architecture Diagram](Screenshots/architecture.png)
+<p align="center"><img src="Screenshots/architecture.png" alt="Architecture Diagram" width="700"></p>
 
 ASCII Diagram
 - Android <-> FastAPI (HTTP/WebSocket planned)
@@ -100,27 +110,27 @@ Android:
 
 ## Screenshots
 
-- Welcome screen
+- Onboarding
 
-![Welcome](Screenshots/welcome.png)
-
-- Login and Register
-
-![Login](Screenshots/login.png)
-
-![Register](Screenshots/Register.png)
+<p>
+  <img src="Screenshots/welcome.png" alt="Welcome" width="240" style="margin-right: 12px;" />
+  <img src="Screenshots/login.png" alt="Login" width="240" style="margin-right: 12px;" />
+  <img src="Screenshots/Register.png" alt="Register" width="240" />
+</p>
 
 - Home and Map
 
-![Home](Screenshots/Home.png)
+<p>
+  <img src="Screenshots/Home.png" alt="Home" width="300" style="margin-right: 12px;" />
+  <img src="Screenshots/Map.png" alt="Map" width="300" />
+</p>
 
-![Map](Screenshots/Map.png)
+- Power-ups
 
-- Power-ups UI
-
-![Power-ups](Screenshots/Powerups.png)
-
-![Power-ups 2](Screenshots/Powerups2.png)
+<p>
+  <img src="Screenshots/Powerups.png" alt="Power-ups" width="300" style="margin-right: 12px;" />
+  <img src="Screenshots/Powerups2.png" alt="Power-ups 2" width="300" />
+</p>
 
 ## Subproject READMEs
 - Backend: StrideonBackend/README.md (detailed setup, env, endpoints)
