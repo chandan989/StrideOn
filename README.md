@@ -55,7 +55,7 @@ This creates a thrilling battle for territory where every street corner holds po
 
 | Power-ups Detail | System Architecture |
 |:----------------:|:-------------------:|
-| ![Power-ups Detail](./Screenshots/Powerups2.png) | ![Architecture](./Screenshots/architecture.png) |
+| ![Power-ups Detail](./Screenshots/Powerups2.png) | ![Architecture](./Screenshots/diagram.png) |
 | *Detailed power-up effects and costs* | *Complete technical system design* |
 
 </div>
