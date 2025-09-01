@@ -11,7 +11,7 @@
 
 *Turn outdoor activity into strategic territory battles while earning VERY tokens*
 
-📱 **[Download App](#-getting-started)** | 🎥 **[Demo Video](https://www.youtube.com/watch?v=z3qVbHfGXVc)** | 🌐 **[Landing Page](https://strideon.vercel.app/)** | 📚 **[Documentation](https://www.notion.so/Complete-Technical-Architecture-Data-Flow-25eda6675e0c80228517e6003ed156c7)**
+📱 **[Android_App](https://github.com/chandan989/StrideOn/tree/main/StrideonApp)** | 🎥 **[Demo Video](https://www.youtube.com/watch?v=z3qVbHfGXVc)** | 🌐 **[Landing Page](https://strideon.vercel.app/)** | 📚 **[Documentation](https://www.notion.so/Complete-Technical-Architecture-Data-Flow-25eda6675e0c80228517e6003ed156c7)**
 
 </div>
 
