@@ -115,6 +115,18 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* 3D carousel helpers */
+        .perspective-3d { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        #hero-slideshow .slide { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        /* Subtle inner shadow for depth */
+        #hero-slideshow::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 30px 60px rgba(0,0,0,0.35), inset 0 -30px 60px rgba(0,0,0,0.35); border-radius: 1.5rem; }
+        /* Nav buttons: barely visible, reveal a bit on hover/focus */
+        .carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; background: rgba(15,23,42,0.6); color: rgba(255,255,255,0.9); border: 1px solid rgba(148,163,184,0.25); opacity: 0.15; transition: opacity 0.2s ease, background 0.2s ease; z-index: 10; }
+        .carousel-nav:hover, .carousel-nav:focus { opacity: 0.5; outline: none; background: rgba(15,23,42,0.8); }
+        .carousel-nav:focus-visible { box-shadow: 0 0 0 3px rgba(163,230,53,0.35); }
+        .carousel-prev { left: 8px; }
+        .carousel-next { right: 8px; }
     </style>
 </head>
 
@@ -123,29 +135,24 @@
     <!-- Header / Nav -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-slate-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white">StrideOn <span class="text-lime-400">⚡️</span></h1>
+            <div class="flex items-center space-x-3">
+                <svg class="w-8 h-8 text-lime-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" fill="currentColor"/>
+                </svg>
+                <h1 class="text-2xl font-bold text-white">StrideOn</h1>
+            </div>
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center space-x-6">
                 <a href="https://www.notion.so/Complete-Technical-Architecture-Data-Flow-25eda6675e0c80228517e6003ed156c7?source=copy_link"
                     target="_blank" rel="noopener noreferrer" title="Documentation (Notion)"
-                    class="text-slate-400 hover:text-white transition-colors">
-                    <svg class="w-6 h-6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor">
-                        <title>Notion</title>
-                        <path
-                            d="M23.156 12.013c0 1.636-.211 3.22-.633 4.748-.422 1.528-1.033 2.95-1.833 4.265-.799 1.316-1.775 2.45-2.928 3.4s-2.45 1.705-3.89 2.261c-1.44.556-2.95.834-4.531.834-2.314 0-4.54-.482-6.677-1.445C.59 24.936 0 23.892 0 22.754V1.246C0 .58.261.127.783.042L1.044 0h11.95v14.933h.01a.34.34 0 0 0 .147.142l.068.04H13.5v-3.03h-1.844v3.03h-.01c-.1-.06-.18-.13-.241-.21l-.03-.04V0h5.181c1.558 0 3.015.253 4.368.76s2.517 1.22 3.493 2.135c.976.915 1.74 2.012 2.292 3.29s.828 2.66.828 4.148zm-5.181 5.344V0h-1.833v10.978c0 .248.014.53.041.844.028.314.078.61.151.888.073.278.17.525.291.74.122.216.27.391.444.526.174.135.378.228.61.28.232.052.48.078.74.078.628 0 1.2-.132 1.711-.397.51-.265.889-.636 1.134-1.112.244-.476.366-1.045.366-1.706 0-.66-.135-1.258-.405-1.793-.27-.535-.678-.96-1.223-1.274-.545-.314-1.2-.47-1.966-.47z" />
-                    </svg>
+                    class="text-slate-400 hover:text-white transition-colors font-medium" aria-label="Planning">
+                    Planning
                 </a>
                 <a href="https://www.figma.com/board/TDvmb7NZhGjIIskTa9DAgy/StrideOn?node-id=0-1&t=XZz5CEsqnGmjazmq-1"
                     target="_blank" rel="noopener noreferrer" title="Architecture (Figma)"
-                    class="text-slate-400 hover:text-white transition-colors">
-                    <svg class="w-6 h-6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor">
-                        <title>Figma</title>
-                        <path
-                            d="M12 24a6 6 0 0 1-6-6v-6h6a6 6 0 0 1 0 12zm0-18a6 6 0 0 0-6 6h12a6 6 0 0 0-6-6zm-6 6a6 6 0 0 0 6 6V6a6 6 0 0 0-6 6zm12 0a6 6 0 0 1-6 6v-6a6 6 0 0 1 6 0zm-6 6a6 6 0 0 0 6 6v-6a6 6 0 0 0-6 6z" />
-                    </svg>
+                    class="text-slate-400 hover:text-white transition-colors font-medium" aria-label="Architecture">
+                    Architecture
                 </a>
                 <a href="#beta" class="btn btn-primary text-white font-semibold py-2 px-5 rounded-lg shadow-md ml-4">
                     Request Access
@@ -186,14 +193,35 @@
                     <a href="https://github.com/chandan989/StrideOn" target="_blank" rel="noopener noreferrer"
                         class="btn btn-secondary text-white font-bold py-3 px-8 rounded-lg text-lg">View on GitHub</a>
                 </div>
-                <!-- Cropped Image Section -->
+                <!-- Hero Slideshow -->
                 <div class="flex justify-center">
-                    <div class="relative w-full max-w-sm h-[500px] overflow-hidden rounded-3xl">
-                        <div
-                            class="absolute -inset-2 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur-xl opacity-40">
+                    <div class="relative w-full max-w-sm h-[500px] overflow-hidden rounded-3xl" aria-label="StrideOn app screenshots slideshow" role="region">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur-xl opacity-40"></div>
+
+                        <div id="hero-slideshow" class="relative h-full perspective-3d">
+                            <div class="track w-full h-full transform-style-3d transition-transform duration-700 ease-in-out">
+                            <img src="Screenshots/Home.png" alt="StrideOn Home screen" class="slide relative rounded-3xl border-2 border-slate-700 shadow-2xl w-full h-full object-cover opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="Screenshots/Map.png" alt="StrideOn Map screen" class="slide absolute top-0 left-0 rounded-3xl border-2 border-slate-700 shadow-2xl w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="Screenshots/Powerups.png" alt="StrideOn Powerups screen" class="slide absolute top-0 left-0 rounded-3xl border-2 border-slate-700 shadow-2xl w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="Screenshots/Powerups2.png" alt="StrideOn Powerups screen 2" class="slide absolute top-0 left-0 rounded-3xl border-2 border-slate-700 shadow-2xl w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out">
+                            </div>
                         </div>
-                        <img src="Screenshots/Home.png" alt="StrideOn App Screenshot"
-                            class="relative rounded-3xl border-2 border-slate-700 shadow-2xl w-full">
+
+                        <!-- Prev/Next (barely visible) -->
+                        <button class="carousel-nav carousel-prev" aria-label="Previous slide" type="button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+                        </button>
+                        <button class="carousel-nav carousel-next" aria-label="Next slide" type="button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10" aria-hidden="true">
+                            <span class="dot w-2 h-2 rounded-full bg-white/40"></span>
+                            <span class="dot w-2 h-2 rounded-full bg-white/40"></span>
+                            <span class="dot w-2 h-2 rounded-full bg-white/40"></span>
+                            <span class="dot w-2 h-2 rounded-full bg-white/40"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -478,8 +506,74 @@
         sections.forEach(section => {
             observer.observe(section);
         });
+
+        // Hero slideshow logic (3D carousel)
+        (function () {
+            const root = document.getElementById('hero-slideshow');
+            if (!root) return;
+            const track = root.querySelector('.track');
+            const slides = Array.from(root.querySelectorAll('.slide'));
+            const dots = Array.from(root.parentElement.querySelectorAll('.dot'));
+            const btnPrev = root.parentElement.querySelector('.carousel-prev');
+            const btnNext = root.parentElement.querySelector('.carousel-next');
+            const n = slides.length;
+            if (!n) return;
+
+            // Arrange slides in a 3D ring
+            const angle = 360 / n;
+            const radius = 300; // px depth for translateZ
+            slides.forEach((s, i) => {
+                s.style.position = 'absolute';
+                s.style.top = '0';
+                s.style.left = '0';
+                s.style.width = '100%';
+                s.style.height = '100%';
+                s.style.opacity = '1';
+                s.style.transform = `rotateY(${i * angle}deg) translateZ(${radius}px)`;
+            });
+
+            let idx = 0;
+            let timer;
+
+            function updateDots(i) {
+                dots.forEach((d, j) => {
+                    d.style.backgroundColor = j === i ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.35)';
+                });
+            }
+
+            function go(i) {
+                idx = (i + n) % n;
+                const rot = -idx * angle;
+                track.style.transform = `translateZ(-${radius}px) rotateY(${rot}deg)`;
+                updateDots(idx);
+                restart();
+            }
+
+            function next() { go(idx + 1); }
+            function prev() { go(idx - 1); }
+
+            function start() {
+                timer = setInterval(next, 3000);
+            }
+            function stop() {
+                clearInterval(timer);
+            }
+            function restart() { stop(); start(); }
+
+            // Init
+            track.style.transform = `translateZ(-${radius}px) rotateY(0deg)`;
+            updateDots(0);
+            start();
+
+            // Controls
+            if (btnNext) btnNext.addEventListener('click', next);
+            if (btnPrev) btnPrev.addEventListener('click', prev);
+            // Pause on hover for better UX
+            root.parentElement.addEventListener('mouseenter', stop);
+            root.parentElement.addEventListener('mouseleave', start);
+        })();
     </script>
 
 </body>
 
-</html>j
+</html>
