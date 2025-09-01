@@ -129,4 +129,14 @@
         </LinearLayout>
     </ScrollView>
 
+    <Button
+        android:id="@+id/check_demo_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Demo Score"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_back"
+        android:padding="12dp"
+        android:layout_marginTop="12dp" />
+
 </LinearLayout>

@@ -322,3 +322,75 @@ jobs:
 
 **Built with ❤ by the StrideOn Android Team**
 
+
+
+
+## Current Implementation & How To Run (MVP)
+
+This repository currently ships an XML-based Android app (not Compose) that connects to the included FastAPI backend and, through it, to an EVM chain (Very Network demo via local Hardhat). Key points:
+
+- UI: Activities with XML layouts (Splash, Welcome, Login, Home, MainActivity with Google Maps, LeaderboardActivity).
+- Networking: Minimal OkHttp-based ApiClient (no Retrofit/Hilt yet) using BuildConfig.API_BASE_URL.
+- Web3: The Android app calls backend endpoints that use web3.py to read from the contract. The Home screen integrates Wepin SDK for wallet login/UI.
+
+### Prerequisites
+- Android Studio Hedgehog+ and an emulator/device
+- Python 3.10+
+- Node.js (for local Hardhat Very RPC in `very-network-integration`)
+
+### 1) Start the Very Network local chain (Hardhat)
+```
+cd very-network-integration
+npm install
+npx hardhat node
+```
+This exposes an RPC on http://127.0.0.1:8545 and deploys demo contracts. Note the contract address in the logs if different from default.
+
+### 2) Start the backend (FastAPI)
+```
+cd StrideonBackend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+# Optionally configure env vars if your contract or RPC differ
+export VERY_RPC_URL="http://127.0.0.1:8545"
+export VERY_CHAIN_ID=31337
+export VERY_CONTRACT_ADDR="0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+uvicorn main:app --reload --port 8000
+```
+Backend health:
+- http://localhost:8000/health
+- http://localhost:8000/verynet/health
+- http://localhost:8000/verynet/leaderboard?count=10
+- http://localhost:8000/verynet/score/<address>
+
+### 3) Configure Android app base URL
+The Android app points to the backend via BuildConfig:
+- File: `StrideonApp/app/build.gradle.kts`
+- Field: `buildConfigField("String", "API_BASE_URL", "\"http://10.0.2.2:8000\"")`
+
+Notes:
+- `10.0.2.2` is the Android emulator loopback to your host’s `localhost`. If you run on a physical device, replace with your machine IP and ensure the port is reachable.
+
+### 4) Run the Android app
+- Build/install from Android Studio or:
+```
+cd StrideonApp
+./gradlew installDebug
+```
+
+### 5) What to expect in the app
+- Splash screen pings `/health` and shows a Toast whether the backend is reachable.
+- Home screen: tap the StrideOn favicon (top-right) to open the Leaderboard.
+- Leaderboard screen:
+  - Loads live data from `/verynet/leaderboard` and fills the 1–8 ranks.
+  - Includes a "Check Demo Score" button that calls `/verynet/score` for a sample address and shows the result in a Toast.
+- MainActivity: GPS + Map screen with a simplified hex grid for demo purposes.
+- Wepin: Home integrates Wepin SDK for wallet login/widget (requires valid appId/appKey and providers).
+
+### 6) Google Maps API Key
+Currently the key is specified in `AndroidManifest.xml` under the meta-data tag. Replace the value with your key if needed. For production, consider moving it to `local.properties`/manifest placeholders.
+
+### Roadmap (from original README)
+- Migrate UI to Jetpack Compose and add Hilt/Retrofit/Room per original architecture.
+- Expand on-chain interactions and secure auth flows.
+- Add tests and CI.
