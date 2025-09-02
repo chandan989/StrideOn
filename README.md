@@ -3,7 +3,6 @@
 <div align="center">
 
 ![StrideOn Logo](https://img.shields.io/badge/StrideOn-Move--to--Earn-brightgreen)
-![Signify Mainnet](https://img.shields.io/badge/Blockchain-Signify%20Mainnet-blue)
 ![Very Network](https://img.shields.io/badge/Network-Very%20Network-purple)
 ![Real-time](https://img.shields.io/badge/Gaming-Real--time-orange)
 ![H3 Hex Grid](https://img.shields.io/badge/Spatial-H3%20Hex%20Grid-yellow)
