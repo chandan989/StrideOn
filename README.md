@@ -539,7 +539,7 @@ This project is licensed under the MIT License, promoting open collaboration whi
 
 *Join the movement that's making fitness fun and Web3 accessible to everyone*
 
-[Download Now](#-getting-started) • [View Demo](https://www.youtube.com/watch?v=z3qVbHfGXVc) • [Visit Landing Page](https://strideon.vercel.app/)
+[Download Now](#-getting-started) • [View Demo](https://youtu.be/CH1oPjP5CP4) • [Visit Landing Page](https://strideon.vercel.app/)
 
 *Built with ❤️ for the global fitness gaming community*
 
