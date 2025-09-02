@@ -102,7 +102,7 @@ StrideOn uses a sophisticated hybrid architecture that leverages the best of bot
 - **H3 Spatial Engine**: Uses Uber's H3 hexagonal grid system for precise territory mapping and efficient collision detection
 
 **🔒 Trust & Settlement Layer (On-chain)**
-- **Signify Mainnet**: Production blockchain providing high performance with low costs for gaming transactions
+- **Verychain Mainnet**: Production blockchain providing high performance with low costs for gaming transactions
 - **Smart Contracts**: Handle secure banking of claimed territories and transparent reward distribution
 - **Merkle Proof System**: Batch verification of game results for gas efficiency while maintaining security
 - **VERY Token Integration**: Native token for all economic activities within the game
@@ -114,9 +114,9 @@ StrideOn uses a sophisticated hybrid architecture that leverages the best of bot
 4. **Secure Banking**: When players choose to bank their progress, results are cryptographically verified and settled on-chain
 5. **Reward Distribution**: Daily automated process distributes VERY tokens to top performers using smart contracts
 
-### What Makes Signify Mainnet Special?
+### What Makes verychain Mainnet Special?
 
-**Signify Mainnet** serves as our production blockchain infrastructure, chosen for its gaming-optimized features:
+**verychain Mainnet** serves as our production blockchain infrastructure, chosen for its gaming-optimized features:
 - **High Throughput**: Processes thousands of transactions per second for smooth gameplay
 - **Low Latency**: Block finality in seconds rather than minutes for responsive gaming
 - **Minimal Costs**: Gas fees low enough to enable frequent micro-transactions
@@ -423,7 +423,6 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 REDIS_URL=redis://localhost:6379/0
 
 # Blockchain Configuration
-SIGNIFY_RPC_URL=https://rpc.signify.network
 VERY_TOKEN_CONTRACT=0x1234567890123456789012345678901234567890
 
 # Wepin Wallet
@@ -514,7 +513,7 @@ StrideOn represents the future of Web3 gaming where blockchain technology enhanc
 ### Technology Stack
 - **Very Network**: Blockchain infrastructure and VERY token integration
 - **VeryChat**: Social features and community communication
-- **Signify Mainnet**: Production blockchain deployment
+- **Verychain Mainnet**: Production blockchain deployment
 - **Supabase**: Backend infrastructure and real-time database
 - **H3 by Uber**: Spatial indexing and territory calculation
 - **Wepin**: Secure wallet management and key custody
