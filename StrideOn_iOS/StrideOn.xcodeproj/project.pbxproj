@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176042842F05018000CF8659 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 176042832F05018000CF8659 /* Auth */; };
+		176042862F05018000CF8659 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 176042852F05018000CF8659 /* Functions */; };
+		176042882F05018000CF8659 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 176042872F05018000CF8659 /* PostgREST */; };
+		1760428A2F05018000CF8659 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 176042892F05018000CF8659 /* Realtime */; };
+		1760428C2F05018000CF8659 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 1760428B2F05018000CF8659 /* Storage */; };
+		1760428E2F05018000CF8659 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1760428D2F05018000CF8659 /* Supabase */; };
 		17F9D5672F02FB440063F8FA /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */; };
 		17F9D56A2F02FB680063F8FA /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 17F9D5692F02FB680063F8FA /* AlertToast */; };
-		29F7146691A4D042C267D8C7 /* Pods_StrideOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */; };
+		1AD80ED433C288D891097328 /* Pods_StrideOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636185AF2A71DB31C75155A5 /* Pods_StrideOn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +49,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09CA28293BD3A76153ED04D5 /* Pods-StrideOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.debug.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.debug.xcconfig"; sourceTree = "<group>"; };
 		17FCA0562F02C6B70014652B /* StrideOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrideOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FCA0632F02C6B90014652B /* StrideOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FCA06D2F02C6B90014652B /* StrideOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.release.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.release.xcconfig"; sourceTree = "<group>"; };
-		8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrideOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.debug.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.debug.xcconfig"; sourceTree = "<group>"; };
+		636185AF2A71DB31C75155A5 /* Pods_StrideOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrideOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E417AE8515184596BB4F2F /* Pods-StrideOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.release.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -72,11 +78,15 @@
 		};
 		17FCA0662F02C6B90014652B /* StrideOnTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = StrideOnTests;
 			sourceTree = "<group>";
 		};
 		17FCA0702F02C6B90014652B /* StrideOnUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = StrideOnUITests;
 			sourceTree = "<group>";
 		};
@@ -87,9 +97,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1760428A2F05018000CF8659 /* Realtime in Frameworks */,
+				176042882F05018000CF8659 /* PostgREST in Frameworks */,
+				176042862F05018000CF8659 /* Functions in Frameworks */,
 				17F9D5672F02FB440063F8FA /* SwiftfulLoadingIndicators in Frameworks */,
+				1760428C2F05018000CF8659 /* Storage in Frameworks */,
+				1760428E2F05018000CF8659 /* Supabase in Frameworks */,
 				17F9D56A2F02FB680063F8FA /* AlertToast in Frameworks */,
-				29F7146691A4D042C267D8C7 /* Pods_StrideOn.framework in Frameworks */,
+				176042842F05018000CF8659 /* Auth in Frameworks */,
+				1AD80ED433C288D891097328 /* Pods_StrideOn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,14 +126,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		090C4B3C15FB6848B4557C43 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		17FCA04D2F02C6B70014652B = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +134,7 @@
 				17FCA0702F02C6B90014652B /* StrideOnUITests */,
 				17FCA0572F02C6B70014652B /* Products */,
 				C74455025C210E92D655C893 /* Pods */,
-				090C4B3C15FB6848B4557C43 /* Frameworks */,
+				A2AA9A2A6969D06CCCC0544A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,11 +148,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A2AA9A2A6969D06CCCC0544A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				636185AF2A71DB31C75155A5 /* Pods_StrideOn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C74455025C210E92D655C893 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */,
-				400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */,
+				09CA28293BD3A76153ED04D5 /* Pods-StrideOn.debug.xcconfig */,
+				A1E417AE8515184596BB4F2F /* Pods-StrideOn.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -156,12 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17FCA0772F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOn" */;
 			buildPhases = (
-				E3C7CD1D52C4557BA68F43D7 /* [CP] Check Pods Manifest.lock */,
+				834618A59C73675FDC7D6C40 /* [CP] Check Pods Manifest.lock */,
 				17FCA0522F02C6B70014652B /* Sources */,
 				17FCA0532F02C6B70014652B /* Frameworks */,
 				17FCA0542F02C6B70014652B /* Resources */,
 				17561D082F03A1CC007871E7 /* Embed Frameworks */,
-				09917557FD667EDF237C5BF9 /* [CP] Embed Pods Frameworks */,
+				3795639330B253D8B09137A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +190,12 @@
 			packageProductDependencies = (
 				17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */,
 				17F9D5692F02FB680063F8FA /* AlertToast */,
+				176042832F05018000CF8659 /* Auth */,
+				176042852F05018000CF8659 /* Functions */,
+				176042872F05018000CF8659 /* PostgREST */,
+				176042892F05018000CF8659 /* Realtime */,
+				1760428B2F05018000CF8659 /* Storage */,
+				1760428D2F05018000CF8659 /* Supabase */,
 			);
 			productName = StrideOn;
 			productReference = 17FCA0562F02C6B70014652B /* StrideOn.app */;
@@ -256,6 +278,7 @@
 			packageReferences = (
 				17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 				17F9D5682F02FB680063F8FA /* XCRemoteSwiftPackageReference "AlertToast" */,
+				176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17FCA0572F02C6B70014652B /* Products */;
@@ -294,7 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09917557FD667EDF237C5BF9 /* [CP] Embed Pods Frameworks */ = {
+		3795639330B253D8B09137A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,20 +325,16 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E3C7CD1D52C4557BA68F43D7 /* [CP] Check Pods Manifest.lock */ = {
+		834618A59C73675FDC7D6C40 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -500,7 +519,7 @@
 		};
 		17FCA0782F02C6B90014652B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */;
+			baseConfigurationReference = 09CA28293BD3A76153ED04D5 /* Pods-StrideOn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,7 +553,7 @@
 		};
 		17FCA0792F02C6B90014652B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */;
+			baseConfigurationReference = A1E417AE8515184596BB4F2F /* Pods-StrideOn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -692,6 +711,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
 		17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators";
@@ -711,6 +738,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		176042832F05018000CF8659 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		176042852F05018000CF8659 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		176042872F05018000CF8659 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		176042892F05018000CF8659 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		1760428B2F05018000CF8659 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		1760428D2F05018000CF8659 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 176042822F05018000CF8659 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
 		17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;

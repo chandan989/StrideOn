@@ -13,72 +13,74 @@ struct GameView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var position: MapCameraPosition = .camera(
-        MapCamera(
-            centerCoordinate: CLLocationCoordinate2D(latitude: 37.3346, longitude: -122.0090),
-            distance: 2500,
-            heading: 0,
-            pitch: 60
-        )
-    )
+    // Use user tracking mode
+    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+    
+    @ObservedObject private var locationManager = LocationManager.shared
     
     // --- Mock Data ---
-    // These arrays represent different routes on the map.
+    // Access mock data from shared model
+    @ObservedObject private var mockData = MockData.shared
     
-    /// The main route, shown in bright green.
-    let mainRoute: [CLLocationCoordinate2D] = [
-        .init(latitude: 37.3364, longitude: -122.0125),
-        .init(latitude: 37.3348, longitude: -122.0109),
-        .init(latitude: 37.3328, longitude: -122.0085)
-    ]
-    
-    /// A secondary route, shown in cyan.
-    let secondaryRoute: [CLLocationCoordinate2D] = [
-        .init(latitude: 37.3391, longitude: -122.0118),
-        .init(latitude: 37.3375, longitude: -122.0100)
-    ]
-    
-    /// Another secondary route, shown in red.
-    let tertiaryRoute: [CLLocationCoordinate2D] = [
-        .init(latitude: 37.3378, longitude: -122.0070),
-        .init(latitude: 37.3365, longitude: -122.0055)
-    ]
+    private var gameState: GameState {
+        mockData.gameState
+    }
 
     var body: some View {
         ZStack(alignment: .top){
             // MARK: - Map Background
             Map(position: $position) {
-                // Draws the mock routes as polylines on the map.
-                MapPolyline(coordinates: mainRoute)
-                    .stroke(Color.green, lineWidth: 6)
-                
-                MapPolyline(coordinates: secondaryRoute)
-                    .stroke(Color.cyan, lineWidth: 6)
-                
-                MapPolyline(coordinates: tertiaryRoute)
-                    .stroke(Color.red, lineWidth: 6)
-                
-                // Adds circular annotations at the start of the secondary routes.
-                Annotation("", coordinate: secondaryRoute.first!) {
-                    Circle()
-                        .fill(Color.cyan)
-                        .frame(width: 15, height: 15)
-                        .shadow(radius: 3)
+                // Draw Claimed Areas (Polygons)
+                ForEach(gameState.claimedAreas) { area in
+                    MapPolygon(coordinates: area.points.map { $0.coordinate })
+                        .foregroundStyle(Color(hex: area.colorHex).opacity(0.4))
+                        .stroke(Color(hex: area.colorHex), lineWidth: 2)
                 }
                 
-                Annotation("", coordinate: tertiaryRoute.first!) {
-                     Circle()
-                        .fill(Color.red)
-                        .frame(width: 15, height: 15)
-                        .shadow(radius: 3)
+                // Draws the active trail (User)
+                MapPolyline(coordinates: gameState.activeTrail.points.map { $0.coordinate })
+                    .stroke(Color(hex: gameState.activeTrail.colorHex), style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
+                
+                // Show real user location
+                if let userLoc = locationManager.userLocation {
+                    Annotation("You", coordinate: userLoc.coordinate) {
+                        Circle()
+                            .fill(Color(hex: "#00FF00")) // Green
+                            .frame(width: 20, height: 20)
+                            .overlay(Circle().stroke(Color.white, lineWidth: 3))
+                            .shadow(radius: 5)
+                            .scaleEffect(1.0) // Fixes occasional sizing issues with Maps
+                    }
+                }
+                
+                // Draw other trails
+                ForEach(gameState.otherTrails) { trail in
+                    MapPolyline(coordinates: trail.points.map { $0.coordinate })
+                        .stroke(Color(hex: trail.colorHex), style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
+                    
+                    if let lastPoint = trail.points.last {
+                        Annotation("", coordinate: lastPoint.coordinate) {
+                            Circle()
+                                .fill(Color(hex: trail.colorHex))
+                                .frame(width: 15, height: 15)
+                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                .shadow(radius: 3)
+                        }
+                    }
                 }
             }
             .mapControlVisibility(.hidden) // Hides default map controls like zoom
             .ignoresSafeArea()
+            .onAppear {
+                locationManager.requestPermission()
+                if !mockData.isSessionActive {
+                     mockData.startSession()
+                }
+            }
 
             // MARK: - UI Overlay
             VStack {
-                TopTimerView()
+                TopTimerView(elapsedTime: mockData.timeRemaining)
                 Spacer()
                 
                 HStack(alignment: .bottom, spacing: 12) {
@@ -99,7 +101,7 @@ struct GameView: View {
                                     .padding([.top],5)
                                 
                                 HStack(spacing: 5){
-                                    Text("0.2")
+                                    Text(String(format: "%.2f", mockData.gameState.totalDistance))
                                         .customFont(.semiBold,15)
                                         .foregroundColor(.white)
                                     
@@ -112,7 +114,7 @@ struct GameView: View {
                                     .fill(.black.opacity(0.65))
                             )
                             
-                            CaloriesCard(value: "238")
+                            CaloriesCard(value: String(format: "%.0f", mockData.gameState.caloriesBurned))
                         }
                         
                         HStack{
@@ -150,12 +152,14 @@ struct GameView: View {
 
 /// The top card view displaying the timer and group info.
 struct TopTimerView: View {
+    var elapsedTime: TimeInterval
+    
     var body: some View {
         ZStack{
             HStack{
                 Spacer()
                 VStack(spacing: 2) {
-                    Text("00:30:00")
+                    Text(timeString(from: elapsedTime))
                         .customFont(.bold,30)
                         .foregroundColor(.white)
                     Text("Time Left")
@@ -177,6 +181,12 @@ struct TopTimerView: View {
         .background(.black.opacity(0.65))
         .clipShape(Capsule())
         .shadow(radius: 10)
+    }
+    
+    func timeString(from timeInterval: TimeInterval) -> String {
+        let minutes = Int(timeInterval) / 60
+        let seconds = Int(timeInterval) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }
 

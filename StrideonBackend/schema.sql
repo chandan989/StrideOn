@@ -16,10 +16,8 @@ EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 -- ===== profiles (1:1 auth.users) =====
 CREATE TABLE IF NOT EXISTS public.profiles (
   user_id uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-  username text UNIQUE,
-  avatar_url text,
-  city text,
-  wepin_user_id text UNIQUE,
+  user_name text UNIQUE,
+  very_user_id text UNIQUE,
   wepin_address text,
   created_at timestamptz NOT NULL DEFAULT now()
 );
@@ -30,14 +28,13 @@ CREATE INDEX IF NOT EXISTS idx_profiles_wepin_address ON public.profiles(wepin_a
 CREATE TABLE IF NOT EXISTS public.sessions (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id uuid NOT NULL REFERENCES public.profiles(user_id) ON DELETE CASCADE,
-  city text,
   started_at timestamptz NOT NULL DEFAULT now(),
   ended_at timestamptz,
   status text CHECK (status IN ('active','ended')) DEFAULT 'active'
 );
 ALTER TABLE public.sessions ENABLE ROW LEVEL SECURITY;
 CREATE INDEX IF NOT EXISTS idx_sessions_user ON public.sessions(user_id);
-CREATE INDEX IF NOT EXISTS idx_sessions_city ON public.sessions(city);
+
 
 -- ===== gps_points (raw stream with H3) =====
 -- MOVED TO REDIS: High-frequency stream should not be persisted in SQL.
@@ -84,14 +81,13 @@ CREATE INDEX IF NOT EXISTS idx_claims_session ON public.claims(session_id);
 CREATE TABLE IF NOT EXISTS public.leaderboard_daily (
   id bigserial PRIMARY KEY,
   day date NOT NULL,
-  city text,
   user_id uuid NOT NULL REFERENCES public.profiles(user_id) ON DELETE CASCADE,
   score integer NOT NULL DEFAULT 0,
   rank integer,
-  UNIQUE(day, city, user_id)
+  UNIQUE(day, user_id)
 );
 ALTER TABLE public.leaderboard_daily ENABLE ROW LEVEL SECURITY;
-CREATE INDEX IF NOT EXISTS idx_lb_day_city_score ON public.leaderboard_daily(day, city, score DESC);
+CREATE INDEX IF NOT EXISTS idx_lb_day_score ON public.leaderboard_daily(day, score DESC);
 
 -- ===== Basic owner RLS policies =====
 -- profiles: user can read all, upsert own row
@@ -175,7 +171,6 @@ CREATE TABLE IF NOT EXISTS public.banked_results (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id uuid NOT NULL REFERENCES public.profiles(user_id) ON DELETE CASCADE,
   session_id uuid NOT NULL REFERENCES public.sessions(id) ON DELETE CASCADE,
-  city text,
   ts timestamptz NOT NULL DEFAULT now(),
   -- day derived from ts (UTC) computed via trigger to avoid GENERATED expression immutability issues
   day date NOT NULL,
@@ -185,7 +180,7 @@ CREATE TABLE IF NOT EXISTS public.banked_results (
   signature text
 );
 ALTER TABLE public.banked_results ENABLE ROW LEVEL SECURITY;
-CREATE INDEX IF NOT EXISTS idx_banked_day_city_user ON public.banked_results(day, city, user_id);
+CREATE INDEX IF NOT EXISTS idx_banked_day_user ON public.banked_results(day, user_id);
 CREATE INDEX IF NOT EXISTS idx_banked_session ON public.banked_results(session_id);
 
 -- Trigger to compute day from ts in UTC

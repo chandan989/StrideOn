@@ -26,5 +26,7 @@
 		<string>LufgaExtraBold.ttf</string>
 		<string>LufgaBlack.ttf</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>StrideOn needs your location to track your runs and show you on the map.</string>
 </dict>
 </plist>

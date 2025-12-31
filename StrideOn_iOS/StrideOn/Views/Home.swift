@@ -8,39 +8,31 @@
 import SwiftUI
 import MapKit
 
-struct Location: Identifiable {
-    let id = UUID()
-    let coordinate: CLLocationCoordinate2D
-}
 
 struct Home: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @EnvironmentObject var wepinManager: WepinManager
     @State private var parentViewController: UIViewController?
+    @ObservedObject private var mockData = MockData.shared // Observe the shared instance
+    @ObservedObject private var locationManager = LocationManager.shared // Observe location manager
     
-    @State private var cameraPosition: MapCameraPosition = .region(
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 26.8500, longitude: 80.9499),
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        )
-    )
+    @State private var cameraPosition: MapCameraPosition = .userLocation(fallback: .automatic)
     
-    // Mock data for the user's route polyline.
-    private let route: [Location] = [
-        .init(coordinate: .init(latitude: 26.8500, longitude: 80.9499)),
-        .init(coordinate: .init(latitude: 26.8515, longitude: 80.9515)),
-        .init(coordinate: .init(latitude: 26.8525, longitude: 80.9535))
-    ]
+    // Access mock data through the observed object
+    private var activeTrail: Trail {
+        mockData.gameState.activeTrail
+    }
     
     // Computed property to easily get just the coordinates for the MapPolyline.
     private var routeCoordinates: [CLLocationCoordinate2D] {
-        route.map { $0.coordinate }
+        activeTrail.points.map { $0.coordinate }
     }
     
     var body: some View {
         NavigationStack{
             ZStack {
+
                 
                 VStack(alignment: .leading, spacing: 0){
                     
@@ -70,7 +62,7 @@ struct Home: View {
                     
                     Spacer().frame(height: 20)
                     
-                    Text("Hi, Chandan")
+                    Text("Hi, \(mockData.gameState.currentUser?.userName ?? "User")") // Dynamic name
                         .customFont(.semiBold,13)
                         .foregroundStyle(.nsTxt)
                     
@@ -103,15 +95,50 @@ struct Home: View {
                         HStack(spacing: 20){
                             ZStack(alignment: .topLeading) {
                                 Map(position: $cameraPosition) {
+                                    // Draw Claimed Areas (Polygons)
+                                    ForEach(mockData.gameState.claimedAreas) { area in
+                                        MapPolygon(coordinates: area.points.map { $0.coordinate })
+                                            .foregroundStyle(Color(hex: area.colorHex).opacity(0.4))
+                                            .stroke(Color(hex: area.colorHex), lineWidth: 2)
+                                    }
+                                    
                                     // Add the route line to the map.
                                     MapPolyline(coordinates: routeCoordinates)
                                         .stroke(.accent, lineWidth: 5)
                                     
-                                    // Add custom start marker at the FIRST coordinate.
-                                    if let firstCoordinate = routeCoordinates.first {
-                                        Annotation("", coordinate: firstCoordinate) {
-                                            UserMarker()
+                                    // Show real user location if available
+                                    if let userLoc = locationManager.userLocation {
+                                        Annotation("You", coordinate: userLoc.coordinate) {
+                                            Circle()
+                                                .fill(Color(hex: "#00FF00")) // Green
+                                                .frame(width: 12, height: 12)
+                                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                                .shadow(radius: 5)
                                         }
+                                    } else if let firstCoordinate = routeCoordinates.first {
+                                        // Fallback to mock start if no user location
+                                        Annotation("", coordinate: firstCoordinate) {
+                                            Circle()
+                                                .fill(Color(hex: "#00FF00")) // Green
+                                                .frame(width: 12, height: 12)
+                                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                                .shadow(radius: 5)
+                                        }
+                                    }
+                                    
+                                    // Draw Other Users (Moving Dots)
+                                    ForEach(mockData.gameState.otherTrails) { trail in
+                                        if let lastPoint = trail.points.last {
+                                            Annotation("User", coordinate: lastPoint.coordinate) {
+                                                Circle()
+                                                    .fill(Color(hex: trail.colorHex))
+                                                    .frame(width: 12, height: 12)
+                                                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                                    .shadow(radius: 3)
+                                            }
+                                        }
+                                        MapPolyline(coordinates: trail.points.map { $0.coordinate })
+                                            .stroke(Color(hex: trail.colorHex).opacity(0.5), lineWidth: 3)
                                     }
                                     
                                     // Add a small dot at the LAST coordinate.
@@ -129,6 +156,9 @@ struct Home: View {
                                                     showsTraffic: false))
                                 .ignoresSafeArea()
                                 .preferredColorScheme(.dark)
+                                .onAppear {
+                                    locationManager.requestPermission()
+                                }
                                 
                                 VStack(alignment: .leading, spacing: 0) {
                                     Image(.timeIcon)
@@ -141,7 +171,7 @@ struct Home: View {
                                         .customFont(.semiBold,13)
                                         .foregroundColor(Color(.nsTxt)).padding([.top,.bottom],2)
                                     
-                                    Text("24:22")
+                                    Text(timeString(from: mockData.timeRemaining))
                                         .customFont(.semiBold,15)
                                         .foregroundColor(.white)
                                 }
@@ -172,7 +202,7 @@ struct Home: View {
                                         .padding([.top],5)
                                     
                                     HStack(spacing: 5){
-                                        Text("238")
+                                        Text(String(format: "%.0f", mockData.gameState.caloriesBurned))
                                             .customFont(.semiBold,20)
                                             .foregroundColor(.white)
                                         
@@ -219,7 +249,7 @@ struct Home: View {
                                         .padding([.top],5)
                                     
                                     HStack(spacing: 5){
-                                        Text("0.1")
+                                        Text(String(format: "%.1f", mockData.gameState.territoryClaimed))
                                             .customFont(.semiBold,20)
                                             .foregroundColor(.white)
                                         
@@ -341,6 +371,12 @@ struct Home: View {
                 wepinManager.initWepin(viewController: vc)
             })
         }
+    }
+    
+    func timeString(from timeInterval: TimeInterval) -> String {
+        let minutes = Int(timeInterval) / 60
+        let seconds = Int(timeInterval) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }
 
