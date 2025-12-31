@@ -55,7 +55,7 @@ struct Home: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: Welcome()) {
+                        NavigationLink(destination: VeryChatConnectionView()) {
                             HStack{
                                 Image(.veryLogo)
                                     .resizable()
