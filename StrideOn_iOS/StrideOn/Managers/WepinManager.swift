@@ -13,6 +13,8 @@ import Combine
 class WepinManager: ObservableObject {
     @Published var isInitialized: Bool = false
     @Published var lifecycle: WepinLifeCycle = .notInitialized
+    @Published var isAuthenticated: Bool = false
+    @Published var userProfileIsEmpty: Bool = true
     
     // TODO: Replace with your actual App Key if needed, though usually App ID is enough for public init in some SDKs, 
     // but WepinWidgetParams requires appKey. 
@@ -60,6 +62,16 @@ class WepinManager: ObservableObject {
                 await MainActor.run {
                     self.lifecycle = status
                     print("Wepin Lifecycle: \(status)")
+                    // Simple logic: if status implies we need login, then we are not authenticated.
+                    // Ideally, we'd check for a user session specifically.
+                    if status == .login || status == .loginBeforeRegister || status == .notInitialized {
+                        self.isAuthenticated = false
+                    }
+                    // Note: If status is .initialized, sometimes it means we are ready but not logged in?
+                    // Or maybe it means logged in? Assuming 'initialized' + no further action needed = logged in? 
+                    // Actually, 'openWallet' treats 'initialized' as needing 'loginWithUI'. 
+                    // So 'initialized' seems to be NOT authenticated.
+                    // Thus, we primarily rely on explicit login success or maybe getAccounts?
                 }
             } catch {
                 print("Wepin Status Error: \(error)")
@@ -97,14 +109,37 @@ class WepinManager: ObservableObject {
                         if result.userStatus?.loginStatus == .registerRequired {
                              let regRes = try await widget.register(viewController: viewController)
                              print("Register after login: \(regRes)")
+                             // verify register success
                         } else {
                             let openRes = try await widget.openWidget(viewController: viewController)
                             print("Widget Opened after login: \(openRes)")
+                            await MainActor.run {
+                                self.isAuthenticated = true
+                                self.userProfileIsEmpty = false // Assuming full profile if successfully opened
+                            }
                         }
                     }
                 }
             } catch {
                 print("Wepin Open/Login Error: \(error)")
+            }
+        }
+    }
+    
+    func checkInitializationUsingRoot() {
+        // Attempt to find the root view controller to initialize Wepin automatically
+        DispatchQueue.main.async {
+            if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene ?? UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first(where: { $0.isKeyWindow }) ?? windowScene.windows.first,
+               let rootVC = window.rootViewController {
+                print("Found root VC for Wepin auto-init: \(rootVC)")
+                self.initWepin(viewController: rootVC)
+            } else {
+                print("Could not find root VC for Wepin auto-init")
+                // Retailer logic? Retry maybe?
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                     self.checkInitializationUsingRoot()
+                }
             }
         }
     }

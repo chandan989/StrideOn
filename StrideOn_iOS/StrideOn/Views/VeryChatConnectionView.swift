@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct VeryChatConnectionView: View {
-    @StateObject private var manager = VeryChatManager()
+    @EnvironmentObject private var manager: VeryChatManager
     @State private var handleId: String = ""
     @State private var verificationCode: String = ""
     @State private var showVerificationInput = false
@@ -142,6 +142,18 @@ struct VeryChatConnectionView: View {
                     }
                     .padding(.horizontal, 30)
                     
+                    // Create ID Link
+                    Button(action: {
+                        if let url = URL(string: "https://verychat.io") { // Placeholder URL
+                            UIApplication.shared.open(url)
+                        }
+                    }) {
+                        Text("Don't have an ID? **Create one**")
+                            .customFont(.regular, 14)
+                            .foregroundColor(.white.opacity(0.8))
+                    }
+                    .padding(.top, 10)
+                    
                     if let error = manager.errorMessage {
                         Text(error)
                             .foregroundColor(.red)
@@ -206,7 +218,7 @@ struct VeryChatConnectionView: View {
                         Spacer()
                         
                         Button(action: { manager.logout() }) {
-                            Text("Disconnect")
+                            Text("Logout")
                                 .customFont(.bold, 18)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -215,18 +227,7 @@ struct VeryChatConnectionView: View {
                                 .cornerRadius(20)
                         }
                         .padding(.horizontal, 30)
-                        
-                        Button(action: { dismiss() }) {
-                            Text("Close")
-                                .customFont(.bold, 18)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.white)
-                                .foregroundColor(.black)
-                                .cornerRadius(20)
-                        }
-                        .padding(.horizontal, 30)
-                        
+                       
                         Spacer().frame(height: 20)
                         
                         // Debug Output
