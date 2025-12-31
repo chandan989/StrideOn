@@ -13,7 +13,8 @@ struct Welcome: View {
     @State var showRegisterView: Bool = false
     var body: some View {
         if showRegisterView{
-            Register()
+//            Register()
+            Home()
         }else{
             ZStack {
                 HStack{
