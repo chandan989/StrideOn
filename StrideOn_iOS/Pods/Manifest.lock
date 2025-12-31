@@ -1,0 +1,58 @@
+PODS:
+  - AppAuth (2.0.0):
+    - AppAuth/Core (= 2.0.0)
+    - AppAuth/ExternalUserAgent (= 2.0.0)
+  - AppAuth/Core (2.0.0)
+  - AppAuth/ExternalUserAgent (2.0.0):
+    - AppAuth/Core
+  - BCrypt (1.0.0)
+  - WepinCommon (1.2.1)
+  - WepinCore (1.2.1):
+    - WepinCommon (~> 1.2.1)
+  - WepinLogin (1.2.1):
+    - AppAuth (~> 2.0.0)
+    - BCrypt (~> 1.0.0)
+    - WepinCommon (~> 1.2.1)
+    - WepinCore (~> 1.2.1)
+  - WepinModal (1.2.1)
+  - WepinWidget (1.2.1):
+    - WepinCommon (~> 1.2.1)
+    - WepinCore (~> 1.2.1)
+    - WepinLogin (~> 1.2.1)
+    - WepinModal (~> 1.2.1)
+
+DEPENDENCIES:
+  - AppAuth
+  - WepinCommon (from `./wepin-ios-sdk-internal-v1/packages/WepinCommon`)
+  - WepinCore (from `./wepin-ios-sdk-internal-v1/packages/WepinCore`)
+  - WepinModal (from `./wepin-ios-sdk-internal-v1/packages/WepinModal`)
+  - WepinWidget (from `./wepin-ios-sdk-widget-v1`)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - BCrypt
+    - WepinLogin
+
+EXTERNAL SOURCES:
+  WepinCommon:
+    :path: "./wepin-ios-sdk-internal-v1/packages/WepinCommon"
+  WepinCore:
+    :path: "./wepin-ios-sdk-internal-v1/packages/WepinCore"
+  WepinModal:
+    :path: "./wepin-ios-sdk-internal-v1/packages/WepinModal"
+  WepinWidget:
+    :path: "./wepin-ios-sdk-widget-v1"
+
+SPEC CHECKSUMS:
+  AppAuth: 1c1a8afa7e12f2ec3a294d9882dfa5ab7d3cb063
+  BCrypt: 712b656110e5020d319c547e4d8f3053ded82b2a
+  WepinCommon: ab2bd0e3ca5a0410c6b91ee516ca4a17590d2342
+  WepinCore: 77f93aba2df022e871a2852ba7492e2158f18657
+  WepinLogin: 5a357bd1500fb6940cbf7fd895517066b1bc5285
+  WepinModal: 92a7b6a712f270ab5074b1ab354d314cb60da46f
+  WepinWidget: 8574ca6424f486b031b05e662d1dba3a02201ab5
+
+PODFILE CHECKSUM: 0f0d2cb9a07531cfc4bc247cea4662e14f4e1a26
+
+COCOAPODS: 1.16.2

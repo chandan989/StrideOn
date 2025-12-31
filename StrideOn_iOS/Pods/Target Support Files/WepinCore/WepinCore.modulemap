@@ -1,0 +1,6 @@
+framework module WepinCore {
+  umbrella header "WepinCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

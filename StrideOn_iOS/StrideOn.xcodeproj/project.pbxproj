@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17F9D5672F02FB440063F8FA /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */; };
+		17F9D56A2F02FB680063F8FA /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 17F9D5692F02FB680063F8FA /* AlertToast */; };
+		29F7146691A4D042C267D8C7 /* Pods_StrideOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17FCA0642F02C6B90014652B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17FCA04E2F02C6B70014652B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17FCA0552F02C6B70014652B;
+			remoteInfo = StrideOn;
+		};
+		17FCA06E2F02C6B90014652B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17FCA04E2F02C6B70014652B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17FCA0552F02C6B70014652B;
+			remoteInfo = StrideOn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17561D082F03A1CC007871E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17FCA0562F02C6B70014652B /* StrideOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrideOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FCA0632F02C6B90014652B /* StrideOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FCA06D2F02C6B90014652B /* StrideOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.release.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.release.xcconfig"; sourceTree = "<group>"; };
+		8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrideOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrideOn.debug.xcconfig"; path = "Target Support Files/Pods-StrideOn/Pods-StrideOn.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		17FCA0EF2F02C8AD0014652B /* Exceptions for "StrideOn" folder in "StrideOn" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 17FCA0552F02C6B70014652B /* StrideOn */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		17FCA0582F02C6B70014652B /* StrideOn */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				17FCA0EF2F02C8AD0014652B /* Exceptions for "StrideOn" folder in "StrideOn" target */,
+			);
+			path = StrideOn;
+			sourceTree = "<group>";
+		};
+		17FCA0662F02C6B90014652B /* StrideOnTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StrideOnTests;
+			sourceTree = "<group>";
+		};
+		17FCA0702F02C6B90014652B /* StrideOnUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StrideOnUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17FCA0532F02C6B70014652B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F9D5672F02FB440063F8FA /* SwiftfulLoadingIndicators in Frameworks */,
+				17F9D56A2F02FB680063F8FA /* AlertToast in Frameworks */,
+				29F7146691A4D042C267D8C7 /* Pods_StrideOn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA0602F02C6B90014652B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA06A2F02C6B90014652B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090C4B3C15FB6848B4557C43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CACB840B3454ECA46BF057D /* Pods_StrideOn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17FCA04D2F02C6B70014652B = {
+			isa = PBXGroup;
+			children = (
+				17FCA0582F02C6B70014652B /* StrideOn */,
+				17FCA0662F02C6B90014652B /* StrideOnTests */,
+				17FCA0702F02C6B90014652B /* StrideOnUITests */,
+				17FCA0572F02C6B70014652B /* Products */,
+				C74455025C210E92D655C893 /* Pods */,
+				090C4B3C15FB6848B4557C43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17FCA0572F02C6B70014652B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17FCA0562F02C6B70014652B /* StrideOn.app */,
+				17FCA0632F02C6B90014652B /* StrideOnTests.xctest */,
+				17FCA06D2F02C6B90014652B /* StrideOnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74455025C210E92D655C893 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */,
+				400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17FCA0552F02C6B70014652B /* StrideOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17FCA0772F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOn" */;
+			buildPhases = (
+				E3C7CD1D52C4557BA68F43D7 /* [CP] Check Pods Manifest.lock */,
+				17FCA0522F02C6B70014652B /* Sources */,
+				17FCA0532F02C6B70014652B /* Frameworks */,
+				17FCA0542F02C6B70014652B /* Resources */,
+				17561D082F03A1CC007871E7 /* Embed Frameworks */,
+				09917557FD667EDF237C5BF9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				17FCA0582F02C6B70014652B /* StrideOn */,
+			);
+			name = StrideOn;
+			packageProductDependencies = (
+				17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */,
+				17F9D5692F02FB680063F8FA /* AlertToast */,
+			);
+			productName = StrideOn;
+			productReference = 17FCA0562F02C6B70014652B /* StrideOn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17FCA0622F02C6B90014652B /* StrideOnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17FCA07A2F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOnTests" */;
+			buildPhases = (
+				17FCA05F2F02C6B90014652B /* Sources */,
+				17FCA0602F02C6B90014652B /* Frameworks */,
+				17FCA0612F02C6B90014652B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17FCA0652F02C6B90014652B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17FCA0662F02C6B90014652B /* StrideOnTests */,
+			);
+			name = StrideOnTests;
+			productName = StrideOnTests;
+			productReference = 17FCA0632F02C6B90014652B /* StrideOnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17FCA06C2F02C6B90014652B /* StrideOnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17FCA07D2F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOnUITests" */;
+			buildPhases = (
+				17FCA0692F02C6B90014652B /* Sources */,
+				17FCA06A2F02C6B90014652B /* Frameworks */,
+				17FCA06B2F02C6B90014652B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17FCA06F2F02C6B90014652B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17FCA0702F02C6B90014652B /* StrideOnUITests */,
+			);
+			name = StrideOnUITests;
+			productName = StrideOnUITests;
+			productReference = 17FCA06D2F02C6B90014652B /* StrideOnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17FCA04E2F02C6B70014652B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					17FCA0552F02C6B70014652B = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					17FCA0622F02C6B90014652B = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 17FCA0552F02C6B70014652B;
+					};
+					17FCA06C2F02C6B90014652B = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 17FCA0552F02C6B70014652B;
+					};
+				};
+			};
+			buildConfigurationList = 17FCA0512F02C6B70014652B /* Build configuration list for PBXProject "StrideOn" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17FCA04D2F02C6B70014652B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
+				17F9D5682F02FB680063F8FA /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 17FCA0572F02C6B70014652B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17FCA0552F02C6B70014652B /* StrideOn */,
+				17FCA0622F02C6B90014652B /* StrideOnTests */,
+				17FCA06C2F02C6B90014652B /* StrideOnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17FCA0542F02C6B70014652B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA0612F02C6B90014652B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA06B2F02C6B90014652B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09917557FD667EDF237C5BF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C7CD1D52C4557BA68F43D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StrideOn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17FCA0522F02C6B70014652B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA05F2F02C6B90014652B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17FCA0692F02C6B90014652B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17FCA0652F02C6B90014652B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17FCA0552F02C6B70014652B /* StrideOn */;
+			targetProxy = 17FCA0642F02C6B90014652B /* PBXContainerItemProxy */;
+		};
+		17FCA06F2F02C6B90014652B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17FCA0552F02C6B70014652B /* StrideOn */;
+			targetProxy = 17FCA06E2F02C6B90014652B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17FCA0752F02C6B90014652B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17FCA0762F02C6B90014652B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17FCA0782F02C6B90014652B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C63EF854F625349F5331B5 /* Pods-StrideOn.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StrideOn/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17FCA0792F02C6B90014652B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400F2970ABEA5AD43C5124F5 /* Pods-StrideOn.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StrideOn/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17FCA07B2F02C6B90014652B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrideOn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrideOn";
+			};
+			name = Debug;
+		};
+		17FCA07C2F02C6B90014652B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrideOn.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrideOn";
+			};
+			name = Release;
+		};
+		17FCA07E2F02C6B90014652B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StrideOn;
+			};
+			name = Debug;
+		};
+		17FCA07F2F02C6B90014652B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NU36YRH9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = very.StrideOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StrideOn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17FCA0512F02C6B70014652B /* Build configuration list for PBXProject "StrideOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FCA0752F02C6B90014652B /* Debug */,
+				17FCA0762F02C6B90014652B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17FCA0772F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FCA0782F02C6B90014652B /* Debug */,
+				17FCA0792F02C6B90014652B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17FCA07A2F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FCA07B2F02C6B90014652B /* Debug */,
+				17FCA07C2F02C6B90014652B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17FCA07D2F02C6B90014652B /* Build configuration list for PBXNativeTarget "StrideOnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17FCA07E2F02C6B90014652B /* Debug */,
+				17FCA07F2F02C6B90014652B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+		17F9D5682F02FB680063F8FA /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17F9D5662F02FB440063F8FA /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17F9D5652F02FB440063F8FA /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
+		};
+		17F9D5692F02FB680063F8FA /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17F9D5682F02FB680063F8FA /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 17FCA04E2F02C6B70014652B /* Project object */;
+}

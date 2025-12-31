@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>very.StrideOn</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wepin.da2f065cb44fa7fd915a4796c6559246</string>
+			</array>
+		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LufgaThin.ttf</string>
+		<string>LufgaLight.ttf</string>
+		<string>LufgaRegular.ttf</string>
+		<string>LufgaMedium.ttf</string>
+		<string>LufgaSemiBold.ttf</string>
+		<string>LufgaBold.ttf</string>
+		<string>LufgaExtraBold.ttf</string>
+		<string>LufgaBlack.ttf</string>
+	</array>
+</dict>
+</plist>

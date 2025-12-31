@@ -1,0 +1,345 @@
+//
+//  SpaceOptimizer.swift
+//  StrideOn
+//
+//  Created by Chandan on 29/12/25.
+//
+
+import Foundation
+
+struct SpaceOptimizer {
+    // Arrays
+    static let monthArr: [String] = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ]
+    
+    static let genderArr: [String] = [
+        "Female", "Male", "Trans", "Intersex", "Non-Conforming", "Eunuch", "Prefer Not to say"
+    ]
+    
+    static let zodiacArr: [String] = [
+        "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"
+    ]
+    
+    static let personaArr: [String] = [
+        "Nathan", "Athena"
+    ]
+    
+    static let membershipArr: [String] = [
+        "Alpha Prime", "Alpha", "Sigma Prime", "Sigma"
+    ]
+    
+    static let membershipDesc: [String] = [
+        "You have been granted access to all the exclusive functionalities.",
+        "You have been granted access to all the companionship and productivity functionalities.",
+        "You have been granted access to all the exclusive companionship and some productivity functionalities.",
+        "You have been granted access to all the companionship and some productivity functionalities."
+    ]
+    
+    static let langs: [String] = [
+        "English", "Hinglish", "Hindi"
+    ]
+    
+    static let lifeAreaArr: [String] = [
+        "Personal", "Professional", "Pets"
+    ]
+    
+    static let personalArr: [String] = [
+        "Friend", "Best Friend", "Father", "Mother", "Grand Father", "Grand Mother", "Brother", "Sister", "Son", "Daughter", "Roommate", "Girlfriend", "Boyfriend", "Ex Girlfriend", "Ex Boyfriend", "Partner", "Husband", "Wife", "Grandchild", "Crush", "Ex Wife", "Fiance", "Uncle", "Aunt", "Cousin", "Other"
+    ]
+    
+    static let professionalArr: [String] = [
+        "Co worker", "Boss", "Lawyer", "Teacher", "Ex boss", "Ex co worker", "Client", "Classmate", "Plumber", "Toy", "Nurse", "Doctor", "Nanny", "Coach", "Therapist", "Other"
+    ]
+    
+    static let petsArr: [String] = [
+        "Pet cat", "Pet horse", "Pet hamster", "Pet fish", "Pet mouse", "Pet pig", "Pet dog", "Pet rabbit", "Pet bird", "Pet Turtle", "Pet rat", "Pet guinea", "Other"
+    ]
+    
+    static let categoryArr: [String] = [
+        "Personal", "Daily Life", "Favorites", "Education", "Career"
+    ]
+    
+    static let aiNames = [
+        "Astra",
+        "Voxel",
+        "Zenith",
+        "Nebula",
+        "Quasar",
+        "Lumina",
+        "Eclipse",
+        "Synapse",
+        "Helios",
+        "Orion",
+        "Cogny",
+        "Aether",
+        "Solstice",
+        "Zephyr",
+        "Nova",
+        "Chronos",
+        "Echo",
+        "Quantum",
+        "Serenity",
+        "Pulse",
+        "Mystic",
+        "Tranquil",
+        "Vortex",
+        "Celestia",
+        "Neura",
+        "Aegis",
+        "Phoenix",
+        "Ripple",
+        "Infinity",
+        "Paragon",
+        "Aarav",
+        "Anika",
+        "Vivaan",
+        "Ishaan",
+        "Myra",
+        "Arjun",
+        "Sakshi",
+        "Reyansh",
+        "Kiara",
+        "Advait",
+        "Eira",
+        "Kai",
+        "Zara",
+        "Rohan",
+        "Lyra",
+        "Ember",
+        "Nyla",
+        "Rian",
+        "Tara",
+        "Jiya"
+    ]
+    
+    static let countries = [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "American Samoa",
+        "Andorra",
+        "Angola",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia and Herzegovina",
+        "Botswana",
+        "Brazil",
+        "British Virgin Islands",
+        "Brunei",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Canary Islands",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central African Republic",
+        "Ceuta and Melilla",
+        "Chad",
+        "Chile",
+        "China",
+        "Colombia",
+        "Comoros",
+        "Congo [DRC]",
+        "Congo [Republic]",
+        "Costa Rica",
+        "Croatia",
+        "Cuba",
+        "Curaçao",
+        "Cyprus",
+        "Czech Republic",
+        "Côte d’Ivoire",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Ethiopia",
+        "Europe",
+        "Faroe Islands",
+        "Fiji",
+        "Finland",
+        "France",
+        "French Guiana",
+        "French Polynesia",
+        "Gabon",
+        "Gambia",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Gibraltar",
+        "Greece",
+        "Greenland",
+        "Grenada",
+        "Guadeloupe",
+        "Guam",
+        "Guatemala",
+        "Guernsey",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hong Kong",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iran",
+        "Iraq",
+        "Ireland",
+        "Isle of Man",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Jersey",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Laos",
+        "Latin America",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Liberia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Macau",
+        "Macedonia [FYROM]",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Mali",
+        "Malta",
+        "Marshall Islands",
+        "Martinique",
+        "Mauritania",
+        "Mauritius",
+        "Mayotte",
+        "Mexico",
+        "Micronesia",
+        "Moldova",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Morocco",
+        "Mozambique",
+        "Myanmar [Burma]",
+        "Namibia",
+        "Nepal",
+        "Netherlands",
+        "New Caledonia",
+        "New Zealand",
+        "Nicaragua",
+        "Niger",
+        "Nigeria",
+        "North Korea",
+        "Northern Mariana Islands",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Palau",
+        "Palestine",
+        "Panama",
+        "Papua New Guinea",
+        "Paraguay",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto Rico",
+        "Qatar",
+        "Romania",
+        "Russia",
+        "Rwanda",
+        "Réunion",
+        "Saint Barthélemy",
+        "Saint Kitts and Nevis",
+        "Saint Lucia",
+        "Saint Martin",
+        "Saint Vincent and the Grenadines",
+        "Samoa",
+        "San Marino",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Seychelles",
+        "Sierra Leone",
+        "Singapore",
+        "Sint Maarten",
+        "Slovakia",
+        "Slovenia",
+        "Solomon Islands",
+        "Somalia",
+        "South Africa",
+        "South Korea",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "Sudan",
+        "Suriname",
+        "Swaziland",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "São Tomé and Príncipe",
+        "Taiwan",
+        "Tanzania",
+        "Thailand",
+        "Timor-Leste",
+        "Togo",
+        "Tonga",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turks and Caicos Islands",
+        "U.S. Outlying Islands",
+        "U.S. Virgin Islands",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Venezuela",
+        "Vietnam",
+        "Western Sahara",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe",
+        "Åland Islands"
+    ]
+
+}

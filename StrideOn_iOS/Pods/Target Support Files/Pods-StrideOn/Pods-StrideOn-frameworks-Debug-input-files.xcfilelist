@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-StrideOn/Pods-StrideOn-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework
+${BUILT_PRODUCTS_DIR}/BCrypt/BCrypt.framework
+${BUILT_PRODUCTS_DIR}/WepinCommon/WepinCommon.framework
+${BUILT_PRODUCTS_DIR}/WepinCore/WepinCore.framework
+${BUILT_PRODUCTS_DIR}/WepinLogin/WepinLogin.framework
+${BUILT_PRODUCTS_DIR}/WepinModal/WepinModal.framework
+${BUILT_PRODUCTS_DIR}/WepinWidget/WepinWidget.framework

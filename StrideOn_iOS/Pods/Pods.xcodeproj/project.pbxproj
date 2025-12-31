@@ -1,0 +1,2624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D01423416CE2FA9956AF64006EE7D2 /* pycabcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 590ADD1976BE30B11AECD488B1DC44B5 /* pycabcrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02D27692DA1ECD60DB78E33E9460670F /* OIDEndSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D1309747BDCCFA70930569433535B1E9 /* OIDEndSessionResponse.m */; };
+		03A5BB19030D5B4F647C1F62224990DC /* AppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD181CDCB39621AAB710F12EC80B1A78 /* AppAuth-dummy.m */; };
+		04320FA2FB84B0CA23764445A57A374A /* WepinLoginTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2840D8AB14B5EF7D9A1D003512C2944 /* WepinLoginTypes.swift */; };
+		0700E7FBEAE5143E22AFCC6DFAC822FA /* OIDExternalUserAgentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 429EA683B9650A581CC5BD4E4C92334C /* OIDExternalUserAgentRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09D76C372F1545EB6894AE22974A39BC /* OIDServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B24BBABC757EE5F79DADA3898481CF85 /* OIDServiceConfiguration.m */; };
+		0A60D09EC45EFD49E5A0BEC3DCCDD88F /* OIDScopes.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C9033293AC098864A486CE36B7E9C /* OIDScopes.m */; };
+		0BFE9069980DC73AD8D237A5C8497A5A /* WepinCommonBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBCC278FC016FE4E12A9836896B4BC02 /* WepinCommonBridge.mm */; };
+		0F7BCDFDAD7FB05000BC3931FD4A2D21 /* JSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF2A118E139798C532F508A084EE25 /* JSResponse.swift */; };
+		1086F4B1EA5CBDC9CBA5B5F3C7A1DF0F /* timingsafe_bcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BBB62BD024BD3749D0C7AF1DB4C7CE3 /* timingsafe_bcmp.c */; };
+		10A9FB735684D720023C4B10C2C41B5C /* portable_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 0910E5D9AA250E71C38956C5E287390A /* portable_endian.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11FB9C8FCEADC84542F07AF822B9A11D /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = B9600C6F19EEDEA7123930DF68074044 /* OIDError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1259FEE055A61C948D90FB864661E1CB /* WepinStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D98448C27413FD4351ED36D5107F0 /* WepinStorageManager.swift */; };
+		129F5D71C96536B80AA2D80384FE8DB4 /* OIDEndSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E83052CF2778191BE5AA09E840D27F /* OIDEndSessionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13DF559CFEB551A762CE28734FBCA6BC /* OIDURLQueryComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 658F93D4440FC4414B33634F4C7D7FC4 /* OIDURLQueryComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A0ADDD9FE5AD192B994832CCE476F14 /* OIDTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2D82900652C6370732DAED1F937B83 /* OIDTokenRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E86A782F818F06FC3F4E579B8BD61F1 /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBBF059BD981BA39EFF2EBDF5B8EDC4 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EC0765AD0F6F5D86CE5EE8020E22C0F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79753A599C169451FC5C5B0554D90897 /* SafariServices.framework */; };
+		25905DF463C7701C819B7D286E2EA591 /* WepinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B07463C236EFD1F7A4F8D22428B078 /* WepinError.swift */; };
+		276DF879597D3010D9A8CB5EA6F28C42 /* blf.c in Sources */ = {isa = PBXBuildFile; fileRef = B63EE913F0908F7EDA5E3BB8E8FBCF84 /* blf.c */; };
+		27B4D281EEA92DF510E70A2D03062267 /* PerfectBCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6884E288C55E6C9BD577AC38C4D116A /* PerfectBCrypt.swift */; };
+		27CC411F1023445DA5222533A4EE0CDC /* WepinWidget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBD96B5AD35DF0E7BFB3ED9F6D196CD /* WepinWidget-dummy.m */; };
+		28D588CF60BFCBB11C88C3C05DBCF82C /* WepinLoginStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E394032A128B397F04E5F837150E18 /* WepinLoginStorage.swift */; };
+		29EED9B061838482622E29DE978947CA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE2BA00C08F26B064C8DE65A1C62A46 /* Utils.swift */; };
+		2A2F22122FF76B7E36774927848F47D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		2C7933565D5EDD5BA7D58116233CF7DD /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FD4C796E07979F3A549CF9AE1A912D /* OIDResponseTypes.m */; };
+		2E541F089DC2BB586A8D9A042BCF2B0C /* OIDAuthState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4582799CCBFC761298A3AD9373DAB374 /* OIDAuthState.m */; };
+		2F269D3FCA178F541B84DB1DA94326E6 /* WepinLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F22E36836A3FF148F6FF4527BA4F8D /* WepinLogin.swift */; };
+		2F8CA8830F8BBF18ABABA11F869C6D99 /* OIDExternalUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA2CF9E5FDDA41D79F941A2076CE65F /* OIDExternalUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36217C17012C6CA48F89F54B87CD44D9 /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1765A03505DEF8C2FD26D9BD66C1F7 /* OIDURLSessionProvider.m */; };
+		395EFF07A109E0F665941B8CDF591BF6 /* WepinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39C01BBC2AB11AC2C6AB6C67B02C74 /* WepinError.swift */; };
+		3B7AAAB356FC81C6565BBE6938CE6B70 /* AppAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A72B5FC2CFC135EB466FBEE2CBB8BE /* AppAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DF85F053E5311E445FD12BF231D7EA2 /* JsonRpcClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA5262AD051B2FEEEA70CA8F77E47F /* JsonRpcClient.swift */; };
+		3EBD700ABBE61BD4AAD3BAF0F4E39FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		4026E0C37B420EA9E2C6F2842D56D629 /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 635227DC596072D78B78460CE65D25BB /* OIDRegistrationRequest.m */; };
+		408DA46FD224E481EFBB0CEBF72506E9 /* OIDTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 90BEC6FBE819B57C93125322D13F6D89 /* OIDTokenResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		423F8E2CFAAC00F9A1FCD5E6DFB88152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		434A75B3C9FBAC207DDA76DF2F7F52D1 /* WepinWidget-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 168087C961BE2FB149970C31760FB35C /* WepinWidget-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46F18AAA50A0315D3DCA99F9A9117F05 /* OIDServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB6FEDF603706B523921B5756780A40 /* OIDServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B25244740419A7155F3E6B398B23445 /* BCrypt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0555068BE732D56E79F047B09C2EDC1A /* BCrypt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DF5C01A1B5A81D69A6BB4620AEE5900 /* JSProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67344A9F9BE403376088004C802387FA /* JSProcessor.swift */; };
+		4F0553EA2D6DD875F99FD0903DB44585 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		4F1B7939FDF1030E68E99D13DCC1C29F /* OIDAuthorizationService+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C6F7371B5CCDCB7D2EB6B33A18F456 /* OIDAuthorizationService+IOS.m */; };
+		4F39457825E2956E654E50D443BC1330 /* WepinModal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AE3BD3011B3A7A9A5749B49EAD64BC /* WepinModal-dummy.m */; };
+		4F5F702E9DFEA81F4EC7F0990F3ED184 /* OIDIDToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DCD9E88388A729BC6586FB4AF606C42 /* OIDIDToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5328EECFC32259196096A8B6387F42B8 /* OIDErrorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AA865CA581FF7081503016F9106020 /* OIDErrorUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		587B88BE045B5034B5EF313D15805CAD /* OIDClientMetadataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = DA20B51B0A0952F2FFF0331B2E0A42BB /* OIDClientMetadataParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BA2FB4C365B6E0D4F5ED0656769ECF2 /* WepinNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667C124AC9135B1DB99DABCAEE9FA5B7 /* WepinNetwork.swift */; };
+		5E0FE034C3020FF69E6DFFFBD40510C9 /* OIDEndSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D66844DC953126BCF55A9B458AC5165 /* OIDEndSessionRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6170E9B57C3CEF286FBEC36A4127905E /* OIDGrantTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C6A55DAAF48487B15233C0364C985 /* OIDGrantTypes.m */; };
+		6393BC96F4D6B658ED2D44125C0C2A62 /* bcrypt_pbkdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD876B9FD1D29EC2AEE07922CA5B970 /* bcrypt_pbkdf.c */; };
+		68462D63131BB656F4612EE12E555DE4 /* OIDExternalUserAgentIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BD98FC8E3F36A9C6C196586B0199B7 /* OIDExternalUserAgentIOS.m */; };
+		6A7EF80BF53EEA21F71984C619EB3772 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF425176E228F22154AFC29E0E5FDF90 /* NetworkError.swift */; };
+		6BAD5BCD18BC17CA9D358C12937313F1 /* WepinWidgetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9637F281BF36FC03D12FAACD11946455 /* WepinWidgetTypes.swift */; };
+		6BB804D7E93D9968659BA6B6B1C7D4A5 /* OIDFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FD033D986E023199634863FFCA7AE /* OIDFieldMapping.m */; };
+		6C15208410D419482CA29F64A243F03A /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 75889CDDD62D9D73D9ADF980DBB5532A /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D636208250A1962E083E6A119D1DB2E /* WepinWidgetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ABB0FF9C9C7A11275D432DD4A5507E /* WepinWidgetWrapper.swift */; };
+		7039F257E6ABF5806655CBE2AD2E9531 /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = F55A8C10274C1659AD5B57D63310A4F9 /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71981EE53197200543C53BE7423BB89A /* OIDFieldMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 28472D87E93FFA4295FB213A0640BC8E /* OIDFieldMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		742809215DD94D2B55996F33BF986C84 /* WepinModalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B898AC955AD89D85B7A969B11DB6FC2F /* WepinModalWrapper.swift */; };
+		7442237D6AA09EC7D5C276B837C55A2A /* OIDEndSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5A7741AA30A57839B9141F08489BB /* OIDEndSessionRequest.m */; };
+		77484F0DDD40F4F6F7F100FCFA65E20A /* blf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB2B5711FDE90874E1A6885FF26E173 /* blf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C1E0438E51364B4CEAEE7B51BBBDA42 /* OIDExternalUserAgentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF222A76F7267AC71689430504C39C3 /* OIDExternalUserAgentSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DE7F668D7A0544BE046C1D07D73DD4E /* OIDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E363E967F2650B0CF207A11A85D6D3 /* OIDError.m */; };
+		7F02672C0901E6EEA34E03547AD1E0EA /* WepinAppAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970EBAC773656E180C3F8E814FA05F7 /* WepinAppAuthManager.swift */; };
+		7FFF93B0637FEE76FEED6D132B25D213 /* OIDAuthorizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8342B0B06420735818AC389593D9E876 /* OIDAuthorizationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8092B4E2A73605C2B8EA58F554581141 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = C8D1E609EA42942F45192397F2791180 /* module.modulemap */; };
+		8586DFBE23815C4BDF9FDFECC27471DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		8682B96E2FECDCA68D19D3E0201C4F6B /* OIDAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 15627FCF9F7B114E958287BD0C5C9C5A /* OIDAuthorizationService.m */; };
+		86D0F6376197F28E07FB932B8E036550 /* OIDClientMetadataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F00895A784015C734175AA3DD562D4 /* OIDClientMetadataParameters.m */; };
+		8B98690B06CB078B7D87310A327A4CA3 /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ADD27145E8A651B9552F23A3E4A9745 /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CB00AF5E36C153F347BDFE43A9843AA /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C4BA6FF431B6A4E7F5C865BA66284 /* OIDScopeUtilities.m */; };
+		942E6921BCA835875C706AAF54A7C9B8 /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = CAB37D76854BC78D3F05CC45F6A33DFD /* sha2.c */; };
+		9430B5316DA2BFDCBA543BD10F999FF1 /* OIDURLSessionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EB04EEDECA832046887EB1A467FECA /* OIDURLSessionProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94BE4A8D2A5C641E03977536534871A3 /* WepinModal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F59D3BF653F675710AA2AA346A6A5A /* WepinModal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95F3D9C574C6D76ABE168C204D0E218D /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D470EDE83B8E1B352DBDC9AB7DD5A9 /* OIDIDToken.m */; };
+		9601D6440AAD53C73CB3E60BAB201DD4 /* WepinLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D38BA5D6D36E8F98CD1EB52EFC69222 /* WepinLogin-dummy.m */; };
+		97AE21967075F7F8E134C6AA97D5686E /* WepinPresentationContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19087FA5E453DF8595374DD017CB472E /* WepinPresentationContextProvider.swift */; };
+		991F4FF90AC6340789B2518D26E588FC /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5143C864177D772AAAE4E36D1C12DF /* OIDAuthorizationResponse.m */; };
+		99F93C496B7BE6B97406E4A48A59DD2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		9AD957E4C0F184CA89DB73C74C577042 /* OIDTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4305E262E8F1C15D870F6895A2C6 /* OIDTokenResponse.m */; };
+		A0311676F7B5206CB6FCAC86A2F03DC6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D1127CCB8E77AB0C3AC55DFEBAAD2577 /* PrivacyInfo.xcprivacy */; };
+		A38EEF53871F8AAAD0429E1DF4FCA1CE /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = DB82B62070D77A9F5EFD6C79C484570E /* OIDExternalUserAgentIOSCustomBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43CE95339C51D2BEA7DAA3070091D6E /* WepinStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D48833B028106B2686EA184856AFBC /* WepinStorage.swift */; };
+		A4FC5C63C1C49CDF77A7B3EACF06AF97 /* OIDAuthState+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 480BBC3F93BECF9F1C69787757CEEF9B /* OIDAuthState+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A578A8BEEF555A48DF8D933062B0C23E /* WepinLoginWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF876E416266056B0E9C5EB4B12D6490 /* WepinLoginWrapper.swift */; };
+		A60D123D5CACBB76AF321DB31903880D /* OIDExternalUserAgentCatalyst.m in Sources */ = {isa = PBXBuildFile; fileRef = 839FA839EA51B95B901655B24B02FE5F /* OIDExternalUserAgentCatalyst.m */; };
+		A6BB7A782A2AAC3961F98DE8AA3E8890 /* WepinCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389A0C1A3C92DE4BCE85F8AF947831A /* WepinCommon.swift */; };
+		A80CC8C035F3636D6FEF831DADCCBDCB /* OIDTokenUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7D3098E91681FA31C78FE908208773 /* OIDTokenUtilities.m */; };
+		A941DDFA800996C0C6B3AF6E6C00D4A9 /* WepinCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF1B459415767ADFE5A6E63F82C5F505 /* WepinCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2439BAA2E4174F49F223579F4D8AC5 /* OIDTokenUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D2886B00775B635137A378E1CCE9AFFF /* OIDTokenUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA351DB92927C342D8FD9F16FF6D1D20 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 169613DBDFC7B464D9F5962CE01A287D /* OIDExternalUserAgentIOSCustomBrowser.m */; };
+		AAE884024D82960F91DE1AD4B8C06257 /* WepinLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA33BE5B1F5FECB12BBEE174D87A8E8E /* WepinLogin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADAB95829C10EB96B5C0F0DC2642437F /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB88E8D7D7BCD400A7003F55F8EFE1 /* OIDRegistrationResponse.m */; };
+		AEEF21E567FE4366C7624057B7976D2C /* AppAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8574D51C41E202F50FACD701D0312275 /* AppAuthCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF50237D7D9814A09CEA246A04C0BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		B0093D4780360978EC4F26B9428911C6 /* Pods-StrideOn-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B96E5CE4D793DCFA89F8DFBD54CDAE /* Pods-StrideOn-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B05508F9764D4F1672936648A44B95DB /* OIDExternalUserAgentIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7A9B96F5EC13428D0AC8C1EA37A35F /* OIDExternalUserAgentIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0ABE5FCE29F999DD4BD78153A0EF5F7 /* BCrypt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4D1BDD794D271757714690DB44470B /* BCrypt-dummy.m */; };
+		B1EF6D5B9573B57A49458FA23202E2D0 /* WepinSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF6566880247D1416C1A8524E806ECC /* WepinSessionManager.swift */; };
+		B387DA1A90AABE851EE27F0CEF53496D /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF08CF1AE60062EE82367BBD8A3A213 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD1992EB0DEC51204FFA5B78743E06FD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61813BE934624CF580F8031E299841 /* NetworkMonitor.swift */; };
+		BD3C0E3F3639F0515989376162E36FDF /* WepinManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC7E400E17E7E3ECE7A713DC03A8166 /* WepinManagers.swift */; };
+		BD777111D6BADA5F5A21AC52D727607D /* WepinCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 593C137CF9EBF759E6E2378DE6D96C5B /* WepinCore-dummy.m */; };
+		BEC894CA0C0967AC0D87484BE1CE7950 /* OIDTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C19AB89E42B70071773F0D5F2808FD6 /* OIDTokenRequest.m */; };
+		C79A43932B96D456A1BD8A68A037E75C /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C933450E2F2773A69274CB5183D2E43 /* OIDURLQueryComponent.m */; };
+		C88CA6721406C72E6EEDDB736B97A434 /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = C9287C214EE75FE6B6D0B2F9C9CF23BB /* OIDAuthState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF238A6BD005718699B81801BE0198CE /* OIDExternalUserAgentCatalyst.h in Headers */ = {isa = PBXBuildFile; fileRef = D71ABF8E19977DFFF584F242D6750EDC /* OIDExternalUserAgentCatalyst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFD4FF2AD9DE475FE12FDA7109C22A6F /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E95A9EAE00E07D400B25A27CD052344 /* OIDErrorUtilities.m */; };
+		D113A464B8F95A4849DF94B4D300A4D3 /* OIDAuthStateErrorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D2293D0FA0EBB39E5DD7BC2AAA5DE55A /* OIDAuthStateErrorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D130E1185F0FA5B7828D3C1E0FA54580 /* AppIntallTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6249070E8708E64E2D3A33DBC99F74B /* AppIntallTracker.swift */; };
+		D168696891DA2A1B771DBEF1AF351BD7 /* WepinCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71EE72B212DA7155675902CCEDC0F0DB /* WepinCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1A6C98462AFC7DFE26D8CDC310F0C10 /* WepinCommonBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B6CCCA3D9C256A40502AA4EADC997FA6 /* WepinCommonBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1F0123A32394CFE85744DECB6A68514 /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 22948C4593BFAA3EF9C52E5A3719B42F /* OIDDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2C1DE31C7076EB32C252F911014C098 /* AppAuth-AppAuthCore_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */; };
+		D33A70B5F3D101DFA5FC2BC014E5D8F0 /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 80604666D472CE7300FEBBE7DD2A16CA /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3F95D81B933EE05BE11B4B1D2BF0ADD /* AppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = B119C669000435E69164D78967D2F4D1 /* AppAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D83AF4E43CC0482FB69CD41BDF219072 /* OIDScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 816D529E7FE1707ADC521EF867406887 /* OIDScopes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA8D91B62FEB7F8999C7B01EBB430471 /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA8E4594E8D3A064C03AA639F1077FF /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAD08C6645D9D8E560A17087D3FA7AFE /* WepinWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F136C208D010EC25C989F9F7510FD7 /* WepinWidget.swift */; };
+		DC3D2579D744460EAEC04977ABA66DB0 /* WepinWebivewManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B6911A511A727FB5806AA71347C6D /* WepinWebivewManagers.swift */; };
+		DCB16ED5585C4F6E4C046E7D6CDBFDCF /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEA1EAFDD05745BD28458D8213AD323 /* OIDServiceDiscovery.m */; };
+		DD1BCA6DE3D00BF294E30A8C180F4621 /* WepinCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B3569C817680FEC108B99D53A7AAFA /* WepinCommon-dummy.m */; };
+		DD1F22E70A8754D0E92B7F6387B7ACB1 /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6961D54D6D5FF3FD9A2BC23DD49F84 /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE3351320479524BDB4D91D8315D56A6 /* bcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 044CF7BFB3319FF3BB5AFF87E5986AB9 /* bcrypt.c */; };
+		E38EA8153B9533A972DFB4061D8AC441 /* WepinFirebaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A185BDB6C5805911C0A683AAF7CD1 /* WepinFirebaseNetwork.swift */; };
+		E99EE4085991793730ADA654BF94F756 /* OIDAuthState+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 754DA94BFD5D32D52DD968A31A5E724A /* OIDAuthState+IOS.m */; };
+		EDC79CEE96B97E71AB7004D2400431E9 /* OIDAuthStateChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5DD72A8F0756CC7D74012E29036978 /* OIDAuthStateChangeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFCFBCA2AE1BF3043EB39CFE544145D6 /* WepinCommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71393F565003FE8ED839AB506C905A1 /* WepinCommonTypes.swift */; };
+		F0CF753B4410288549DEF1152A92EB19 /* WepinNetworkTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C6A3D2D694CBEC2712D3476AB8155C /* WepinNetworkTypes.swift */; };
+		F2BE5E1005CA99D473133A44BCE0B5EF /* WepinModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33049ABAAF89A80FE8C3043F2AE3FD1 /* WepinModal.swift */; };
+		F399293EE2154A2159E97EF9D807F510 /* OIDGrantTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E7B78CDCB29F7ED8E09A1D1F7385FD /* OIDGrantTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5589BC1C6FCCEC5B2056F38720053D2 /* WepinCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B948C8BCE2C5DB18EA09E56CD2BD57 /* WepinCore.swift */; };
+		FB35F14DCA485D9A57728211FF12580C /* sha2.h in Headers */ = {isa = PBXBuildFile; fileRef = A3DF94E56937D6334F72C1106D7E9317 /* sha2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD6C9F756C73D747DBF4A1CFB0AAA04F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */; };
+		FD9F6D1D6FEF98B2B56473BA95C3EAC7 /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8B9069BFD5164CE68DF997287B4625 /* OIDAuthorizationRequest.m */; };
+		FF2D9B53192E362C3DB4024FEF6CAF38 /* Pods-StrideOn-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF7640BABEB4178452D77BE0F17A4D7 /* Pods-StrideOn-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		029A457F9324CE75382FA93A84DE7FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03340631D53B1119803C2F8E3506D4A;
+			remoteInfo = BCrypt;
+		};
+		0523E71300CC6476138D1FB2C88D294F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B76265FC4362BCC9990FF5C0D807C2;
+			remoteInfo = WepinCommon;
+		};
+		22BF472430D6D63558D957CCA67BB42C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404BE9C76F3FDD7109D521B64E890E66;
+			remoteInfo = WepinCore;
+		};
+		2773EC3C10EF7F6FC753A7CBB416EF75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404BE9C76F3FDD7109D521B64E890E66;
+			remoteInfo = WepinCore;
+		};
+		40B435F7396477E208443CD801B31DF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		4A6D770059A35C25A880A66D96D5FF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404BE9C76F3FDD7109D521B64E890E66;
+			remoteInfo = WepinCore;
+		};
+		5D15AC0618B3A272DB6FAC4A564FC7A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B76265FC4362BCC9990FF5C0D807C2;
+			remoteInfo = WepinCommon;
+		};
+		5E279BD0080928B9C7A019B61051290D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB2D909B3348B46F2A6E0496C7FD6D7;
+			remoteInfo = WepinLogin;
+		};
+		6CB65C3CC562246425C6BAC1A0FEBAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8B38D126CB35D08BCEA0D2EFAE137FE;
+			remoteInfo = WepinModal;
+		};
+		75B78AD8F01EBEF47AFEDCAB11403B2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB2D909B3348B46F2A6E0496C7FD6D7;
+			remoteInfo = WepinLogin;
+		};
+		A6C3CEB223A26F881240AAEF7A63BB59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8B38D126CB35D08BCEA0D2EFAE137FE;
+			remoteInfo = WepinModal;
+		};
+		C8C6327BCDEBBCB4D19B9C76F99140FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B932EC9659D505694902B50F4EB3D8B;
+			remoteInfo = "AppAuth-AppAuthCore_Privacy";
+		};
+		D8E6DB48C3722AD8F8464B8A1B234231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		DD0F510B83386F7066D3826A999559E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B76265FC4362BCC9990FF5C0D807C2;
+			remoteInfo = WepinCommon;
+		};
+		DD8781179744E15AF810E0D2DCE95963 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B76265FC4362BCC9990FF5C0D807C2;
+			remoteInfo = WepinCommon;
+		};
+		E88EB657FA3B5ECD65F9CF9C0A2C041A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200C32CC5346F401A31756B2131F3FBF;
+			remoteInfo = WepinWidget;
+		};
+		FD39FFC33FF8E9496ACE3E903EB98E84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03340631D53B1119803C2F8E3506D4A;
+			remoteInfo = BCrypt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01E03D29DCC6D74E862C00903351AA7D /* WepinCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WepinCore.modulemap; sourceTree = "<group>"; };
+		0380AD67B65A024C802BF4CA3812C47E /* WepinCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinCommon-prefix.pch"; sourceTree = "<group>"; };
+		03E83052CF2778191BE5AA09E840D27F /* OIDEndSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionResponse.h; path = Sources/AppAuthCore/OIDEndSessionResponse.h; sourceTree = "<group>"; };
+		044CF7BFB3319FF3BB5AFF87E5986AB9 /* bcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt.c; path = BCrypt/Classes/bcryptc/bcrypt.c; sourceTree = "<group>"; };
+		04B7034135C3D210E148A5BA6E4DD568 /* BCrypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCrypt.debug.xcconfig; sourceTree = "<group>"; };
+		0555068BE732D56E79F047B09C2EDC1A /* BCrypt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCrypt-umbrella.h"; sourceTree = "<group>"; };
+		065AB4A09E1A1FF67B31D4D6C1CDE9DF /* WepinWidget-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinWidget-Info.plist"; sourceTree = "<group>"; };
+		06F59D3BF653F675710AA2AA346A6A5A /* WepinModal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinModal-umbrella.h"; sourceTree = "<group>"; };
+		0910E5D9AA250E71C38956C5E287390A /* portable_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = portable_endian.h; path = BCrypt/Classes/bcryptc/include/portable_endian.h; sourceTree = "<group>"; };
+		0C9C6A55DAAF48487B15233C0364C985 /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Sources/AppAuthCore/OIDGrantTypes.m; sourceTree = "<group>"; };
+		0D4CE42260030E6304293732BFBD375D /* WepinWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinWidget.release.xcconfig; sourceTree = "<group>"; };
+		0E5DD72A8F0756CC7D74012E29036978 /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Sources/AppAuthCore/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
+		0E9DADFC706B8A785FFC906BAD87C065 /* Pods-StrideOn-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StrideOn-frameworks.sh"; sourceTree = "<group>"; };
+		1386E50DE47FD7342FDA2941C3885B3A /* Pods-StrideOn-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StrideOn-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13C6A3D2D694CBEC2712D3476AB8155C /* WepinNetworkTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinNetworkTypes.swift; sourceTree = "<group>"; };
+		15627FCF9F7B114E958287BD0C5C9C5A /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Sources/AppAuthCore/OIDAuthorizationService.m; sourceTree = "<group>"; };
+		168087C961BE2FB149970C31760FB35C /* WepinWidget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinWidget-umbrella.h"; sourceTree = "<group>"; };
+		169613DBDFC7B464D9F5962CE01A287D /* OIDExternalUserAgentIOSCustomBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOSCustomBrowser.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.m; sourceTree = "<group>"; };
+		19087FA5E453DF8595374DD017CB472E /* WepinPresentationContextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinPresentationContextProvider.swift; path = WepinLogin/Classes/WepinPresentationContextProvider.swift; sourceTree = "<group>"; };
+		1C19AB89E42B70071773F0D5F2808FD6 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Sources/AppAuthCore/OIDTokenRequest.m; sourceTree = "<group>"; };
+		1C5AF43D3BE3C59A5C287E9155A5F269 /* WepinLogin */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WepinLogin; path = WepinLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC20028DD9B431AE04EA887966077DE /* WepinModal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WepinModal.modulemap; sourceTree = "<group>"; };
+		1E4D1BDD794D271757714690DB44470B /* BCrypt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BCrypt-dummy.m"; sourceTree = "<group>"; };
+		1FF429AE811202AEF5AFD9D5B09399F3 /* WepinWidget */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WepinWidget; path = WepinWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E363E967F2650B0CF207A11A85D6D3 /* OIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDError.m; path = Sources/AppAuthCore/OIDError.m; sourceTree = "<group>"; };
+		22948C4593BFAA3EF9C52E5A3719B42F /* OIDDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDDefines.h; path = Sources/AppAuthCore/OIDDefines.h; sourceTree = "<group>"; };
+		244ECE91C4F8B652CB0763DB7C7E4AE7 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
+		24ABB0FF9C9C7A11275D432DD4A5507E /* WepinWidgetWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinWidgetWrapper.swift; path = WepinWidget/Classes/WepinWidgetWrapper.swift; sourceTree = "<group>"; };
+		27A817B6447B693BF19BE0BB71720AFB /* WepinWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinWidget.debug.xcconfig; sourceTree = "<group>"; };
+		28472D87E93FFA4295FB213A0640BC8E /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Sources/AppAuthCore/OIDFieldMapping.h; sourceTree = "<group>"; };
+		2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		316B9BC11A6F713834C6504A82F9FA2C /* BCrypt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCrypt-prefix.pch"; sourceTree = "<group>"; };
+		324EE07A2FCAB85B6C7F95C71852DC57 /* WepinModal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinModal.debug.xcconfig; sourceTree = "<group>"; };
+		350C4BA6FF431B6A4E7F5C865BA66284 /* OIDScopeUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopeUtilities.m; path = Sources/AppAuthCore/OIDScopeUtilities.m; sourceTree = "<group>"; };
+		366B6911A511A727FB5806AA71347C6D /* WepinWebivewManagers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinWebivewManagers.swift; sourceTree = "<group>"; };
+		38B948C8BCE2C5DB18EA09E56CD2BD57 /* WepinCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinCore.swift; path = WepinCore/Classes/WepinCore.swift; sourceTree = "<group>"; };
+		39881FE0F007BCD75022890B6C296173 /* Pods-StrideOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StrideOn.debug.xcconfig"; sourceTree = "<group>"; };
+		3BBBF059BD981BA39EFF2EBDF5B8EDC4 /* OIDScopeUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopeUtilities.h; path = Sources/AppAuthCore/OIDScopeUtilities.h; sourceTree = "<group>"; };
+		3CAA4E642B55EC8E844E48BE4BB2CF8A /* AppAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.debug.xcconfig; sourceTree = "<group>"; };
+		3F61813BE934624CF580F8031E299841 /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3FA8E4594E8D3A064C03AA639F1077FF /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Sources/AppAuthCore/OIDAuthorizationService.h; sourceTree = "<group>"; };
+		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C6F7371B5CCDCB7D2EB6B33A18F456 /* OIDAuthorizationService+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthorizationService+IOS.m"; path = "Sources/AppAuth/iOS/OIDAuthorizationService+IOS.m"; sourceTree = "<group>"; };
+		429EA683B9650A581CC5BD4E4C92334C /* OIDExternalUserAgentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentRequest.h; path = Sources/AppAuthCore/OIDExternalUserAgentRequest.h; sourceTree = "<group>"; };
+		43BD98FC8E3F36A9C6C196586B0199B7 /* OIDExternalUserAgentIOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOS.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOS.m; sourceTree = "<group>"; };
+		43D07EBF2F5DCBA6EF019E5E76EA1028 /* WepinCore */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WepinCore; path = WepinCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E735569345124F1BC3DBDC435EE397 /* WepinCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinCore-prefix.pch"; sourceTree = "<group>"; };
+		44E394032A128B397F04E5F837150E18 /* WepinLoginStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinLoginStorage.swift; path = WepinLogin/Classes/WepinLoginStorage.swift; sourceTree = "<group>"; };
+		451731BA97EDEBB02737A1BC3D3C7342 /* Pods-StrideOn-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StrideOn-Info.plist"; sourceTree = "<group>"; };
+		4582799CCBFC761298A3AD9373DAB374 /* OIDAuthState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthState.m; path = Sources/AppAuthCore/OIDAuthState.m; sourceTree = "<group>"; };
+		46F136C208D010EC25C989F9F7510FD7 /* WepinWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinWidget.swift; path = WepinWidget/Classes/WepinWidget.swift; sourceTree = "<group>"; };
+		47BD2842A6DEA6DDCC57F1A14FF15462 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		480BBC3F93BECF9F1C69787757CEEF9B /* OIDAuthState+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthState+IOS.h"; path = "Sources/AppAuth/iOS/OIDAuthState+IOS.h"; sourceTree = "<group>"; };
+		4970EBAC773656E180C3F8E814FA05F7 /* WepinAppAuthManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinAppAuthManager.swift; path = WepinLogin/Classes/WepinAppAuthManager.swift; sourceTree = "<group>"; };
+		49A5A7741AA30A57839B9141F08489BB /* OIDEndSessionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionRequest.m; path = Sources/AppAuthCore/OIDEndSessionRequest.m; sourceTree = "<group>"; };
+		4BB2B5711FDE90874E1A6885FF26E173 /* blf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blf.h; path = BCrypt/Classes/bcryptc/include/blf.h; sourceTree = "<group>"; };
+		4C5143C864177D772AAAE4E36D1C12DF /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Sources/AppAuthCore/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
+		4D66844DC953126BCF55A9B458AC5165 /* OIDEndSessionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionRequest.h; path = Sources/AppAuthCore/OIDEndSessionRequest.h; sourceTree = "<group>"; };
+		4DF08CF1AE60062EE82367BBD8A3A213 /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Sources/AppAuthCore/OIDRegistrationResponse.h; sourceTree = "<group>"; };
+		4EA2CF9E5FDDA41D79F941A2076CE65F /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Sources/AppAuthCore/OIDExternalUserAgent.h; sourceTree = "<group>"; };
+		50B96E5CE4D793DCFA89F8DFBD54CDAE /* Pods-StrideOn-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StrideOn-umbrella.h"; sourceTree = "<group>"; };
+		5389A0C1A3C92DE4BCE85F8AF947831A /* WepinCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinCommon.swift; path = WepinCommon/Classes/WepinCommon.swift; sourceTree = "<group>"; };
+		55A4596653DD0A75FB2C0EA4455E664A /* WepinLogin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinLogin-Info.plist"; sourceTree = "<group>"; };
+		57DF2A118E139798C532F508A084EE25 /* JSResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSResponse.swift; sourceTree = "<group>"; };
+		590ADD1976BE30B11AECD488B1DC44B5 /* pycabcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pycabcrypt.h; path = BCrypt/Classes/bcryptc/include/pycabcrypt.h; sourceTree = "<group>"; };
+		593C137CF9EBF759E6E2378DE6D96C5B /* WepinCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinCore-dummy.m"; sourceTree = "<group>"; };
+		5985F8FC30ACF53B014AFF5107AE94D4 /* WepinCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinCommon.debug.xcconfig; sourceTree = "<group>"; };
+		5E95A9EAE00E07D400B25A27CD052344 /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Sources/AppAuthCore/OIDErrorUtilities.m; sourceTree = "<group>"; };
+		611D98448C27413FD4351ED36D5107F0 /* WepinStorageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinStorageManager.swift; sourceTree = "<group>"; };
+		62F22E36836A3FF148F6FF4527BA4F8D /* WepinLogin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinLogin.swift; path = WepinLogin/Classes/WepinLogin.swift; sourceTree = "<group>"; };
+		635227DC596072D78B78460CE65D25BB /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Sources/AppAuthCore/OIDRegistrationRequest.m; sourceTree = "<group>"; };
+		658F93D4440FC4414B33634F4C7D7FC4 /* OIDURLQueryComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLQueryComponent.h; path = Sources/AppAuthCore/OIDURLQueryComponent.h; sourceTree = "<group>"; };
+		667C124AC9135B1DB99DABCAEE9FA5B7 /* WepinNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinNetwork.swift; sourceTree = "<group>"; };
+		67344A9F9BE403376088004C802387FA /* JSProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSProcessor.swift; sourceTree = "<group>"; };
+		69AE3BD3011B3A7A9A5749B49EAD64BC /* WepinModal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinModal-dummy.m"; sourceTree = "<group>"; };
+		6AD2BAEC10CC2EE6A4A3CCE009C316EA /* WepinCommon */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WepinCommon; path = WepinCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB6FEDF603706B523921B5756780A40 /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Sources/AppAuthCore/OIDServiceConfiguration.h; sourceTree = "<group>"; };
+		6BBB62BD024BD3749D0C7AF1DB4C7CE3 /* timingsafe_bcmp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = timingsafe_bcmp.c; path = BCrypt/Classes/bcryptc/timingsafe_bcmp.c; sourceTree = "<group>"; };
+		6DCD9E88388A729BC6586FB4AF606C42 /* OIDIDToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDIDToken.h; path = Sources/AppAuthCore/OIDIDToken.h; sourceTree = "<group>"; };
+		6E39C01BBC2AB11AC2C6AB6C67B02C74 /* WepinError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinError.swift; sourceTree = "<group>"; };
+		7099F61E30DA0BD6FE0A0395C9D50DA7 /* WepinLogin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinLogin-prefix.pch"; sourceTree = "<group>"; };
+		71EE72B212DA7155675902CCEDC0F0DB /* WepinCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinCommon-umbrella.h"; sourceTree = "<group>"; };
+		728216539800FBF166AAE2E9CB6E7857 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		73769D63E7C21E0FF26DF2FD2BA6ED42 /* WepinCommon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WepinCommon.modulemap; sourceTree = "<group>"; };
+		74B8FB926A390278EDEB3CBF886ECA1A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		75206780C3980BB4ABAB69A70A3E4C67 /* WepinWidget.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WepinWidget.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		754DA94BFD5D32D52DD968A31A5E724A /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Sources/AppAuth/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
+		75889CDDD62D9D73D9ADF980DBB5532A /* OIDServiceDiscovery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceDiscovery.h; path = Sources/AppAuthCore/OIDServiceDiscovery.h; sourceTree = "<group>"; };
+		77EB04EEDECA832046887EB1A467FECA /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Sources/AppAuthCore/OIDURLSessionProvider.h; sourceTree = "<group>"; };
+		79753A599C169451FC5C5B0554D90897 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		7CC7E400E17E7E3ECE7A713DC03A8166 /* WepinManagers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinManagers.swift; sourceTree = "<group>"; };
+		7D004ADA5D9042F6E2956CEF469361E2 /* BCrypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCrypt.release.xcconfig; sourceTree = "<group>"; };
+		80604666D472CE7300FEBBE7DD2A16CA /* OIDAuthorizationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationResponse.h; path = Sources/AppAuthCore/OIDAuthorizationResponse.h; sourceTree = "<group>"; };
+		806A185BDB6C5805911C0A683AAF7CD1 /* WepinFirebaseNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinFirebaseNetwork.swift; sourceTree = "<group>"; };
+		80F00895A784015C734175AA3DD562D4 /* OIDClientMetadataParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDClientMetadataParameters.m; path = Sources/AppAuthCore/OIDClientMetadataParameters.m; sourceTree = "<group>"; };
+		816D529E7FE1707ADC521EF867406887 /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Sources/AppAuthCore/OIDScopes.h; sourceTree = "<group>"; };
+		825CDFF5BD2748CC8AA8F6261C4C74C1 /* WepinCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinCommon.release.xcconfig; sourceTree = "<group>"; };
+		8342B0B06420735818AC389593D9E876 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Sources/AppAuthCore/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
+		839FA839EA51B95B901655B24B02FE5F /* OIDExternalUserAgentCatalyst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentCatalyst.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentCatalyst.m; sourceTree = "<group>"; };
+		8444BDA645E4D7E1D5188793F7BFA7F1 /* WepinModal-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinModal-Info.plist"; sourceTree = "<group>"; };
+		84813F005EA22CB2146F9DB4B9762299 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		848785C26FC25F0D36BBAA52D411CFAA /* WepinCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinCore.debug.xcconfig; sourceTree = "<group>"; };
+		8574D51C41E202F50FACD701D0312275 /* AppAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuthCore.h; path = Sources/AppAuthCore.h; sourceTree = "<group>"; };
+		85E9B1ACE449DC3AD01AB5C96A3D2A93 /* WepinCommon.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WepinCommon.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		86BEB6E7AB4F60A0879641D347E214A0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		87D40AABD883FD89DB24285D06369122 /* WepinCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinCore.release.xcconfig; sourceTree = "<group>"; };
+		8A9FD033D986E023199634863FFCA7AE /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Sources/AppAuthCore/OIDFieldMapping.m; sourceTree = "<group>"; };
+		8ADD27145E8A651B9552F23A3E4A9745 /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Sources/AppAuthCore/OIDRegistrationRequest.h; sourceTree = "<group>"; };
+		8BD876B9FD1D29EC2AEE07922CA5B970 /* bcrypt_pbkdf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt_pbkdf.c; path = BCrypt/Classes/bcryptc/bcrypt_pbkdf.c; sourceTree = "<group>"; };
+		8C933450E2F2773A69274CB5183D2E43 /* OIDURLQueryComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLQueryComponent.m; path = Sources/AppAuthCore/OIDURLQueryComponent.m; sourceTree = "<group>"; };
+		8F8BA65358B1EC08E61698F2D2C24740 /* AppAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AppAuth.modulemap; sourceTree = "<group>"; };
+		90BEC6FBE819B57C93125322D13F6D89 /* OIDTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenResponse.h; path = Sources/AppAuthCore/OIDTokenResponse.h; sourceTree = "<group>"; };
+		9637F281BF36FC03D12FAACD11946455 /* WepinWidgetTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinWidgetTypes.swift; sourceTree = "<group>"; };
+		9724589BF4DE41D5ECE8FF95E39BB5D1 /* WepinModal-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinModal-prefix.pch"; sourceTree = "<group>"; };
+		97B07463C236EFD1F7A4F8D22428B078 /* WepinError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinError.swift; path = WepinCommon/Classes/WepinError.swift; sourceTree = "<group>"; };
+		9A326828615889A1F911042C3D6DF482 /* Pods-StrideOn */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StrideOn"; path = Pods_StrideOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B7A9B96F5EC13428D0AC8C1EA37A35F /* OIDExternalUserAgentIOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOS.h; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOS.h; sourceTree = "<group>"; };
+		9D38BA5D6D36E8F98CD1EB52EFC69222 /* WepinLogin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinLogin-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E2D82900652C6370732DAED1F937B83 /* OIDTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenRequest.h; path = Sources/AppAuthCore/OIDTokenRequest.h; sourceTree = "<group>"; };
+		A0C646B18FD6F02D5E93288032367275 /* Pods-StrideOn.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StrideOn.modulemap"; sourceTree = "<group>"; };
+		A111A8A8662C04D02470CF779BDBCCDA /* WepinLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinLogin.release.xcconfig; sourceTree = "<group>"; };
+		A1D470EDE83B8E1B352DBDC9AB7DD5A9 /* OIDIDToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDIDToken.m; path = Sources/AppAuthCore/OIDIDToken.m; sourceTree = "<group>"; };
+		A3DF94E56937D6334F72C1106D7E9317 /* sha2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha2.h; path = BCrypt/Classes/bcryptc/include/sha2.h; sourceTree = "<group>"; };
+		A4483895BF353933E7F7B4B9CB1617F9 /* WepinCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinCore-Info.plist"; sourceTree = "<group>"; };
+		A6884E288C55E6C9BD577AC38C4D116A /* PerfectBCrypt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerfectBCrypt.swift; path = BCrypt/Classes/PerfectBCrypt/PerfectBCrypt.swift; sourceTree = "<group>"; };
+		A8577FB8BE18ACA32C32011FB943B65C /* AppAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AppAuth-Info.plist"; sourceTree = "<group>"; };
+		A9B0FA269904B9C5DBE7728003FA16BF /* AppAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.release.xcconfig; sourceTree = "<group>"; };
+		A9FA18B0B3D5A417F052118C7B8972F7 /* WepinModal */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WepinModal; path = WepinModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD7C0717743A28A71656204F9A3B8FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		ACE2BA00C08F26B064C8DE65A1C62A46 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = WepinLogin/Classes/Utils.swift; sourceTree = "<group>"; };
+		AF1B459415767ADFE5A6E63F82C5F505 /* WepinCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinCore-umbrella.h"; sourceTree = "<group>"; };
+		B119C669000435E69164D78967D2F4D1 /* AppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuth.h; path = Sources/AppAuth.h; sourceTree = "<group>"; };
+		B24BBABC757EE5F79DADA3898481CF85 /* OIDServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceConfiguration.m; path = Sources/AppAuthCore/OIDServiceConfiguration.m; sourceTree = "<group>"; };
+		B28397576164D4B92B94F6F3690E1A46 /* WepinCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WepinCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B33049ABAAF89A80FE8C3043F2AE3FD1 /* WepinModal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinModal.swift; path = WepinModal/Classes/WepinModal.swift; sourceTree = "<group>"; };
+		B3D48833B028106B2686EA184856AFBC /* WepinStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinStorage.swift; sourceTree = "<group>"; };
+		B63EE913F0908F7EDA5E3BB8E8FBCF84 /* blf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blf.c; path = BCrypt/Classes/bcryptc/blf.c; sourceTree = "<group>"; };
+		B6CCCA3D9C256A40502AA4EADC997FA6 /* WepinCommonBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WepinCommonBridge.h; sourceTree = "<group>"; };
+		B898AC955AD89D85B7A969B11DB6FC2F /* WepinModalWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinModalWrapper.swift; path = WepinModal/Classes/WepinModalWrapper.swift; sourceTree = "<group>"; };
+		B9600C6F19EEDEA7123930DF68074044 /* OIDError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDError.h; path = Sources/AppAuthCore/OIDError.h; sourceTree = "<group>"; };
+		BBCC4305E262E8F1C15D870F6895A2C6 /* OIDTokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenResponse.m; path = Sources/AppAuthCore/OIDTokenResponse.m; sourceTree = "<group>"; };
+		BCF222A76F7267AC71689430504C39C3 /* OIDExternalUserAgentSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentSession.h; path = Sources/AppAuthCore/OIDExternalUserAgentSession.h; sourceTree = "<group>"; };
+		BD181CDCB39621AAB710F12EC80B1A78 /* AppAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppAuth-dummy.m"; sourceTree = "<group>"; };
+		BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BCrypt; path = BCrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBD96B5AD35DF0E7BFB3ED9F6D196CD /* WepinWidget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinWidget-dummy.m"; sourceTree = "<group>"; };
+		BE7D3098E91681FA31C78FE908208773 /* OIDTokenUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenUtilities.m; path = Sources/AppAuthCore/OIDTokenUtilities.m; sourceTree = "<group>"; };
+		C3E7B78CDCB29F7ED8E09A1D1F7385FD /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Sources/AppAuthCore/OIDGrantTypes.h; sourceTree = "<group>"; };
+		C6249070E8708E64E2D3A33DBC99F74B /* AppIntallTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppIntallTracker.swift; sourceTree = "<group>"; };
+		C79AD474D9910A35D7D7A7B43F78F266 /* WepinWidget-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinWidget-prefix.pch"; sourceTree = "<group>"; };
+		C8D1E609EA42942F45192397F2791180 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = BCrypt/Classes/bcryptc/include/module.modulemap; sourceTree = "<group>"; };
+		C9287C214EE75FE6B6D0B2F9C9CF23BB /* OIDAuthState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthState.h; path = Sources/AppAuthCore/OIDAuthState.h; sourceTree = "<group>"; };
+		C9AA865CA581FF7081503016F9106020 /* OIDErrorUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDErrorUtilities.h; path = Sources/AppAuthCore/OIDErrorUtilities.h; sourceTree = "<group>"; };
+		CAB37D76854BC78D3F05CC45F6A33DFD /* sha2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha2.c; path = BCrypt/Classes/bcryptc/sha2.c; sourceTree = "<group>"; };
+		CBF7640BABEB4178452D77BE0F17A4D7 /* Pods-StrideOn-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StrideOn-dummy.m"; sourceTree = "<group>"; };
+		CD6961D54D6D5FF3FD9A2BC23DD49F84 /* OIDAuthorizationService+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthorizationService+IOS.h"; path = "Sources/AppAuth/iOS/OIDAuthorizationService+IOS.h"; sourceTree = "<group>"; };
+		CF425176E228F22154AFC29E0E5FDF90 /* NetworkError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D1127CCB8E77AB0C3AC55DFEBAAD2577 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/AppAuthCore/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D1309747BDCCFA70930569433535B1E9 /* OIDEndSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionResponse.m; path = Sources/AppAuthCore/OIDEndSessionResponse.m; sourceTree = "<group>"; };
+		D2293D0FA0EBB39E5DD7BC2AAA5DE55A /* OIDAuthStateErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateErrorDelegate.h; path = Sources/AppAuthCore/OIDAuthStateErrorDelegate.h; sourceTree = "<group>"; };
+		D2886B00775B635137A378E1CCE9AFFF /* OIDTokenUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenUtilities.h; path = Sources/AppAuthCore/OIDTokenUtilities.h; sourceTree = "<group>"; };
+		D4A72B5FC2CFC135EB466FBEE2CBB8BE /* AppAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-umbrella.h"; sourceTree = "<group>"; };
+		D4DA17CF0AE21FDA1295B0D87091CF5D /* Pods-StrideOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StrideOn.release.xcconfig"; sourceTree = "<group>"; };
+		D5DB88E8D7D7BCD400A7003F55F8EFE1 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Sources/AppAuthCore/OIDRegistrationResponse.m; sourceTree = "<group>"; };
+		D71393F565003FE8ED839AB506C905A1 /* WepinCommonTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinCommonTypes.swift; sourceTree = "<group>"; };
+		D71ABF8E19977DFFF584F242D6750EDC /* OIDExternalUserAgentCatalyst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentCatalyst.h; path = Sources/AppAuth/iOS/OIDExternalUserAgentCatalyst.h; sourceTree = "<group>"; };
+		D830558416039DEA5563ADF7A5E1F86B /* WepinLogin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WepinLogin.modulemap; sourceTree = "<group>"; };
+		D9BA5262AD051B2FEEEA70CA8F77E47F /* JsonRpcClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonRpcClient.swift; sourceTree = "<group>"; };
+		DA20B51B0A0952F2FFF0331B2E0A42BB /* OIDClientMetadataParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDClientMetadataParameters.h; path = Sources/AppAuthCore/OIDClientMetadataParameters.h; sourceTree = "<group>"; };
+		DB82B62070D77A9F5EFD6C79C484570E /* OIDExternalUserAgentIOSCustomBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOSCustomBrowser.h; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.h; sourceTree = "<group>"; };
+		DC00BCA2681BCF092103951D2F484D61 /* Pods-StrideOn-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StrideOn-acknowledgements.plist"; sourceTree = "<group>"; };
+		DF520CC441B92E375B3541F6B3C611C2 /* WepinCommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinCommon-Info.plist"; sourceTree = "<group>"; };
+		DFEA1EAFDD05745BD28458D8213AD323 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Sources/AppAuthCore/OIDServiceDiscovery.m; sourceTree = "<group>"; };
+		E09E635719A3CD6A68C5F673EEA7DB08 /* BCrypt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BCrypt-Info.plist"; sourceTree = "<group>"; };
+		E261B9BF85848910A08601D61128A78F /* BCrypt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BCrypt.modulemap; sourceTree = "<group>"; };
+		E443CB04BEAB4E5BF1E0D7FA23B017B2 /* ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist"; sourceTree = "<group>"; };
+		E4FD4C796E07979F3A549CF9AE1A912D /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Sources/AppAuthCore/OIDResponseTypes.m; sourceTree = "<group>"; };
+		EA33BE5B1F5FECB12BBEE174D87A8E8E /* WepinLogin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WepinLogin-umbrella.h"; sourceTree = "<group>"; };
+		EA47D128780D2D8658BD6E48366F1D26 /* WepinWidget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WepinWidget.modulemap; sourceTree = "<group>"; };
+		EA4A5A1F21D182E5BB2A63862FA6336F /* WepinLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinLogin.debug.xcconfig; sourceTree = "<group>"; };
+		EBAEDE3B43BA4646731F9A860B0F71DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EBCC278FC016FE4E12A9836896B4BC02 /* WepinCommonBridge.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = WepinCommonBridge.mm; sourceTree = "<group>"; };
+		EE1765A03505DEF8C2FD26D9BD66C1F7 /* OIDURLSessionProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLSessionProvider.m; path = Sources/AppAuthCore/OIDURLSessionProvider.m; sourceTree = "<group>"; };
+		EE8B9069BFD5164CE68DF997287B4625 /* OIDAuthorizationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationRequest.m; path = Sources/AppAuthCore/OIDAuthorizationRequest.m; sourceTree = "<group>"; };
+		EEF6566880247D1416C1A8524E806ECC /* WepinSessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WepinSessionManager.swift; sourceTree = "<group>"; };
+		EF876E416266056B0E9C5EB4B12D6490 /* WepinLoginWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinLoginWrapper.swift; path = WepinLogin/Classes/WepinLoginWrapper.swift; sourceTree = "<group>"; };
+		EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "AppAuth-AppAuthCore_Privacy"; path = AppAuthCore_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2840D8AB14B5EF7D9A1D003512C2944 /* WepinLoginTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinLoginTypes.swift; path = WepinLogin/Classes/types/WepinLoginTypes.swift; sourceTree = "<group>"; };
+		F2B3569C817680FEC108B99D53A7AAFA /* WepinCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinCommon-dummy.m"; sourceTree = "<group>"; };
+		F34BC53E3B0881B69A699FA5B9CB855B /* WepinModal.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WepinModal.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F55A8C10274C1659AD5B57D63310A4F9 /* OIDResponseTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDResponseTypes.h; path = Sources/AppAuthCore/OIDResponseTypes.h; sourceTree = "<group>"; };
+		FA4C9033293AC098864A486CE36B7E9C /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Sources/AppAuthCore/OIDScopes.m; sourceTree = "<group>"; };
+		FCB672CB19302EBFA698B4A17A513D13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FE15CAEAACDB6107AD5177B7908ACC81 /* WepinModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinModal.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00B9CB2D101C8CACF6CD1430DA222000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423F8E2CFAAC00F9A1FCD5E6DFB88152 /* Foundation.framework in Frameworks */,
+				1EC0765AD0F6F5D86CE5EE8020E22C0F /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF8AD36F704873DC0AD6EEFFC6FBD1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF50237D7D9814A09CEA246A04C0BAD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EFBEFEE39A0BCCDCB6C8B87BF61847B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F93C496B7BE6B97406E4A48A59DD2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40148E34E35252D743B2F39F3BCC8E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0553EA2D6DD875F99FD0903DB44585 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42181378F6ACDE3A9290F2F40F3E406C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A2F22122FF76B7E36774927848F47D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6425EF58499DB66910B65FA339C8CFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBD700ABBE61BD4AAD3BAF0F4E39FC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB526914BC293DDC87099CBCAC030BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8586DFBE23815C4BDF9FDFECC27471DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC7E88B3C089AE9D48337C1BA171827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6C9F756C73D747DBF4A1CFB0AAA04F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EBF8BA007E6E52B35B0F08E119EA1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00CEC9BEDF396B307D6EE6C7546A67AF /* ExternalUserAgent */ = {
+			isa = PBXGroup;
+			children = (
+				B119C669000435E69164D78967D2F4D1 /* AppAuth.h */,
+				CD6961D54D6D5FF3FD9A2BC23DD49F84 /* OIDAuthorizationService+IOS.h */,
+				41C6F7371B5CCDCB7D2EB6B33A18F456 /* OIDAuthorizationService+IOS.m */,
+				480BBC3F93BECF9F1C69787757CEEF9B /* OIDAuthState+IOS.h */,
+				754DA94BFD5D32D52DD968A31A5E724A /* OIDAuthState+IOS.m */,
+				D71ABF8E19977DFFF584F242D6750EDC /* OIDExternalUserAgentCatalyst.h */,
+				839FA839EA51B95B901655B24B02FE5F /* OIDExternalUserAgentCatalyst.m */,
+				9B7A9B96F5EC13428D0AC8C1EA37A35F /* OIDExternalUserAgentIOS.h */,
+				43BD98FC8E3F36A9C6C196586B0199B7 /* OIDExternalUserAgentIOS.m */,
+				DB82B62070D77A9F5EFD6C79C484570E /* OIDExternalUserAgentIOSCustomBrowser.h */,
+				169613DBDFC7B464D9F5962CE01A287D /* OIDExternalUserAgentIOSCustomBrowser.m */,
+			);
+			name = ExternalUserAgent;
+			sourceTree = "<group>";
+		};
+		01632FE05751F02092DDD1DAD1576551 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73769D63E7C21E0FF26DF2FD2BA6ED42 /* WepinCommon.modulemap */,
+				F2B3569C817680FEC108B99D53A7AAFA /* WepinCommon-dummy.m */,
+				DF520CC441B92E375B3541F6B3C611C2 /* WepinCommon-Info.plist */,
+				0380AD67B65A024C802BF4CA3812C47E /* WepinCommon-prefix.pch */,
+				71EE72B212DA7155675902CCEDC0F0DB /* WepinCommon-umbrella.h */,
+				5985F8FC30ACF53B014AFF5107AE94D4 /* WepinCommon.debug.xcconfig */,
+				825CDFF5BD2748CC8AA8F6261C4C74C1 /* WepinCommon.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../Pods/Target Support Files/WepinCommon";
+			sourceTree = "<group>";
+		};
+		102F8D3CA3939BB0024623A5A252B92F /* network */ = {
+			isa = PBXGroup;
+			children = (
+				D9BA5262AD051B2FEEEA70CA8F77E47F /* JsonRpcClient.swift */,
+				CF425176E228F22154AFC29E0E5FDF90 /* NetworkError.swift */,
+				3F61813BE934624CF580F8031E299841 /* NetworkMonitor.swift */,
+				806A185BDB6C5805911C0A683AAF7CD1 /* WepinFirebaseNetwork.swift */,
+				667C124AC9135B1DB99DABCAEE9FA5B7 /* WepinNetwork.swift */,
+			);
+			name = network;
+			path = WepinCore/Classes/network;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24DE71243FE84E5CE9709D5ECC89B4E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FD4755BBAA11D41DA7FA6E5F20683EA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8574D51C41E202F50FACD701D0312275 /* AppAuthCore.h */,
+				8342B0B06420735818AC389593D9E876 /* OIDAuthorizationRequest.h */,
+				EE8B9069BFD5164CE68DF997287B4625 /* OIDAuthorizationRequest.m */,
+				80604666D472CE7300FEBBE7DD2A16CA /* OIDAuthorizationResponse.h */,
+				4C5143C864177D772AAAE4E36D1C12DF /* OIDAuthorizationResponse.m */,
+				3FA8E4594E8D3A064C03AA639F1077FF /* OIDAuthorizationService.h */,
+				15627FCF9F7B114E958287BD0C5C9C5A /* OIDAuthorizationService.m */,
+				C9287C214EE75FE6B6D0B2F9C9CF23BB /* OIDAuthState.h */,
+				4582799CCBFC761298A3AD9373DAB374 /* OIDAuthState.m */,
+				0E5DD72A8F0756CC7D74012E29036978 /* OIDAuthStateChangeDelegate.h */,
+				D2293D0FA0EBB39E5DD7BC2AAA5DE55A /* OIDAuthStateErrorDelegate.h */,
+				DA20B51B0A0952F2FFF0331B2E0A42BB /* OIDClientMetadataParameters.h */,
+				80F00895A784015C734175AA3DD562D4 /* OIDClientMetadataParameters.m */,
+				22948C4593BFAA3EF9C52E5A3719B42F /* OIDDefines.h */,
+				4D66844DC953126BCF55A9B458AC5165 /* OIDEndSessionRequest.h */,
+				49A5A7741AA30A57839B9141F08489BB /* OIDEndSessionRequest.m */,
+				03E83052CF2778191BE5AA09E840D27F /* OIDEndSessionResponse.h */,
+				D1309747BDCCFA70930569433535B1E9 /* OIDEndSessionResponse.m */,
+				B9600C6F19EEDEA7123930DF68074044 /* OIDError.h */,
+				20E363E967F2650B0CF207A11A85D6D3 /* OIDError.m */,
+				C9AA865CA581FF7081503016F9106020 /* OIDErrorUtilities.h */,
+				5E95A9EAE00E07D400B25A27CD052344 /* OIDErrorUtilities.m */,
+				4EA2CF9E5FDDA41D79F941A2076CE65F /* OIDExternalUserAgent.h */,
+				429EA683B9650A581CC5BD4E4C92334C /* OIDExternalUserAgentRequest.h */,
+				BCF222A76F7267AC71689430504C39C3 /* OIDExternalUserAgentSession.h */,
+				28472D87E93FFA4295FB213A0640BC8E /* OIDFieldMapping.h */,
+				8A9FD033D986E023199634863FFCA7AE /* OIDFieldMapping.m */,
+				C3E7B78CDCB29F7ED8E09A1D1F7385FD /* OIDGrantTypes.h */,
+				0C9C6A55DAAF48487B15233C0364C985 /* OIDGrantTypes.m */,
+				6DCD9E88388A729BC6586FB4AF606C42 /* OIDIDToken.h */,
+				A1D470EDE83B8E1B352DBDC9AB7DD5A9 /* OIDIDToken.m */,
+				8ADD27145E8A651B9552F23A3E4A9745 /* OIDRegistrationRequest.h */,
+				635227DC596072D78B78460CE65D25BB /* OIDRegistrationRequest.m */,
+				4DF08CF1AE60062EE82367BBD8A3A213 /* OIDRegistrationResponse.h */,
+				D5DB88E8D7D7BCD400A7003F55F8EFE1 /* OIDRegistrationResponse.m */,
+				F55A8C10274C1659AD5B57D63310A4F9 /* OIDResponseTypes.h */,
+				E4FD4C796E07979F3A549CF9AE1A912D /* OIDResponseTypes.m */,
+				816D529E7FE1707ADC521EF867406887 /* OIDScopes.h */,
+				FA4C9033293AC098864A486CE36B7E9C /* OIDScopes.m */,
+				3BBBF059BD981BA39EFF2EBDF5B8EDC4 /* OIDScopeUtilities.h */,
+				350C4BA6FF431B6A4E7F5C865BA66284 /* OIDScopeUtilities.m */,
+				6BB6FEDF603706B523921B5756780A40 /* OIDServiceConfiguration.h */,
+				B24BBABC757EE5F79DADA3898481CF85 /* OIDServiceConfiguration.m */,
+				75889CDDD62D9D73D9ADF980DBB5532A /* OIDServiceDiscovery.h */,
+				DFEA1EAFDD05745BD28458D8213AD323 /* OIDServiceDiscovery.m */,
+				9E2D82900652C6370732DAED1F937B83 /* OIDTokenRequest.h */,
+				1C19AB89E42B70071773F0D5F2808FD6 /* OIDTokenRequest.m */,
+				90BEC6FBE819B57C93125322D13F6D89 /* OIDTokenResponse.h */,
+				BBCC4305E262E8F1C15D870F6895A2C6 /* OIDTokenResponse.m */,
+				D2886B00775B635137A378E1CCE9AFFF /* OIDTokenUtilities.h */,
+				BE7D3098E91681FA31C78FE908208773 /* OIDTokenUtilities.m */,
+				658F93D4440FC4414B33634F4C7D7FC4 /* OIDURLQueryComponent.h */,
+				8C933450E2F2773A69274CB5183D2E43 /* OIDURLQueryComponent.m */,
+				77EB04EEDECA832046887EB1A467FECA /* OIDURLSessionProvider.h */,
+				EE1765A03505DEF8C2FD26D9BD66C1F7 /* OIDURLSessionProvider.m */,
+				ED2BBE1BE9D70D6EB15E88A9F52A94B2 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		22F3C529459555EB79E01A6B03ADB150 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				6E39C01BBC2AB11AC2C6AB6C67B02C74 /* WepinError.swift */,
+				9637F281BF36FC03D12FAACD11946455 /* WepinWidgetTypes.swift */,
+			);
+			name = types;
+			path = WepinWidget/Classes/types;
+			sourceTree = "<group>";
+		};
+		238DCB3A6C45ADC9ADE092A7B538A0EA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A082FE663F1C43D3C7A4198CA58A0A2A /* WepinCommon */,
+				D2754FD5BF3C2E980A33AECEAC92BB9A /* WepinCore */,
+				5CDF108346F1021CE6371BDAE876D062 /* WepinModal */,
+				38333C7DD0FC4D66E265F531862F5886 /* WepinWidget */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		24DE71243FE84E5CE9709D5ECC89B4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2E9115413F6DDBB0207B2508AD27E843 /* Foundation.framework */,
+				79753A599C169451FC5C5B0554D90897 /* SafariServices.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		27103207B97EE0070B74DCD0073D9913 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA47D128780D2D8658BD6E48366F1D26 /* WepinWidget.modulemap */,
+				BDBD96B5AD35DF0E7BFB3ED9F6D196CD /* WepinWidget-dummy.m */,
+				065AB4A09E1A1FF67B31D4D6C1CDE9DF /* WepinWidget-Info.plist */,
+				C79AD474D9910A35D7D7A7B43F78F266 /* WepinWidget-prefix.pch */,
+				168087C961BE2FB149970C31760FB35C /* WepinWidget-umbrella.h */,
+				27A817B6447B693BF19BE0BB71720AFB /* WepinWidget.debug.xcconfig */,
+				0D4CE42260030E6304293732BFBD375D /* WepinWidget.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Pods/Target Support Files/WepinWidget";
+			sourceTree = "<group>";
+		};
+		2983E42D255163F67DE86424330E58EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DC20028DD9B431AE04EA887966077DE /* WepinModal.modulemap */,
+				69AE3BD3011B3A7A9A5749B49EAD64BC /* WepinModal-dummy.m */,
+				8444BDA645E4D7E1D5188793F7BFA7F1 /* WepinModal-Info.plist */,
+				9724589BF4DE41D5ECE8FF95E39BB5D1 /* WepinModal-prefix.pch */,
+				06F59D3BF653F675710AA2AA346A6A5A /* WepinModal-umbrella.h */,
+				324EE07A2FCAB85B6C7F95C71852DC57 /* WepinModal.debug.xcconfig */,
+				FE15CAEAACDB6107AD5177B7908ACC81 /* WepinModal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../Pods/Target Support Files/WepinModal";
+			sourceTree = "<group>";
+		};
+		32896477229C81A6F40AC89596123D40 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACF3AA1228E81B1078EC0B3D712113EA /* Pods-StrideOn */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		38333C7DD0FC4D66E265F531862F5886 /* WepinWidget */ = {
+			isa = PBXGroup;
+			children = (
+				46F136C208D010EC25C989F9F7510FD7 /* WepinWidget.swift */,
+				24ABB0FF9C9C7A11275D432DD4A5507E /* WepinWidgetWrapper.swift */,
+				A36FC75365B425D7083AEA29F3B54AFB /* managers */,
+				D594BA3F92E74E99D5507164C295E8F1 /* Pod */,
+				27103207B97EE0070B74DCD0073D9913 /* Support Files */,
+				22F3C529459555EB79E01A6B03ADB150 /* types */,
+				3D715A0858771BF35D2C909FBE2AA71D /* webview */,
+			);
+			name = WepinWidget;
+			path = "../wepin-ios-sdk-widget-v1";
+			sourceTree = "<group>";
+		};
+		3D715A0858771BF35D2C909FBE2AA71D /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				67344A9F9BE403376088004C802387FA /* JSProcessor.swift */,
+				366B6911A511A727FB5806AA71347C6D /* WepinWebivewManagers.swift */,
+			);
+			name = webview;
+			path = WepinWidget/Classes/webview;
+			sourceTree = "<group>";
+		};
+		4360A7A583CD8BFA2C6CEFABC143EE7C /* types */ = {
+			isa = PBXGroup;
+			children = (
+				13C6A3D2D694CBEC2712D3476AB8155C /* WepinNetworkTypes.swift */,
+			);
+			name = types;
+			path = WepinCore/Classes/types;
+			sourceTree = "<group>";
+		};
+		509B5055C1DE6D8707AD50BB2B1F8EE0 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				B3D48833B028106B2686EA184856AFBC /* WepinStorage.swift */,
+				D7DA40448149624584DDB9BF93E30C90 /* manager */,
+			);
+			name = storage;
+			path = WepinCore/Classes/storage;
+			sourceTree = "<group>";
+		};
+		512DE169551E68659DA973D7CFE36933 /* BCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				044CF7BFB3319FF3BB5AFF87E5986AB9 /* bcrypt.c */,
+				8BD876B9FD1D29EC2AEE07922CA5B970 /* bcrypt_pbkdf.c */,
+				B63EE913F0908F7EDA5E3BB8E8FBCF84 /* blf.c */,
+				4BB2B5711FDE90874E1A6885FF26E173 /* blf.h */,
+				C8D1E609EA42942F45192397F2791180 /* module.modulemap */,
+				A6884E288C55E6C9BD577AC38C4D116A /* PerfectBCrypt.swift */,
+				0910E5D9AA250E71C38956C5E287390A /* portable_endian.h */,
+				590ADD1976BE30B11AECD488B1DC44B5 /* pycabcrypt.h */,
+				CAB37D76854BC78D3F05CC45F6A33DFD /* sha2.c */,
+				A3DF94E56937D6334F72C1106D7E9317 /* sha2.h */,
+				6BBB62BD024BD3749D0C7AF1DB4C7CE3 /* timingsafe_bcmp.c */,
+				F19F19531C576B3D19D9779F9F6E6C5D /* Support Files */,
+			);
+			name = BCrypt;
+			path = BCrypt;
+			sourceTree = "<group>";
+		};
+		5180A29D58DD94AEA0AB81221817F633 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				47BD2842A6DEA6DDCC57F1A14FF15462 /* LICENSE */,
+				728216539800FBF166AAE2E9CB6E7857 /* README.md */,
+				F34BC53E3B0881B69A699FA5B9CB855B /* WepinModal.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5CDF108346F1021CE6371BDAE876D062 /* WepinModal */ = {
+			isa = PBXGroup;
+			children = (
+				B33049ABAAF89A80FE8C3043F2AE3FD1 /* WepinModal.swift */,
+				B898AC955AD89D85B7A969B11DB6FC2F /* WepinModalWrapper.swift */,
+				5180A29D58DD94AEA0AB81221817F633 /* Pod */,
+				2983E42D255163F67DE86424330E58EA /* Support Files */,
+			);
+			name = WepinModal;
+			path = "../wepin-ios-sdk-internal-v1/packages/WepinModal";
+			sourceTree = "<group>";
+		};
+		5F03188D071F44D7D01961FA1E1C267B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3B203F2136F7BCF5F875628EACE67C5 /* AppAuth */,
+				512DE169551E68659DA973D7CFE36933 /* BCrypt */,
+				B64ABF0EBE2DE22998BEB76087DEC133 /* WepinLogin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		655D918AB7C9AF469EE5A00BC829C398 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCCA3D9C256A40502AA4EADC997FA6 /* WepinCommonBridge.h */,
+				EBCC278FC016FE4E12A9836896B4BC02 /* WepinCommonBridge.mm */,
+			);
+			name = ObjC;
+			path = WepinCommon/Classes/ObjC;
+			sourceTree = "<group>";
+		};
+		68654C707DC58FE9FC251626447C7FBE /* session */ = {
+			isa = PBXGroup;
+			children = (
+				EEF6566880247D1416C1A8524E806ECC /* WepinSessionManager.swift */,
+			);
+			name = session;
+			path = WepinCore/Classes/session;
+			sourceTree = "<group>";
+		};
+		7D7C9E6376D2A0E2363C584B7BC020E3 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				57DF2A118E139798C532F508A084EE25 /* JSResponse.swift */,
+				D71393F565003FE8ED839AB506C905A1 /* WepinCommonTypes.swift */,
+			);
+			name = types;
+			path = WepinCommon/Classes/types;
+			sourceTree = "<group>";
+		};
+		A082FE663F1C43D3C7A4198CA58A0A2A /* WepinCommon */ = {
+			isa = PBXGroup;
+			children = (
+				5389A0C1A3C92DE4BCE85F8AF947831A /* WepinCommon.swift */,
+				97B07463C236EFD1F7A4F8D22428B078 /* WepinError.swift */,
+				655D918AB7C9AF469EE5A00BC829C398 /* ObjC */,
+				B088DE97F166E85A8A2FE6B7A839AEE0 /* Pod */,
+				01632FE05751F02092DDD1DAD1576551 /* Support Files */,
+				7D7C9E6376D2A0E2363C584B7BC020E3 /* types */,
+			);
+			name = WepinCommon;
+			path = "../wepin-ios-sdk-internal-v1/packages/WepinCommon";
+			sourceTree = "<group>";
+		};
+		A36FC75365B425D7083AEA29F3B54AFB /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				7CC7E400E17E7E3ECE7A713DC03A8166 /* WepinManagers.swift */,
+			);
+			name = managers;
+			path = WepinWidget/Classes/managers;
+			sourceTree = "<group>";
+		};
+		ACF3AA1228E81B1078EC0B3D712113EA /* Pods-StrideOn */ = {
+			isa = PBXGroup;
+			children = (
+				A0C646B18FD6F02D5E93288032367275 /* Pods-StrideOn.modulemap */,
+				1386E50DE47FD7342FDA2941C3885B3A /* Pods-StrideOn-acknowledgements.markdown */,
+				DC00BCA2681BCF092103951D2F484D61 /* Pods-StrideOn-acknowledgements.plist */,
+				CBF7640BABEB4178452D77BE0F17A4D7 /* Pods-StrideOn-dummy.m */,
+				0E9DADFC706B8A785FFC906BAD87C065 /* Pods-StrideOn-frameworks.sh */,
+				451731BA97EDEBB02737A1BC3D3C7342 /* Pods-StrideOn-Info.plist */,
+				50B96E5CE4D793DCFA89F8DFBD54CDAE /* Pods-StrideOn-umbrella.h */,
+				39881FE0F007BCD75022890B6C296173 /* Pods-StrideOn.debug.xcconfig */,
+				D4DA17CF0AE21FDA1295B0D87091CF5D /* Pods-StrideOn.release.xcconfig */,
+			);
+			name = "Pods-StrideOn";
+			path = "Target Support Files/Pods-StrideOn";
+			sourceTree = "<group>";
+		};
+		B088DE97F166E85A8A2FE6B7A839AEE0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEDE3B43BA4646731F9A860B0F71DA /* LICENSE */,
+				74B8FB926A390278EDEB3CBF886ECA1A /* README.md */,
+				85E9B1ACE449DC3AD01AB5C96A3D2A93 /* WepinCommon.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		B3B203F2136F7BCF5F875628EACE67C5 /* AppAuth */ = {
+			isa = PBXGroup;
+			children = (
+				1FD4755BBAA11D41DA7FA6E5F20683EA /* Core */,
+				00CEC9BEDF396B307D6EE6C7546A67AF /* ExternalUserAgent */,
+				DD4C299456C7075C6B7A72AD515FF597 /* Support Files */,
+			);
+			name = AppAuth;
+			path = AppAuth;
+			sourceTree = "<group>";
+		};
+		B64ABF0EBE2DE22998BEB76087DEC133 /* WepinLogin */ = {
+			isa = PBXGroup;
+			children = (
+				ACE2BA00C08F26B064C8DE65A1C62A46 /* Utils.swift */,
+				4970EBAC773656E180C3F8E814FA05F7 /* WepinAppAuthManager.swift */,
+				62F22E36836A3FF148F6FF4527BA4F8D /* WepinLogin.swift */,
+				44E394032A128B397F04E5F837150E18 /* WepinLoginStorage.swift */,
+				F2840D8AB14B5EF7D9A1D003512C2944 /* WepinLoginTypes.swift */,
+				EF876E416266056B0E9C5EB4B12D6490 /* WepinLoginWrapper.swift */,
+				19087FA5E453DF8595374DD017CB472E /* WepinPresentationContextProvider.swift */,
+				CDA6AC3BFF0C5845025AF7017728ED08 /* Support Files */,
+			);
+			name = WepinLogin;
+			path = WepinLogin;
+			sourceTree = "<group>";
+		};
+		BCD854D00B7BA58E4B321B92EC77FA2C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				01E03D29DCC6D74E862C00903351AA7D /* WepinCore.modulemap */,
+				593C137CF9EBF759E6E2378DE6D96C5B /* WepinCore-dummy.m */,
+				A4483895BF353933E7F7B4B9CB1617F9 /* WepinCore-Info.plist */,
+				43E735569345124F1BC3DBDC435EE397 /* WepinCore-prefix.pch */,
+				AF1B459415767ADFE5A6E63F82C5F505 /* WepinCore-umbrella.h */,
+				848785C26FC25F0D36BBAA52D411CFAA /* WepinCore.debug.xcconfig */,
+				87D40AABD883FD89DB24285D06369122 /* WepinCore.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../Pods/Target Support Files/WepinCore";
+			sourceTree = "<group>";
+		};
+		C10DA79BAF21C6046FB15E4D93929156 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				ACD7C0717743A28A71656204F9A3B8FA /* LICENSE */,
+				84813F005EA22CB2146F9DB4B9762299 /* README.md */,
+				B28397576164D4B92B94F6F3690E1A46 /* WepinCore.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CDA6AC3BFF0C5845025AF7017728ED08 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D830558416039DEA5563ADF7A5E1F86B /* WepinLogin.modulemap */,
+				9D38BA5D6D36E8F98CD1EB52EFC69222 /* WepinLogin-dummy.m */,
+				55A4596653DD0A75FB2C0EA4455E664A /* WepinLogin-Info.plist */,
+				7099F61E30DA0BD6FE0A0395C9D50DA7 /* WepinLogin-prefix.pch */,
+				EA33BE5B1F5FECB12BBEE174D87A8E8E /* WepinLogin-umbrella.h */,
+				EA4A5A1F21D182E5BB2A63862FA6336F /* WepinLogin.debug.xcconfig */,
+				A111A8A8662C04D02470CF779BDBCCDA /* WepinLogin.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WepinLogin";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				238DCB3A6C45ADC9ADE092A7B538A0EA /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				5F03188D071F44D7D01961FA1E1C267B /* Pods */,
+				E467A5B4F479FE0B8F9BD9AA6FE803BB /* Products */,
+				32896477229C81A6F40AC89596123D40 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2754FD5BF3C2E980A33AECEAC92BB9A /* WepinCore */ = {
+			isa = PBXGroup;
+			children = (
+				38B948C8BCE2C5DB18EA09E56CD2BD57 /* WepinCore.swift */,
+				102F8D3CA3939BB0024623A5A252B92F /* network */,
+				C10DA79BAF21C6046FB15E4D93929156 /* Pod */,
+				68654C707DC58FE9FC251626447C7FBE /* session */,
+				509B5055C1DE6D8707AD50BB2B1F8EE0 /* storage */,
+				BCD854D00B7BA58E4B321B92EC77FA2C /* Support Files */,
+				4360A7A583CD8BFA2C6CEFABC143EE7C /* types */,
+			);
+			name = WepinCore;
+			path = "../wepin-ios-sdk-internal-v1/packages/WepinCore";
+			sourceTree = "<group>";
+		};
+		D594BA3F92E74E99D5507164C295E8F1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				FCB672CB19302EBFA698B4A17A513D13 /* LICENSE */,
+				86BEB6E7AB4F60A0879641D347E214A0 /* README.md */,
+				75206780C3980BB4ABAB69A70A3E4C67 /* WepinWidget.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		D7DA40448149624584DDB9BF93E30C90 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				C6249070E8708E64E2D3A33DBC99F74B /* AppIntallTracker.swift */,
+				611D98448C27413FD4351ED36D5107F0 /* WepinStorageManager.swift */,
+			);
+			name = manager;
+			path = manager;
+			sourceTree = "<group>";
+		};
+		DD4C299456C7075C6B7A72AD515FF597 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F8BA65358B1EC08E61698F2D2C24740 /* AppAuth.modulemap */,
+				BD181CDCB39621AAB710F12EC80B1A78 /* AppAuth-dummy.m */,
+				A8577FB8BE18ACA32C32011FB943B65C /* AppAuth-Info.plist */,
+				244ECE91C4F8B652CB0763DB7C7E4AE7 /* AppAuth-prefix.pch */,
+				D4A72B5FC2CFC135EB466FBEE2CBB8BE /* AppAuth-umbrella.h */,
+				3CAA4E642B55EC8E844E48BE4BB2CF8A /* AppAuth.debug.xcconfig */,
+				A9B0FA269904B9C5DBE7728003FA16BF /* AppAuth.release.xcconfig */,
+				E443CB04BEAB4E5BF1E0D7FA23B017B2 /* ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AppAuth";
+			sourceTree = "<group>";
+		};
+		E467A5B4F479FE0B8F9BD9AA6FE803BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */,
+				EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */,
+				BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */,
+				9A326828615889A1F911042C3D6DF482 /* Pods-StrideOn */,
+				6AD2BAEC10CC2EE6A4A3CCE009C316EA /* WepinCommon */,
+				43D07EBF2F5DCBA6EF019E5E76EA1028 /* WepinCore */,
+				1C5AF43D3BE3C59A5C287E9155A5F269 /* WepinLogin */,
+				A9FA18B0B3D5A417F052118C7B8972F7 /* WepinModal */,
+				1FF429AE811202AEF5AFD9D5B09399F3 /* WepinWidget */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2BBE1BE9D70D6EB15E88A9F52A94B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1127CCB8E77AB0C3AC55DFEBAAD2577 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F19F19531C576B3D19D9779F9F6E6C5D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E261B9BF85848910A08601D61128A78F /* BCrypt.modulemap */,
+				1E4D1BDD794D271757714690DB44470B /* BCrypt-dummy.m */,
+				E09E635719A3CD6A68C5F673EEA7DB08 /* BCrypt-Info.plist */,
+				316B9BC11A6F713834C6504A82F9FA2C /* BCrypt-prefix.pch */,
+				0555068BE732D56E79F047B09C2EDC1A /* BCrypt-umbrella.h */,
+				04B7034135C3D210E148A5BA6E4DD568 /* BCrypt.debug.xcconfig */,
+				7D004ADA5D9042F6E2956CEF469361E2 /* BCrypt.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BCrypt";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05D6EFB5A7C5AEB9C2DE26AF0FF426F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D168696891DA2A1B771DBEF1AF351BD7 /* WepinCommon-umbrella.h in Headers */,
+				D1A6C98462AFC7DFE26D8CDC310F0C10 /* WepinCommonBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A7F7A9A7525E813BF8D2826C58F3370 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A941DDFA800996C0C6B3AF6E6C00D4A9 /* WepinCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42CCC08B8E7156BDF3EB1902B16FDBC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0093D4780360978EC4F26B9428911C6 /* Pods-StrideOn-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EEBC4CD3F28B6A54D61E6252E809D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B25244740419A7155F3E6B398B23445 /* BCrypt-umbrella.h in Headers */,
+				77484F0DDD40F4F6F7F100FCFA65E20A /* blf.h in Headers */,
+				10A9FB735684D720023C4B10C2C41B5C /* portable_endian.h in Headers */,
+				00D01423416CE2FA9956AF64006EE7D2 /* pycabcrypt.h in Headers */,
+				FB35F14DCA485D9A57728211FF12580C /* sha2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E7B3016D5B650F10A20CB380660C0DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94BE4A8D2A5C641E03977536534871A3 /* WepinModal-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A14E8CF78453862760F90928F5D8896 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE884024D82960F91DE1AD4B8C06257 /* WepinLogin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF777EB134443C4159F728A2656E350 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434A75B3C9FBAC207DDA76DF2F7F52D1 /* WepinWidget-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3A4229B8C5AC1CFCCBE4D98C895116C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3F95D81B933EE05BE11B4B1D2BF0ADD /* AppAuth.h in Headers */,
+				3B7AAAB356FC81C6565BBE6938CE6B70 /* AppAuth-umbrella.h in Headers */,
+				AEEF21E567FE4366C7624057B7976D2C /* AppAuthCore.h in Headers */,
+				7FFF93B0637FEE76FEED6D132B25D213 /* OIDAuthorizationRequest.h in Headers */,
+				D33A70B5F3D101DFA5FC2BC014E5D8F0 /* OIDAuthorizationResponse.h in Headers */,
+				DA8D91B62FEB7F8999C7B01EBB430471 /* OIDAuthorizationService.h in Headers */,
+				DD1F22E70A8754D0E92B7F6387B7ACB1 /* OIDAuthorizationService+IOS.h in Headers */,
+				C88CA6721406C72E6EEDDB736B97A434 /* OIDAuthState.h in Headers */,
+				A4FC5C63C1C49CDF77A7B3EACF06AF97 /* OIDAuthState+IOS.h in Headers */,
+				EDC79CEE96B97E71AB7004D2400431E9 /* OIDAuthStateChangeDelegate.h in Headers */,
+				D113A464B8F95A4849DF94B4D300A4D3 /* OIDAuthStateErrorDelegate.h in Headers */,
+				587B88BE045B5034B5EF313D15805CAD /* OIDClientMetadataParameters.h in Headers */,
+				D1F0123A32394CFE85744DECB6A68514 /* OIDDefines.h in Headers */,
+				5E0FE034C3020FF69E6DFFFBD40510C9 /* OIDEndSessionRequest.h in Headers */,
+				129F5D71C96536B80AA2D80384FE8DB4 /* OIDEndSessionResponse.h in Headers */,
+				11FB9C8FCEADC84542F07AF822B9A11D /* OIDError.h in Headers */,
+				5328EECFC32259196096A8B6387F42B8 /* OIDErrorUtilities.h in Headers */,
+				2F8CA8830F8BBF18ABABA11F869C6D99 /* OIDExternalUserAgent.h in Headers */,
+				CF238A6BD005718699B81801BE0198CE /* OIDExternalUserAgentCatalyst.h in Headers */,
+				B05508F9764D4F1672936648A44B95DB /* OIDExternalUserAgentIOS.h in Headers */,
+				A38EEF53871F8AAAD0429E1DF4FCA1CE /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */,
+				0700E7FBEAE5143E22AFCC6DFAC822FA /* OIDExternalUserAgentRequest.h in Headers */,
+				7C1E0438E51364B4CEAEE7B51BBBDA42 /* OIDExternalUserAgentSession.h in Headers */,
+				71981EE53197200543C53BE7423BB89A /* OIDFieldMapping.h in Headers */,
+				F399293EE2154A2159E97EF9D807F510 /* OIDGrantTypes.h in Headers */,
+				4F5F702E9DFEA81F4EC7F0990F3ED184 /* OIDIDToken.h in Headers */,
+				8B98690B06CB078B7D87310A327A4CA3 /* OIDRegistrationRequest.h in Headers */,
+				B387DA1A90AABE851EE27F0CEF53496D /* OIDRegistrationResponse.h in Headers */,
+				7039F257E6ABF5806655CBE2AD2E9531 /* OIDResponseTypes.h in Headers */,
+				D83AF4E43CC0482FB69CD41BDF219072 /* OIDScopes.h in Headers */,
+				1E86A782F818F06FC3F4E579B8BD61F1 /* OIDScopeUtilities.h in Headers */,
+				46F18AAA50A0315D3DCA99F9A9117F05 /* OIDServiceConfiguration.h in Headers */,
+				6C15208410D419482CA29F64A243F03A /* OIDServiceDiscovery.h in Headers */,
+				1A0ADDD9FE5AD192B994832CCE476F14 /* OIDTokenRequest.h in Headers */,
+				408DA46FD224E481EFBB0CEBF72506E9 /* OIDTokenResponse.h in Headers */,
+				AA2439BAA2E4174F49F223579F4D8AC5 /* OIDTokenUtilities.h in Headers */,
+				13DF559CFEB551A762CE28734FBCA6BC /* OIDURLQueryComponent.h in Headers */,
+				9430B5316DA2BFDCBA543BD10F999FF1 /* OIDURLSessionProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		200C32CC5346F401A31756B2131F3FBF /* WepinWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE150869DF14D7636E5026747AA7135C /* Build configuration list for PBXNativeTarget "WepinWidget" */;
+			buildPhases = (
+				AFF777EB134443C4159F728A2656E350 /* Headers */,
+				547AC54736E5BCA139595FD3C8F2FD9B /* Sources */,
+				6425EF58499DB66910B65FA339C8CFEE /* Frameworks */,
+				65572C65BE3F63B697DAA2610527737B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF928C8E15019391ADCD1D8F86FDF462 /* PBXTargetDependency */,
+				AB973A5AF91E7C4CAF28F4F9174841BC /* PBXTargetDependency */,
+				F8880560209FAA9D24A1C93ED30DBF4F /* PBXTargetDependency */,
+				36126C859C24DB436AD685FB3280F16E /* PBXTargetDependency */,
+			);
+			name = WepinWidget;
+			productName = WepinWidget;
+			productReference = 1FF429AE811202AEF5AFD9D5B09399F3 /* WepinWidget */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B932EC9659D505694902B50F4EB3D8B /* AppAuth-AppAuthCore_Privacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9CDC622047B0AC15ADD2744C6DED227 /* Build configuration list for PBXNativeTarget "AppAuth-AppAuthCore_Privacy" */;
+			buildPhases = (
+				856228EC8E7136EEAB24AB6D246CCA27 /* Sources */,
+				82EBF8BA007E6E52B35B0F08E119EA1E /* Frameworks */,
+				EEEF3875C0BE7E97ECA15D8A120AF7BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppAuth-AppAuthCore_Privacy";
+			productName = AppAuthCore_Privacy;
+			productReference = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */;
+			productType = "com.apple.product-type.bundle";
+		};
+		404BE9C76F3FDD7109D521B64E890E66 /* WepinCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12866D928FA18EAEB69BD9E4F34844A /* Build configuration list for PBXNativeTarget "WepinCore" */;
+			buildPhases = (
+				2A7F7A9A7525E813BF8D2826C58F3370 /* Headers */,
+				D64F061357C730EC9F48B344C5728AF4 /* Sources */,
+				7BC7E88B3C089AE9D48337C1BA171827 /* Frameworks */,
+				1B85A0FE466BC10E45404DC4C93D74C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EFB5628433ED401D96D54DB9C999B64 /* PBXTargetDependency */,
+			);
+			name = WepinCore;
+			productName = WepinCore;
+			productReference = 43D07EBF2F5DCBA6EF019E5E76EA1028 /* WepinCore */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C642AA10FB29936669CC269F42079C6 /* AppAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33590A1A41B07057C61742E882402D8 /* Build configuration list for PBXNativeTarget "AppAuth" */;
+			buildPhases = (
+				F3A4229B8C5AC1CFCCBE4D98C895116C /* Headers */,
+				826B6844FBF04008486F552DB0C53849 /* Sources */,
+				00B9CB2D101C8CACF6CD1430DA222000 /* Frameworks */,
+				83B9DE5B1E3657C91EA09C8480C98DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B276156E41699857616ABF72F38D0F4D /* PBXTargetDependency */,
+			);
+			name = AppAuth;
+			productName = AppAuth;
+			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */;
+			productType = "com.apple.product-type.framework";
+		};
+		5FB2D909B3348B46F2A6E0496C7FD6D7 /* WepinLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27ABB04608107EECF96074432C6EEBD7 /* Build configuration list for PBXNativeTarget "WepinLogin" */;
+			buildPhases = (
+				8A14E8CF78453862760F90928F5D8896 /* Headers */,
+				35F92C6D5435F58FC7361F874F12809D /* Sources */,
+				40148E34E35252D743B2F39F3BCC8E86 /* Frameworks */,
+				0EBAFA0FFD52A9C93A62854BB7A7C1CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F404CBD52C30E711EA8A3EFC2AD6273 /* PBXTargetDependency */,
+				CDC80D681FFF7A0CE8D49CC77ED08B38 /* PBXTargetDependency */,
+				ED2AFAC4791FB2E234D9C559BAEF8D77 /* PBXTargetDependency */,
+				F3D907EFD3D90831C0453E0EF865C6B8 /* PBXTargetDependency */,
+			);
+			name = WepinLogin;
+			productName = WepinLogin;
+			productReference = 1C5AF43D3BE3C59A5C287E9155A5F269 /* WepinLogin */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB827FD7381E014998A90A7B54939328 /* Build configuration list for PBXNativeTarget "WepinCommon" */;
+			buildPhases = (
+				05D6EFB5A7C5AEB9C2DE26AF0FF426F7 /* Headers */,
+				D9CDF1188AF3E51174D5831722AB1F2E /* Sources */,
+				1EFBEFEE39A0BCCDCB6C8B87BF61847B /* Frameworks */,
+				9F2BB1DA7260A784ED2FAABB50503545 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WepinCommon;
+			productName = WepinCommon;
+			productReference = 6AD2BAEC10CC2EE6A4A3CCE009C316EA /* WepinCommon */;
+			productType = "com.apple.product-type.framework";
+		};
+		C03340631D53B1119803C2F8E3506D4A /* BCrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7698130201C74360AE1254B40F19F8 /* Build configuration list for PBXNativeTarget "BCrypt" */;
+			buildPhases = (
+				63EEBC4CD3F28B6A54D61E6252E809D2 /* Headers */,
+				BB230D993F584EF3C3ACB2FFA724494D /* Sources */,
+				0EF8AD36F704873DC0AD6EEFFC6FBD1E /* Frameworks */,
+				7266447939782CA9472F33DA0F2A2367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCrypt;
+			productName = BCrypt;
+			productReference = BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4C15CDD141302AC5944C618B0018E61 /* Pods-StrideOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A6381B2D78889DE5B0EB81E56E67EAE /* Build configuration list for PBXNativeTarget "Pods-StrideOn" */;
+			buildPhases = (
+				42CCC08B8E7156BDF3EB1902B16FDBC5 /* Headers */,
+				CBAF97A2F83581B310CF7765A5A5A7CD /* Sources */,
+				6AB526914BC293DDC87099CBCAC030BD /* Frameworks */,
+				4FBF03EF1FB135B17423EB7D2BE0C928 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECD6842FFBF02F96EC2D93D4C95788E1 /* PBXTargetDependency */,
+				C08A4D658444F9CBFF31BE85F2C587E6 /* PBXTargetDependency */,
+				3D7752B43DAB3A44278E4597223F181F /* PBXTargetDependency */,
+				0E2DC50847522A32A4B57BD42CB5481B /* PBXTargetDependency */,
+				9947AF83CF2773A1182239A832D1303F /* PBXTargetDependency */,
+				80A2A8A4E076F9379251098590FF061B /* PBXTargetDependency */,
+				A7DCE352F3172D9166B8B85BFE9277D6 /* PBXTargetDependency */,
+			);
+			name = "Pods-StrideOn";
+			productName = Pods_StrideOn;
+			productReference = 9A326828615889A1F911042C3D6DF482 /* Pods-StrideOn */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8B38D126CB35D08BCEA0D2EFAE137FE /* WepinModal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317E684D7C4F7CB6DAC062B307907586 /* Build configuration list for PBXNativeTarget "WepinModal" */;
+			buildPhases = (
+				7E7B3016D5B650F10A20CB380660C0DE /* Headers */,
+				A1582D6F8888E18E6733F1C36493A1AB /* Sources */,
+				42181378F6ACDE3A9290F2F40F3E406C /* Frameworks */,
+				43E9EB2165039B82F7AB93E8195C3F7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WepinModal;
+			productName = WepinModal;
+			productReference = A9FA18B0B3D5A417F052118C7B8972F7 /* WepinModal */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E467A5B4F479FE0B8F9BD9AA6FE803BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C642AA10FB29936669CC269F42079C6 /* AppAuth */,
+				3B932EC9659D505694902B50F4EB3D8B /* AppAuth-AppAuthCore_Privacy */,
+				C03340631D53B1119803C2F8E3506D4A /* BCrypt */,
+				C4C15CDD141302AC5944C618B0018E61 /* Pods-StrideOn */,
+				B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */,
+				404BE9C76F3FDD7109D521B64E890E66 /* WepinCore */,
+				5FB2D909B3348B46F2A6E0496C7FD6D7 /* WepinLogin */,
+				E8B38D126CB35D08BCEA0D2EFAE137FE /* WepinModal */,
+				200C32CC5346F401A31756B2131F3FBF /* WepinWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EBAFA0FFD52A9C93A62854BB7A7C1CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B85A0FE466BC10E45404DC4C93D74C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43E9EB2165039B82F7AB93E8195C3F7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FBF03EF1FB135B17423EB7D2BE0C928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65572C65BE3F63B697DAA2610527737B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7266447939782CA9472F33DA0F2A2367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B9DE5B1E3657C91EA09C8480C98DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C1DE31C7076EB32C252F911014C098 /* AppAuth-AppAuthCore_Privacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F2BB1DA7260A784ED2FAABB50503545 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEF3875C0BE7E97ECA15D8A120AF7BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0311676F7B5206CB6FCAC86A2F03DC6 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35F92C6D5435F58FC7361F874F12809D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EED9B061838482622E29DE978947CA /* Utils.swift in Sources */,
+				7F02672C0901E6EEA34E03547AD1E0EA /* WepinAppAuthManager.swift in Sources */,
+				2F269D3FCA178F541B84DB1DA94326E6 /* WepinLogin.swift in Sources */,
+				9601D6440AAD53C73CB3E60BAB201DD4 /* WepinLogin-dummy.m in Sources */,
+				28D588CF60BFCBB11C88C3C05DBCF82C /* WepinLoginStorage.swift in Sources */,
+				04320FA2FB84B0CA23764445A57A374A /* WepinLoginTypes.swift in Sources */,
+				A578A8BEEF555A48DF8D933062B0C23E /* WepinLoginWrapper.swift in Sources */,
+				97AE21967075F7F8E134C6AA97D5686E /* WepinPresentationContextProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547AC54736E5BCA139595FD3C8F2FD9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF5C01A1B5A81D69A6BB4620AEE5900 /* JSProcessor.swift in Sources */,
+				395EFF07A109E0F665941B8CDF591BF6 /* WepinError.swift in Sources */,
+				BD3C0E3F3639F0515989376162E36FDF /* WepinManagers.swift in Sources */,
+				DC3D2579D744460EAEC04977ABA66DB0 /* WepinWebivewManagers.swift in Sources */,
+				DAD08C6645D9D8E560A17087D3FA7AFE /* WepinWidget.swift in Sources */,
+				27CC411F1023445DA5222533A4EE0CDC /* WepinWidget-dummy.m in Sources */,
+				6BAD5BCD18BC17CA9D358C12937313F1 /* WepinWidgetTypes.swift in Sources */,
+				6D636208250A1962E083E6A119D1DB2E /* WepinWidgetWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826B6844FBF04008486F552DB0C53849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A5BB19030D5B4F647C1F62224990DC /* AppAuth-dummy.m in Sources */,
+				FD9F6D1D6FEF98B2B56473BA95C3EAC7 /* OIDAuthorizationRequest.m in Sources */,
+				991F4FF90AC6340789B2518D26E588FC /* OIDAuthorizationResponse.m in Sources */,
+				8682B96E2FECDCA68D19D3E0201C4F6B /* OIDAuthorizationService.m in Sources */,
+				4F1B7939FDF1030E68E99D13DCC1C29F /* OIDAuthorizationService+IOS.m in Sources */,
+				2E541F089DC2BB586A8D9A042BCF2B0C /* OIDAuthState.m in Sources */,
+				E99EE4085991793730ADA654BF94F756 /* OIDAuthState+IOS.m in Sources */,
+				86D0F6376197F28E07FB932B8E036550 /* OIDClientMetadataParameters.m in Sources */,
+				7442237D6AA09EC7D5C276B837C55A2A /* OIDEndSessionRequest.m in Sources */,
+				02D27692DA1ECD60DB78E33E9460670F /* OIDEndSessionResponse.m in Sources */,
+				7DE7F668D7A0544BE046C1D07D73DD4E /* OIDError.m in Sources */,
+				CFD4FF2AD9DE475FE12FDA7109C22A6F /* OIDErrorUtilities.m in Sources */,
+				A60D123D5CACBB76AF321DB31903880D /* OIDExternalUserAgentCatalyst.m in Sources */,
+				68462D63131BB656F4612EE12E555DE4 /* OIDExternalUserAgentIOS.m in Sources */,
+				AA351DB92927C342D8FD9F16FF6D1D20 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */,
+				6BB804D7E93D9968659BA6B6B1C7D4A5 /* OIDFieldMapping.m in Sources */,
+				6170E9B57C3CEF286FBEC36A4127905E /* OIDGrantTypes.m in Sources */,
+				95F3D9C574C6D76ABE168C204D0E218D /* OIDIDToken.m in Sources */,
+				4026E0C37B420EA9E2C6F2842D56D629 /* OIDRegistrationRequest.m in Sources */,
+				ADAB95829C10EB96B5C0F0DC2642437F /* OIDRegistrationResponse.m in Sources */,
+				2C7933565D5EDD5BA7D58116233CF7DD /* OIDResponseTypes.m in Sources */,
+				0A60D09EC45EFD49E5A0BEC3DCCDD88F /* OIDScopes.m in Sources */,
+				8CB00AF5E36C153F347BDFE43A9843AA /* OIDScopeUtilities.m in Sources */,
+				09D76C372F1545EB6894AE22974A39BC /* OIDServiceConfiguration.m in Sources */,
+				DCB16ED5585C4F6E4C046E7D6CDBFDCF /* OIDServiceDiscovery.m in Sources */,
+				BEC894CA0C0967AC0D87484BE1CE7950 /* OIDTokenRequest.m in Sources */,
+				9AD957E4C0F184CA89DB73C74C577042 /* OIDTokenResponse.m in Sources */,
+				A80CC8C035F3636D6FEF831DADCCBDCB /* OIDTokenUtilities.m in Sources */,
+				C79A43932B96D456A1BD8A68A037E75C /* OIDURLQueryComponent.m in Sources */,
+				36217C17012C6CA48F89F54B87CD44D9 /* OIDURLSessionProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		856228EC8E7136EEAB24AB6D246CCA27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1582D6F8888E18E6733F1C36493A1AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2BE5E1005CA99D473133A44BCE0B5EF /* WepinModal.swift in Sources */,
+				4F39457825E2956E654E50D443BC1330 /* WepinModal-dummy.m in Sources */,
+				742809215DD94D2B55996F33BF986C84 /* WepinModalWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB230D993F584EF3C3ACB2FFA724494D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3351320479524BDB4D91D8315D56A6 /* bcrypt.c in Sources */,
+				B0ABE5FCE29F999DD4BD78153A0EF5F7 /* BCrypt-dummy.m in Sources */,
+				6393BC96F4D6B658ED2D44125C0C2A62 /* bcrypt_pbkdf.c in Sources */,
+				276DF879597D3010D9A8CB5EA6F28C42 /* blf.c in Sources */,
+				8092B4E2A73605C2B8EA58F554581141 /* module.modulemap in Sources */,
+				27B4D281EEA92DF510E70A2D03062267 /* PerfectBCrypt.swift in Sources */,
+				942E6921BCA835875C706AAF54A7C9B8 /* sha2.c in Sources */,
+				1086F4B1EA5CBDC9CBA5B5F3C7A1DF0F /* timingsafe_bcmp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBAF97A2F83581B310CF7765A5A5A7CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2D9B53192E362C3DB4024FEF6CAF38 /* Pods-StrideOn-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64F061357C730EC9F48B344C5728AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D130E1185F0FA5B7828D3C1E0FA54580 /* AppIntallTracker.swift in Sources */,
+				3DF85F053E5311E445FD12BF231D7EA2 /* JsonRpcClient.swift in Sources */,
+				6A7EF80BF53EEA21F71984C619EB3772 /* NetworkError.swift in Sources */,
+				BD1992EB0DEC51204FFA5B78743E06FD /* NetworkMonitor.swift in Sources */,
+				F5589BC1C6FCCEC5B2056F38720053D2 /* WepinCore.swift in Sources */,
+				BD777111D6BADA5F5A21AC52D727607D /* WepinCore-dummy.m in Sources */,
+				E38EA8153B9533A972DFB4061D8AC441 /* WepinFirebaseNetwork.swift in Sources */,
+				5BA2FB4C365B6E0D4F5ED0656769ECF2 /* WepinNetwork.swift in Sources */,
+				F0CF753B4410288549DEF1152A92EB19 /* WepinNetworkTypes.swift in Sources */,
+				B1EF6D5B9573B57A49458FA23202E2D0 /* WepinSessionManager.swift in Sources */,
+				A43CE95339C51D2BEA7DAA3070091D6E /* WepinStorage.swift in Sources */,
+				1259FEE055A61C948D90FB864661E1CB /* WepinStorageManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9CDF1188AF3E51174D5831722AB1F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7BCDFDAD7FB05000BC3931FD4A2D21 /* JSResponse.swift in Sources */,
+				A6BB7A782A2AAC3961F98DE8AA3E8890 /* WepinCommon.swift in Sources */,
+				DD1BCA6DE3D00BF294E30A8C180F4621 /* WepinCommon-dummy.m in Sources */,
+				0BFE9069980DC73AD8D237A5C8497A5A /* WepinCommonBridge.mm in Sources */,
+				EFCFBCA2AE1BF3043EB39CFE544145D6 /* WepinCommonTypes.swift in Sources */,
+				25905DF463C7701C819B7D286E2EA591 /* WepinError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E2DC50847522A32A4B57BD42CB5481B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCore;
+			target = 404BE9C76F3FDD7109D521B64E890E66 /* WepinCore */;
+			targetProxy = 2773EC3C10EF7F6FC753A7CBB416EF75 /* PBXContainerItemProxy */;
+		};
+		36126C859C24DB436AD685FB3280F16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinModal;
+			target = E8B38D126CB35D08BCEA0D2EFAE137FE /* WepinModal */;
+			targetProxy = A6C3CEB223A26F881240AAEF7A63BB59 /* PBXContainerItemProxy */;
+		};
+		3D7752B43DAB3A44278E4597223F181F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCommon;
+			target = B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */;
+			targetProxy = DD0F510B83386F7066D3826A999559E0 /* PBXContainerItemProxy */;
+		};
+		6EFB5628433ED401D96D54DB9C999B64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCommon;
+			target = B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */;
+			targetProxy = 0523E71300CC6476138D1FB2C88D294F /* PBXContainerItemProxy */;
+		};
+		80A2A8A4E076F9379251098590FF061B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinModal;
+			target = E8B38D126CB35D08BCEA0D2EFAE137FE /* WepinModal */;
+			targetProxy = 6CB65C3CC562246425C6BAC1A0FEBAF2 /* PBXContainerItemProxy */;
+		};
+		8F404CBD52C30E711EA8A3EFC2AD6273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 40B435F7396477E208443CD801B31DF7 /* PBXContainerItemProxy */;
+		};
+		9947AF83CF2773A1182239A832D1303F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinLogin;
+			target = 5FB2D909B3348B46F2A6E0496C7FD6D7 /* WepinLogin */;
+			targetProxy = 75B78AD8F01EBEF47AFEDCAB11403B2B /* PBXContainerItemProxy */;
+		};
+		A7DCE352F3172D9166B8B85BFE9277D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinWidget;
+			target = 200C32CC5346F401A31756B2131F3FBF /* WepinWidget */;
+			targetProxy = E88EB657FA3B5ECD65F9CF9C0A2C041A /* PBXContainerItemProxy */;
+		};
+		AB973A5AF91E7C4CAF28F4F9174841BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCore;
+			target = 404BE9C76F3FDD7109D521B64E890E66 /* WepinCore */;
+			targetProxy = 22BF472430D6D63558D957CCA67BB42C /* PBXContainerItemProxy */;
+		};
+		B276156E41699857616ABF72F38D0F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AppAuth-AppAuthCore_Privacy";
+			target = 3B932EC9659D505694902B50F4EB3D8B /* AppAuth-AppAuthCore_Privacy */;
+			targetProxy = C8C6327BCDEBBCB4D19B9C76F99140FF /* PBXContainerItemProxy */;
+		};
+		C08A4D658444F9CBFF31BE85F2C587E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCrypt;
+			target = C03340631D53B1119803C2F8E3506D4A /* BCrypt */;
+			targetProxy = 029A457F9324CE75382FA93A84DE7FA4 /* PBXContainerItemProxy */;
+		};
+		CDC80D681FFF7A0CE8D49CC77ED08B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCrypt;
+			target = C03340631D53B1119803C2F8E3506D4A /* BCrypt */;
+			targetProxy = FD39FFC33FF8E9496ACE3E903EB98E84 /* PBXContainerItemProxy */;
+		};
+		CF928C8E15019391ADCD1D8F86FDF462 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCommon;
+			target = B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */;
+			targetProxy = DD8781179744E15AF810E0D2DCE95963 /* PBXContainerItemProxy */;
+		};
+		ECD6842FFBF02F96EC2D93D4C95788E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = D8E6DB48C3722AD8F8464B8A1B234231 /* PBXContainerItemProxy */;
+		};
+		ED2AFAC4791FB2E234D9C559BAEF8D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCommon;
+			target = B4B76265FC4362BCC9990FF5C0D807C2 /* WepinCommon */;
+			targetProxy = 5D15AC0618B3A272DB6FAC4A564FC7A9 /* PBXContainerItemProxy */;
+		};
+		F3D907EFD3D90831C0453E0EF865C6B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinCore;
+			target = 404BE9C76F3FDD7109D521B64E890E66 /* WepinCore */;
+			targetProxy = 4A6D770059A35C25A880A66D96D5FF3E /* PBXContainerItemProxy */;
+		};
+		F8880560209FAA9D24A1C93ED30DBF4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WepinLogin;
+			target = 5FB2D909B3348B46F2A6E0496C7FD6D7 /* WepinLogin */;
+			targetProxy = 5E279BD0080928B9C7A019B61051290D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AFEAAC79A6B67FA97098B8739FD0510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B0FA269904B9C5DBE7728003FA16BF /* AppAuth.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IBSC_MODULE = AppAuth;
+				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_NAME = AppAuthCore_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		18870F8EB038C5B497889EABB51AF8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D40AABD883FD89DB24285D06369122 /* WepinCore.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinCore/WepinCore-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinCore/WepinCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinCore/WepinCore.modulemap";
+				PRODUCT_MODULE_NAME = WepinCore;
+				PRODUCT_NAME = WepinCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2EC1EEFF30897F9B95D59EF4327BF252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39881FE0F007BCD75022890B6C296173 /* Pods-StrideOn.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StrideOn/Pods-StrideOn-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StrideOn/Pods-StrideOn.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3AF6568068071765CD946625DF6796E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B0FA269904B9C5DBE7728003FA16BF /* AppAuth.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45B4AC840191D88E457D79381618BEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A817B6447B693BF19BE0BB71720AFB /* WepinWidget.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinWidget/WepinWidget-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinWidget/WepinWidget-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinWidget/WepinWidget.modulemap";
+				PRODUCT_MODULE_NAME = WepinWidget;
+				PRODUCT_NAME = WepinWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6BE49D00C11A12E8ED386B7699CC8025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324EE07A2FCAB85B6C7F95C71852DC57 /* WepinModal.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinModal/WepinModal-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinModal/WepinModal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinModal/WepinModal.modulemap";
+				PRODUCT_MODULE_NAME = WepinModal;
+				PRODUCT_NAME = WepinModal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E75971095CDBDDEFF6ECACEB994DB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4CE42260030E6304293732BFBD375D /* WepinWidget.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinWidget/WepinWidget-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinWidget/WepinWidget-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinWidget/WepinWidget.modulemap";
+				PRODUCT_MODULE_NAME = WepinWidget;
+				PRODUCT_NAME = WepinWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		91495002EE2812C2E5A2E901E607681D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DA17CF0AE21FDA1295B0D87091CF5D /* Pods-StrideOn.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StrideOn/Pods-StrideOn-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StrideOn/Pods-StrideOn.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		94552D7DA7DB0B764ACF3FB33AC03140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAA4E642B55EC8E844E48BE4BB2CF8A /* AppAuth.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IBSC_MODULE = AppAuth;
+				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_NAME = AppAuthCore_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9B7B6C31193DECC7B011FAC8D2C13D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5985F8FC30ACF53B014AFF5107AE94D4 /* WepinCommon.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinCommon/WepinCommon-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinCommon/WepinCommon-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinCommon/WepinCommon.modulemap";
+				PRODUCT_MODULE_NAME = WepinCommon;
+				PRODUCT_NAME = WepinCommon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B63236ED69E2DA7291A8092971424D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE15CAEAACDB6107AD5177B7908ACC81 /* WepinModal.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinModal/WepinModal-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinModal/WepinModal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinModal/WepinModal.modulemap";
+				PRODUCT_MODULE_NAME = WepinModal;
+				PRODUCT_NAME = WepinModal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6643362209BB351F8C1714E27719A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B7034135C3D210E148A5BA6E4DD568 /* BCrypt.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BCrypt/BCrypt.modulemap";
+				PRODUCT_MODULE_NAME = BCrypt;
+				PRODUCT_NAME = BCrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA6A165DA1993282B18655C515A09F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A111A8A8662C04D02470CF779BDBCCDA /* WepinLogin.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinLogin/WepinLogin-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinLogin/WepinLogin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinLogin/WepinLogin.modulemap";
+				PRODUCT_MODULE_NAME = WepinLogin;
+				PRODUCT_NAME = WepinLogin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4E4DE9E18A98258E5DBE8E648C3C0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D004ADA5D9042F6E2956CEF469361E2 /* BCrypt.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BCrypt/BCrypt.modulemap";
+				PRODUCT_MODULE_NAME = BCrypt;
+				PRODUCT_NAME = BCrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CBD7711966F8D96572595E33F94EF20D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 848785C26FC25F0D36BBAA52D411CFAA /* WepinCore.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinCore/WepinCore-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinCore/WepinCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinCore/WepinCore.modulemap";
+				PRODUCT_MODULE_NAME = WepinCore;
+				PRODUCT_NAME = WepinCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CBF848B821EFCD80B8E89C3DBAEF378F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA4A5A1F21D182E5BB2A63862FA6336F /* WepinLogin.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinLogin/WepinLogin-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinLogin/WepinLogin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinLogin/WepinLogin.modulemap";
+				PRODUCT_MODULE_NAME = WepinLogin;
+				PRODUCT_NAME = WepinLogin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD891A3C8DE9EF094FC380F4FB77C42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAA4E642B55EC8E844E48BE4BB2CF8A /* AppAuth.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F806FDA61E573E999CAA472AB6863B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825CDFF5BD2748CC8AA8F6261C4C74C1 /* WepinCommon.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/WepinCommon/WepinCommon-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/WepinCommon/WepinCommon-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WepinCommon/WepinCommon.modulemap";
+				PRODUCT_MODULE_NAME = WepinCommon;
+				PRODUCT_NAME = WepinCommon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27ABB04608107EECF96074432C6EEBD7 /* Build configuration list for PBXNativeTarget "WepinLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF848B821EFCD80B8E89C3DBAEF378F /* Debug */,
+				BA6A165DA1993282B18655C515A09F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		317E684D7C4F7CB6DAC062B307907586 /* Build configuration list for PBXNativeTarget "WepinModal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BE49D00C11A12E8ED386B7699CC8025 /* Debug */,
+				B63236ED69E2DA7291A8092971424D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF6A0D1970CA9705974E3CB2134802 /* Debug */,
+				30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A6381B2D78889DE5B0EB81E56E67EAE /* Build configuration list for PBXNativeTarget "Pods-StrideOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC1EEFF30897F9B95D59EF4327BF252 /* Debug */,
+				91495002EE2812C2E5A2E901E607681D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9CDC622047B0AC15ADD2744C6DED227 /* Build configuration list for PBXNativeTarget "AppAuth-AppAuthCore_Privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94552D7DA7DB0B764ACF3FB33AC03140 /* Debug */,
+				0AFEAAC79A6B67FA97098B8739FD0510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D33590A1A41B07057C61742E882402D8 /* Build configuration list for PBXNativeTarget "AppAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD891A3C8DE9EF094FC380F4FB77C42C /* Debug */,
+				3AF6568068071765CD946625DF6796E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB827FD7381E014998A90A7B54939328 /* Build configuration list for PBXNativeTarget "WepinCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B7B6C31193DECC7B011FAC8D2C13D08 /* Debug */,
+				F806FDA61E573E999CAA472AB6863B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7698130201C74360AE1254B40F19F8 /* Build configuration list for PBXNativeTarget "BCrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6643362209BB351F8C1714E27719A83 /* Debug */,
+				C4E4DE9E18A98258E5DBE8E648C3C0EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12866D928FA18EAEB69BD9E4F34844A /* Build configuration list for PBXNativeTarget "WepinCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD7711966F8D96572595E33F94EF20D /* Debug */,
+				18870F8EB038C5B497889EABB51AF8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE150869DF14D7636E5026747AA7135C /* Build configuration list for PBXNativeTarget "WepinWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45B4AC840191D88E457D79381618BEE0 /* Debug */,
+				6E75971095CDBDDEFF6ECACEB994DB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
