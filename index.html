@@ -4,40 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRIDE OS // VELOCITY</title>
+    <title>STRIDEON // iOS BETA</title>
 
-    <!-- Fonts: Inter for that clean, athletic look -->
+    <!-- Fonts: Space Grotesk (Tech), Inter (Readability), Noto Sans KR (Korean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
 
     <style>
-        /* --- SYSTEM V3: ATHLETIC PURITY --- */
-        /* Principle: Breathable. Bold. Kinetic. */
-
+        /* --- SYSTEM V4: DARK KINETIC --- */
         :root {
-            /* Palette: Concrete & Volt */
-            --c-canvas: #FFFFFF;
-            --c-vapor: #F5F5F7;
-            --c-platinum: #E5E5EA;
-            --c-ink: #000000;
-            --c-carbon: #111111;
-            --c-asphalt: #8E8E93;
-            --c-volt: #8FFF40;
-            --c-infrared: #FF3B30;
+            /* Palette: Void & Acid */
+            --c-void: #050505;
+            --c-depth: #0F0F0F;
+            --c-surface: #1A1A1A;
+            --c-text-primary: #FFFFFF;
+            --c-text-secondary: #888888;
 
-            /* Spacing & Layout */
-            --radius-pill: 999px;
-            --radius-card: 24px;
-            --container-width: 1200px;
-            --spacing-unit: 8px;
+            /* Accents */
+            --c-acid: #D4FF00;
+            /* Hyper Volt */
+            --c-acid-glow: rgba(212, 255, 0, 0.4);
+            --c-white-glow: rgba(255, 255, 255, 0.1);
 
-            /* Physics (Soft & Elastic) */
-            --shadow-soft: 0 12px 24px -6px rgba(0, 0, 0, 0.05);
-            --shadow-lift: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-            --shadow-glass: 0 10px 40px rgba(0, 0, 0, 0.08);
-            /* Luxurious depth */
-            --ease-elastic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            /* Spacing */
+            --container-width: 1240px;
+            --radius-pill: 100px;
+            --radius-box: 32px;
+
+            /* Animation */
+            --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
@@ -51,58 +50,186 @@
         }
 
         body {
-            background-color: var(--c-canvas);
-            /* White Canvas */
-            color: var(--c-carbon);
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
+            background-color: var(--c-void);
+            color: var(--c-text-primary);
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            /* Added KR Font */
             overflow-x: hidden;
-            perspective: 1000px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* --- TYPOGRAPHY: FAST & LOUD --- */
+        /* --- TYPOGRAPHY --- */
         h1,
         h2,
         h3,
         h4 {
-            color: var(--c-ink);
+            font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+            text-transform: uppercase;
             line-height: 0.9;
-            letter-spacing: -2px;
-            /* Tight tracking */
-            text-transform: uppercase;
         }
 
-        .type-hero {
-            font-size: clamp(4rem, 12vw, 9rem);
-            /* Massive */
-            font-weight: 900;
-            color: var(--c-ink);
+        /* Adjust Korean line height specifically */
+        :lang(ko) h1,
+        :lang(ko) h2,
+        :lang(ko) h3 {
+            line-height: 1.1;
+            word-break: keep-all;
+            /* Prevents awkward breaks in Korean */
         }
 
-        .type-sub {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 800;
-        }
-
-        .type-label {
-            font-size: 0.85rem;
+        .hero-title {
+            font-size: clamp(3.5rem, 10vw, 8.5rem);
             font-weight: 700;
-            letter-spacing: 1.5px;
+            letter-spacing: -0.04em;
+            color: var(--c-text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title span {
+            color: transparent;
+            -webkit-text-stroke: 2px var(--c-text-primary);
+            opacity: 0.5;
+            transition: all 0.5s ease;
+        }
+
+        .hero-title:hover span {
+            color: var(--c-acid);
+            opacity: 1;
+            -webkit-text-stroke: 0px;
+            text-shadow: 0 0 30px var(--c-acid-glow);
+        }
+
+        .text-lead {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--c-text-secondary);
+            max-width: 50ch;
+            line-height: 1.6;
+            margin-top: 2rem;
+        }
+
+        .section-header {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .badge-ios {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 700;
             text-transform: uppercase;
-            color: var(--c-asphalt);
-            margin-bottom: 12px;
-            display: block;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            color: var(--c-acid);
         }
 
-        .type-body {
-            font-size: 1.25rem;
-            line-height: 1.5;
-            color: var(--c-carbon);
-            font-weight: 400;
-            max-width: 65ch;
+        /* --- BUTTONS --- */
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 48px;
+            border-radius: var(--radius-pill);
+            background: var(--c-acid);
+            color: black;
+            font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s var(--ease-elastic), box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
-        /* --- LAYOUT UTILITIES --- */
+        .btn-main:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--c-acid-glow);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px 48px;
+            border-radius: var(--radius-pill);
+            font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--c-text-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-demo {
+            background: #FF0000;
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--radius-pill);
+            font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-demo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switch {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 4px;
+            margin-left: 12px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #888;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: black;
+        }
+
+        /* --- LAYOUT --- */
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
@@ -110,238 +237,262 @@
         }
 
         section {
-            padding: 140px 0;
-            /* More air */
+            padding: 120px 0;
             position: relative;
-        }
-
-        /* --- COMPONENTS --- */
-
-        /* 1. Buttons: The "Velocity" Button */
-        .btn-velocity {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px 64px;
-            /* Larger hit area */
-            background-color: var(--c-ink);
-            color: var(--c-canvas);
-            border-radius: var(--radius-pill);
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 1.125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            border: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s var(--ease-elastic), background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-velocity:hover {
-            transform: scale(1.03);
-            background-color: var(--c-carbon);
-        }
-
-        .btn-velocity:active {
-            transform: scale(0.96);
-        }
-
-        .btn-velocity.volt {
-            background-color: var(--c-volt);
-            color: var(--c-ink);
-            box-shadow: 0 10px 30px rgba(143, 255, 64, 0.3);
-        }
-
-        /* 2. Cards: The "Glass" Athlete Card */
-        .card-athlete {
-            background: var(--c-canvas);
-            border-radius: var(--radius-card);
-            padding: 48px;
-            box-shadow: var(--shadow-glass);
-            transition: transform 0.4s var(--ease-elastic);
-            border: 1px solid rgba(0, 0, 0, 0.02);
-            /* Very subtle definition */
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-athlete:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
         }
 
         /* --- HEADER --- */
         header {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 32px 0;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: var(--container-width);
             z-index: 1000;
-            transition: background 0.3s;
-        }
-
-        header.scrolled {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 20px 0;
-        }
-
-        .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 16px 32px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .logo {
+            font-family: 'Space Grotesk', sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
             letter-spacing: -1px;
             display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--c-ink);
-            text-decoration: none;
-        }
-
-        .logo svg {
-            color: var(--c-volt);
-            /* Logo mark is Volt */
-            height: 32px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--c-asphalt);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--c-ink);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-            overflow: hidden;
-            background: radial-gradient(circle at 50% 50%, var(--c-canvas) 0%, var(--c-vapor) 100%);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            /* More space for text */
-            gap: 80px;
-            align-items: center;
-        }
-
-        /* --- PHONE MOCKUP (Updated) --- */
-        .phone-mockup {
-            width: 360px;
-            height: 720px;
-            background: #fff;
-            border-radius: 48px;
-            border: 8px solid #F5F5F7;
-            /* Vapor Grey bezel */
-            box-shadow: var(--shadow-lift);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transform: rotate(-3deg);
-            /* Slight tilt */
-        }
-
-        /* App internal UI */
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px 24px 20px;
-            align-items: center;
-        }
-
-        .app-stat-big {
-            font-size: 5rem;
-            font-weight: 900;
-            text-align: center;
-            line-height: 1;
-            letter-spacing: -3px;
-            color: var(--c-ink);
-        }
-
-        .app-label-small {
-            text-align: center;
-            color: var(--c-asphalt);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-        }
-
-        .app-map-area {
-            flex: 1;
-            margin: 0 16px 16px;
-            border-radius: 32px;
-            overflow: hidden;
-            position: relative;
-            background: #F2F2F7;
-        }
-
-        .app-action-btn {
-            background: var(--c-volt);
-            color: var(--c-ink);
-            border-radius: 999px;
-            padding: 20px;
-            margin: 0 24px 32px;
-            border: none;
-            font-weight: 800;
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            width: calc(100% - 48px);
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
             align-items: center;
             gap: 10px;
         }
 
-        /* --- FEATURES (Clean Grid) --- */
-        .features-grid {
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--c-acid);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--c-acid);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--c-text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 140px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 255, 0, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+            filter: blur(80px);
+            animation: pulseGlow 8s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .hero-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-actions {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* --- PHONE MOCKUP --- */
+        .phone-container {
+            position: relative;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-mockup {
+            width: 380px;
+            height: 760px;
+            background: #000;
+            border-radius: 56px;
+            border: 10px solid #222;
+            position: relative;
+            box-shadow:
+                0 50px 100px -20px rgba(0, 0, 0, 0.8),
+                0 0 0 2px rgba(255, 255, 255, 0.05);
+            /* Outer Rim */
+            overflow: hidden;
+            transform: rotate(-10deg) translateY(50px);
+            transition: transform 0.1s ease-out;
+            /* For JS Tilt */
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 35px;
+            background: #000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 20;
+        }
+
+        .app-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #111 0%, #050505 100%);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .app-map-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(var(--c-surface) 1px, transparent 1px),
+                radial-gradient(var(--c-surface) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            opacity: 0.2;
+        }
+
+        /* --- MARQUEE --- */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: var(--c-acid);
+            padding: 16px 0;
+            transform: rotate(-2deg) scale(1.1);
+            margin: 60px 0;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+
+        .marquee-content {
+            display: flex;
             gap: 40px;
-            margin-top: 80px;
+            animation: marquee 20s linear infinite;
+            white-space: nowrap;
         }
 
-        /* --- REVEAL ANIMATION --- */
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        .marquee-item {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            color: black;
+            text-transform: uppercase;
         }
 
-        .reveal-visible {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- FEATURE CARDS (COMMON) --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-box);
+            padding: 40px;
+            transition: all 0.4s var(--ease-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            color: var(--c-acid);
+            margin-bottom: 24px;
+            width: 48px;
+            height: 48px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .feature-card p {
+            color: var(--c-text-secondary);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Highlight text inside cards */
+        .highlight {
+            color: var(--c-acid);
+            font-weight: 700;
         }
 
         /* --- RESPONSIVE --- */
@@ -349,17 +500,14 @@
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 60px;
             }
 
-            .hero-text {
-                order: 2;
-            }
-
-            .hero-visual {
-                order: 1;
-                display: flex;
+            .hero-actions {
                 justify-content: center;
+            }
+
+            .phone-container {
+                height: 600px;
             }
 
             .phone-mockup {
@@ -368,554 +516,355 @@
                 transform: rotate(0);
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .type-hero {
+            .hero-title {
                 font-size: 4rem;
             }
-        }
 
-        /* --- UTILS FOR MAP --- */
-        .map-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
+            header {
+                width: calc(100% - 32px);
+                padding: 16px;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+            }
 
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .screenshot-frame {
-            background: var(--c-canvas);
-            padding: 0;
-            /* Clean */
-            border-radius: 24px;
-            box-shadow: var(--shadow-glass);
-            overflow: hidden;
-            transition: transform 0.4s var(--ease-elastic);
-        }
-
-        .screenshot-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 24px;
-        }
-
-        .screenshot-label {
-            padding: 20px;
-            font-weight: 700;
-            color: var(--c-carbon);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        /* 3D TILT */
-        .tilt-card {
-            transform-style: preserve-3d;
-        }
-
-        /* POWERUP GRID UPDATED */
-        .powerup-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .powerup-icon-svg {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 24px;
-            color: var(--c-ink);
+            .nav-links {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- NAV -->
-    <header id="main-header">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo.svg" alt="StrideOn Logo" style="height: 32px; width: auto;">
+            STRIDEON
+        </a>
+        <nav class="nav-links">
+            <a href="Architectures.pdf" target="_blank" class="nav-link" data-i18n="nav_arch">Architecture</a>
+            <a href="PitchDeck.pdf" target="_blank" class="nav-link" data-i18n="nav_pitch">Pitch Deck</a>
+            <a href="https://github.com/chandan989/StrideOn" target="_blank" class="nav-link"
+                data-i18n="nav_github">GitHub</a>
+        </nav>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- YOUTUBE DEMO LINK -->
+            <a href="https://youtube.com/your-demo-link" target="_blank" class="btn-demo" data-i18n="nav_demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                 </svg>
-                STRIDE // OS
+                Watch Demo
             </a>
-            <nav class="nav-links">
-                <a href="#vision" class="nav-link">Vision</a>
-                <a href="#combat" class="nav-link">Combat</a>
-                <a href="#intel" class="nav-link">Intel</a>
-                <a href="#tech" class="nav-link">Tech</a>
-                <button class="btn-velocity" style="padding: 12px 32px; font-size: 0.9rem;">Join Beta</button>
-            </nav>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
+    <div class="hero">
+        <div class="hero-bg-glow"></div>
         <div class="container hero-grid">
-            <div class="hero-text reveal-on-scroll">
-                <h1 class="type-hero">
-                    THE CITY<br>
-                    IS YOUR<br>
-                    CANVAS.
+            <div class="hero-content">
+                <div class="badge-ios" data-i18n="hero_badge"> Now Available on iOS</div>
+                <h1 class="hero-title" data-i18n="hero_title">
+                    CLAIM YOUR <br>
+                    <span>TERRITORY</span>
                 </h1>
-                <p class="type-body" style="margin: 32px 0 48px 0;">
-                    Transform your urban environment into a competitive playground. The first kinetic territory protocol
-                    built for athletes.
+                <p class="text-lead" data-i18n="hero_desc">
+                    The first Web3 kinetic protocol built on the <strong>Very Network</strong>.
+                    Turn every meter you run into a digital asset. Dominate the map.
                 </p>
-                <div style="display: flex; gap: 16px;">
-                    <button class="btn-velocity volt">START RUN</button>
-                    <button class="btn-velocity"
-                        style="background: transparent; color: var(--c-ink); border: 2px solid var(--c-platinum); box-shadow: none;">Watch
-                        Trailer</button>
+
+                <div class="hero-actions">
+                    <!-- iOS App Link -->
+                    <a href="https://testflight.apple.com/" target="_blank" class="btn-main" data-i18n="btn_testflight">
+                        Join TestFlight
+                    </a>
+
+                    <!-- GITHUB REPO LINK -->
+                    <a href="https://github.com/chandan989/StrideOn" target="_blank" class="btn-ghost"
+                        data-i18n="btn_github">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-right: 8px;">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub Repo
+                    </a>
                 </div>
-            </div>
 
-            <div class="hero-visual reveal-on-scroll" style="transition-delay: 0.2s;">
-                <!-- Clean Mockup -->
-                <div class="phone-mockup tilt-card" id="heroPhone">
-                    <div class="app-header">
-                        <span class="app-label-small">SAT, DEC 29</span>
-                        <div style="font-weight:900;">10:42 AM</div>
-                    </div>
-
-                    <div class="app-map-area">
-                        <div class="mockup-hex-grid" id="mockupGrid">
-                            <!-- SVG Hex Overlay injected by JS -->
+                <div style="margin-top: 60px; display: flex; align-items: center; gap: 16px;">
+                    <div style="display: flex;">
+                        <div
+                            style="width: 40px; height: 40px; background: #333; border-radius: 50%; border: 2px solid black;">
+                        </div>
+                        <div
+                            style="width: 40px; height: 40px; background: #555; border-radius: 50%; border: 2px solid black; margin-left: -12px;">
+                        </div>
+                        <div
+                            style="width: 40px; height: 40px; background: #777; border-radius: 50%; border: 2px solid black; margin-left: -12px;">
                         </div>
                     </div>
+                    <span style="color: var(--c-text-secondary); font-size: 0.9rem;" data-i18n="hero_runners">
+                        <strong style="color: white;">12,402</strong> runners active now
+                    </span>
+                </div>
+            </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <div class="app-stat-big">342</div>
-                        <div class="app-label-small">TERRITORY SCORE</div>
-                    </div>
+            <div class="phone-container" id="tiltContainer">
+                <div class="phone-mockup" id="tiltPhone">
+                    <div class="phone-notch"></div>
+                    <div class="app-screen">
+                        <div class="app-map-bg"></div>
 
-                    <button class="app-action-btn">
-                        Start <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="13 17 18 12 13 7"></polyline>
-                            <polyline points="6 17 11 12 6 7"></polyline>
+                        <!-- UI Overlay Simulation -->
+                        <div style="padding: 60px 24px; position: relative; z-index: 2;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                                <div>
+                                    <div style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;"
+                                        data-i18n="app_pace">Current Pace</div>
+                                    <div style="font-size: 3rem; font-weight: 800; color: white; line-height: 1;">4:32
+                                    </div>
+                                </div>
+                                <div style="color: var(--c-acid); font-weight: 700;">/KM</div>
+                            </div>
+
+                            <div
+                                style="margin-top: 40px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 8px;">
+                                    <div
+                                        style="width: 8px; height: 8px; background: var(--c-acid); border-radius: 50%;">
+                                    </div>
+                                    <span style="color: white; font-weight: 600; font-size: 0.9rem;"
+                                        data-i18n="app_sector">SECTOR 17 SECURED</span>
+                                </div>
+                                <div style="font-size: 1.5rem; font-weight: 700; color: white;">+420 VERY</div>
+                            </div>
+                        </div>
+
+                        <!-- Animated Map Lines (SVG) -->
+                        <svg style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%;"
+                            viewBox="0 0 380 400">
+                            <defs>
+                                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:var(--c-acid); stop-opacity:0" />
+                                    <stop offset="50%" style="stop-color:var(--c-acid); stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:var(--c-acid); stop-opacity:0" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M-10 300 Q 100 250 190 350 T 400 320" fill="none" stroke="url(#lineGrad)"
+                                stroke-width="4" stroke-linecap="round">
+                                <animate attributeName="stroke-dasharray" from="0, 1000" to="1000, 0" dur="3s"
+                                    repeatCount="indefinite" />
+                            </path>
                         </svg>
-                    </button>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFINITE MARQUEE -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="marquee-item" data-i18n="marquee">RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///</div>
+            <div class="marquee-item" data-i18n="marquee">RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///</div>
+            <div class="marquee-item" data-i18n="marquee">RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///</div>
+            <div class="marquee-item" data-i18n="marquee">RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///</div>
+        </div>
+    </div>
+
+    <!-- PROTOCOL ARCHITECTURE SECTION -->
+    <section id="protocol">
+        <div class="container">
+            <h2 class="section-header" data-i18n="sec_proto_title">PROTOCOL ARCHITECTURE</h2>
+            <div class="feature-grid">
+
+                <!-- 1. THE GAME LOOP -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <h3 data-i18n="feat_loop_title">The Core Loop</h3>
+                    <p data-i18n="feat_loop_desc">StrideOn gamifies the real world by dividing it into <span
+                            class="highlight">H3 Hex-Grids</span>. Physical movement paints these grids on the map.
+                        Close a loop to capture territory and start mining rewards.</p>
+                </div>
+
+                <!-- 2. WHY VERY NETWORK? -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg>
+                    <h3 data-i18n="feat_very_title">Powered by Very</h3>
+                    <p data-i18n="feat_very_desc">Built on the <span class="highlight">Very Network</span> for
+                        zero-friction onboarding. No seed phrases, instant transactions, and near-zero gas fees make
+                        this the most human-friendly Web3 experience ever.</p>
+                </div>
+
+                <!-- 3. SOCIAL LAYER -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <h3 data-i18n="feat_chat_title">VeryChat Integration</h3>
+                    <p data-i18n="feat_chat_desc">Deeply integrated with <span class="highlight">VeryChat</span>. Log in
+                        with your Chat ID, get real-time "Attack Alerts" via DM, and use deep links to jump straight
+                        into defense mode.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- VISION / MANIFESTO -->
-    <section id="vision">
-        <div class="container reveal-on-scroll">
-            <div style="max-width: 800px; margin-bottom: 80px;">
-                <p class="type-label">Protocol Vision</p>
-                <h2 class="type-sub">ATHLETIC PURITY.<br>TERRITORIAL DOMINANCE.</h2>
-                <p class="type-body" style="margin-top: 32px;">
-                    StrideOn bridges the gap between high-performance fitness utilities and competitive strategy games.
-                    We don't just track your run; we give your movement purpose.
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- TACTICAL ARSENAL SECTION -->
+    <section id="intel" style="padding-top: 60px;">
+        <div class="container">
+            <h2 class="section-header" data-i18n="sec_tactical_title">TACTICAL ARSENAL</h2>
 
-    <!-- OPERATIONAL FRAMEWORK (COMBAT LOOP) -->
-    <section id="combat" style="background: var(--c-vapor);">
-        <div class="container reveal-on-scroll">
-            <h2 class="type-sub" style="margin-bottom: 60px;">OPERATIONAL FRAMEWORK</h2>
-
-            <div class="features-grid">
-                <!-- Step 1 -->
-                <div class="card-athlete tilt-card" data-tilt>
-                    <div class="type-label highlight-volt" style="font-size: 1rem; margin-bottom: 24px;">PHASE 01</div>
-                    <h3>Trail Generation</h3>
-                    <p class="type-body" style="font-size: 1rem; margin-top: 24px; color: var(--c-asphalt);">
-                        Deploy kinetic energy to generate GPS pathways mapped to H3 hex cells. Every
-                        movement vector claims digital territory.
-                    </p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="card-athlete tilt-card" data-tilt>
-                    <div class="type-label highlight-volt" style="font-size: 1rem; margin-bottom: 24px;">PHASE 02</div>
-                    <h3>Territorial Engagement</h3>
-                    <p class="type-body" style="font-size: 1rem; margin-top: 24px; color: var(--c-asphalt);">
-                        Detect hostile agent trails in real-time. Execute trail severance protocols to
-                        intercept enemy progress.
-                    </p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="card-athlete tilt-card" data-tilt>
-                    <div class="type-label highlight-volt" style="font-size: 1rem; margin-bottom: 24px;">PHASE 03</div>
-                    <h3>Settlement</h3>
-                    <p class="type-body" style="font-size: 1rem; margin-top: 24px; color: var(--c-asphalt);">
-                        Navigate to designated banking nodes (real-world landmarks) to initiate settlement
-                        sequences & secure assets.
-                    </p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="card-athlete tilt-card" data-tilt>
-                    <div class="type-label highlight-volt" style="font-size: 1rem; margin-bottom: 24px;">PHASE 04</div>
-                    <h3>Global Dominance</h3>
-                    <p class="type-body" style="font-size: 1rem; margin-top: 24px; color: var(--c-asphalt);">
-                        Secure earnings on the distributed ledger, compete on global rankings, and establish supremacy.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISUAL RECONNAISSANCE (SCREENSHOTS) -->
-    <section id="intel" style="background: var(--c-canvas);">
-        <div class="container reveal-on-scroll">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="type-sub">INTERFACE RECON</h2>
-            </div>
-
-            <div class="screenshot-grid">
-                <div class="screenshot-frame">
-                    <img src="./Screenshots/Home.png" alt="Home Dashboard">
-                    <div class="screenshot-label">Dashboard</div>
-                </div>
-                <div class="screenshot-frame" style="transform: translateY(-40px);">
-                    <img src="./Screenshots/Map.png" alt="Live Map">
-                    <div class="screenshot-label">Live H3 Map</div>
-                </div>
-                <div class="screenshot-frame">
-                    <img src="./Screenshots/Powerups.png" alt="Powerups">
-                    <div class="screenshot-label">Armory</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- POWERUPS -->
-    <section style="background: var(--c-carbon); color: var(--c-vapor);">
-        <div class="container reveal-on-scroll">
-            <h2 class="type-sub" style="color: var(--c-canvas); margin-bottom: 40px;">TACTICAL GEAR</h2>
-            <div class="powerup-grid">
-                <div class="card-athlete tilt-card" data-tilt
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); padding: 32px;">
-                    <svg class="powerup-icon-svg" style="color: var(--c-volt);" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="feature-grid">
+                <!-- Powerup 1: Shield -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
-                    <h4 style="color: var(--c-canvas); margin-bottom: 8px;">Shield</h4>
-                    <p class="type-label" style="opacity: 0.7;">Trail Immunity</p>
+                    <h3 data-i18n="pow_shield_title">Defense Shield</h3>
+                    <p data-i18n="pow_shield_desc">Territories are vulnerable. Activate a shield to lock your hex-grid
+                        for 24 hours, preventing rivals from severing your trails.</p>
                 </div>
 
-                <div class="card-athlete tilt-card" data-tilt
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); padding: 32px;">
-                    <svg class="powerup-icon-svg" style="color: var(--c-volt);" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Powerup 2: Ghost -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path
                             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                         </path>
                     </svg>
-                    <h4 style="color: var(--c-canvas); margin-bottom: 8px;">Ghost</h4>
-                    <p class="type-label" style="opacity: 0.7;">Stealth Mode</p>
+                    <h3 data-i18n="pow_ghost_title">Ghost Protocol</h3>
+                    <p data-i18n="pow_ghost_desc">Go dark. Become invisible on the global map for 10 minutes to
+                        infiltrate high-traffic zones without alerting enemy sentries.</p>
                 </div>
 
-                <div class="card-athlete tilt-card" data-tilt
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); padding: 32px;">
-                    <svg class="powerup-icon-svg" style="color: var(--c-volt);" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Powerup 3: Speed -->
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
                     </svg>
-                    <h4 style="color: var(--c-canvas); margin-bottom: 8px;">Speed</h4>
-                    <p class="type-label" style="opacity: 0.7;">2x Claim Rate</p>
-                </div>
-
-                <div class="card-athlete tilt-card" data-tilt
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); padding: 32px;">
-                    <svg class="powerup-icon-svg" style="color: var(--c-volt);" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-                        <line x1="14" y1="14" x2="14" y2="14"></line>
-                        <line x1="10" y1="10" x2="10" y2="10"></line>
-                        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"></line>
-                    </svg>
-                    <h4 style="color: var(--c-canvas); margin-bottom: 8px;">Freeze</h4>
-                    <p class="type-label" style="opacity: 0.7;">Stop Rivals</p>
-                </div>
-
-                <div class="card-athlete tilt-card" data-tilt
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); padding: 32px;">
-                    <svg class="powerup-icon-svg" style="color: var(--c-volt);" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-2.246-3-6-3-2.6 0-3.9 1.5-2.9 3"
-                            transform="scale(1.5)"></path>
-                        <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
-                    </svg>
-                    <h4 style="color: var(--c-canvas); margin-bottom: 8px;">Burn</h4>
-                    <p class="type-label" style="opacity: 0.7;">Destroy Claims</p>
+                    <h3 data-i18n="pow_speed_title">Kinetic Boost</h3>
+                    <p data-i18n="pow_speed_desc">Amplify your earn rate. Double the $VERY token yield for every meter
+                        run during a 15-minute high-intensity interval.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- INTERACTIVE CANVAS -->
-    <section class="canvas-section">
-        <canvas id="territoryCanvas"></canvas>
-        <div class="overlay-text">
-            <h3 class="type-sub" style="font-size: 2rem; margin-bottom: 8px;">LIVE TERRITORY MAP</h3>
-            <p class="type-label">Interactive Demo</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <div>
-                <a href="#" class="logo" style="color: white; margin-bottom: 24px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                    </svg>
-                    STRIDE // OS
-                </a>
-                <p style="color: var(--c-asphalt); font-size: 0.9rem;">
-                    © 2025 Stride Velocity Inc.<br>
-                    Engineered for the kinetic athlete.
-                </p>
-            </div>
-            <div class="nav-links" style="flex-direction: column; align-items: flex-start; gap: 16px;">
-                <a href="https://github.com/strideon" class="nav-link" style="color: var(--c-asphalt);">GitHub</a>
-                <a href="#" class="nav-link" style="color: var(--c-asphalt);">Discord</a>
-                <a href="#" class="nav-link" style="color: var(--c-asphalt);">Twitter</a>
-            </div>
-        </div>
-    </footer>
 
     <script>
-        /**
-         * INTERACTIVE HEX MAP SCRIPT
-         * Renders a honeycomb grid that reacts to mouse movement/clicks
-         * to simulate the "Territory Claim" mechanic.
-         */
-
-        const canvas = document.getElementById('territoryCanvas');
-        const ctx = canvas.getContext('2d');
-
-        let width, height;
-        let hexes = [];
-        const hexSize = 25;
-
-        // Colors
-        const COLOR_BG = '#FFFFFF';
-        const COLOR_STROKE = '#E5E5EA'; // Platinum
-        const COLOR_CLAIMED = '#8FFF40'; // Volt
-        const COLOR_ENEMY = '#FF3B30'; // Infrared
-
-        function resize() {
-            width = window.innerWidth;
-            height = 500;
-            canvas.width = width;
-            canvas.height = height;
-            initHexes();
-        }
-
-        // Hexagon math helpers
-        function getHexCorners(center, size) {
-            let corners = [];
-            for (let i = 0; i < 6; i++) {
-                const angle_deg = 60 * i - 30;
-                const angle_rad = Math.PI / 180 * angle_deg;
-                corners.push({
-                    x: center.x + size * Math.cos(angle_rad),
-                    y: center.y + size * Math.sin(angle_rad)
-                });
+        // --- TRANSLATION DATA ---
+        const translations = {
+            en: {
+                nav_arch: "Architecture",
+                nav_pitch: "Pitch Deck",
+                nav_github: "GitHub",
+                nav_demo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>Watch Demo`,
+                hero_badge: " Now Available on iOS",
+                hero_title: "CLAIM YOUR <br><span>TERRITORY</span>",
+                hero_desc: "The first Web3 kinetic protocol built on the <strong>Very Network</strong>. Turn every meter you run into a digital asset. Dominate the map.",
+                btn_testflight: "Join TestFlight",
+                btn_github: `<svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-right: 8px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub Repo`,
+                hero_runners: `<strong style="color: white;">12,402</strong> runners active now`,
+                app_pace: "Current Pace",
+                app_sector: "SECTOR 17 SECURED",
+                marquee: "RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///",
+                sec_proto_title: "PROTOCOL ARCHITECTURE",
+                feat_loop_title: "The Core Loop",
+                feat_loop_desc: "StrideOn gamifies the real world by dividing it into <span class='highlight'>H3 Hex-Grids</span>. Physical movement paints these grids on the map. Close a loop to capture territory and start mining rewards.",
+                feat_very_title: "Powered by Very",
+                feat_very_desc: "Built on the <span class='highlight'>Very Network</span> for zero-friction onboarding. No seed phrases, instant transactions, and near-zero gas fees make this the most human-friendly Web3 experience ever.",
+                feat_chat_title: "VeryChat Integration",
+                feat_chat_desc: "Deeply integrated with <span class='highlight'>VeryChat</span>. Log in with your Chat ID, get real-time \"Attack Alerts\" via DM, and use deep links to jump straight into defense mode.",
+                sec_tactical_title: "TACTICAL ARSENAL",
+                pow_shield_title: "Defense Shield",
+                pow_shield_desc: "Territories are vulnerable. Activate a shield to lock your hex-grid for 24 hours, preventing rivals from severing your trails.",
+                pow_ghost_title: "Ghost Protocol",
+                pow_ghost_desc: "Go dark. Become invisible on the global map for 10 minutes to infiltrate high-traffic zones without alerting enemy sentries.",
+                pow_speed_title: "Kinetic Boost",
+                pow_speed_desc: "Amplify your earn rate. Double the $VERY token yield for every meter run during a 15-minute high-intensity interval."
+            },
+            ko: {
+                nav_arch: "아키텍처",
+                nav_pitch: "피치덱",
+                nav_github: "깃허브",
+                nav_demo: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>데모 보기`,
+                hero_badge: " iOS 버전 출시 완료",
+                hero_title: "영토를 <br><span>장악하라</span>",
+                hero_desc: "<strong>Very Network</strong> 기반 최초의 Web3 키네틱 프로토콜. 당신이 달리는 모든 거리를 디지털 자산으로 바꾸십시오. 지도를 지배하십시오.",
+                btn_testflight: "TestFlight 참여",
+                btn_github: `<svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-right: 8px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub 저장소`,
+                hero_runners: `<strong style="color: white;">12,402</strong> 명의 러너 활동 중`,
+                app_pace: "현재 페이스",
+                app_sector: "17구역 확보됨",
+                marquee: "RUN TO EARN /// 지도 지배 /// VERY NETWORK ///",
+                sec_proto_title: "프로토콜 아키텍처",
+                feat_loop_title: "핵심 루프",
+                feat_loop_desc: "StrideOn은 현실 세계를 <span class='highlight'>H3 육각 그리드</span>로 게임화합니다. 물리적 움직임이 지도 위에 영토를 그립니다. 루프를 닫아 영토를 점령하고 보상을 채굴하십시오.",
+                feat_very_title: "Very Network 기반",
+                feat_very_desc: "<span class='highlight'>Very Network</span>를 기반으로 구축되어 시드 문구 없이 즉시 가입, 즉각적인 트랜잭션, 제로에 가까운 가스비를 제공합니다.",
+                feat_chat_title: "VeryChat 연동",
+                feat_chat_desc: "<span class='highlight'>VeryChat</span>과 깊이 통합되었습니다. 채팅 ID로 로그인하고, DM으로 실시간 '공격 알림'을 받으며, 딥링크를 통해 방어 모드로 즉시 진입하십시오.",
+                sec_tactical_title: "전술 무기고",
+                pow_shield_title: "방어막",
+                pow_shield_desc: "영토는 취약합니다. 방어막을 활성화하여 24시간 동안 육각 그리드를 잠그고 라이벌이 경로를 끊는 것을 방지하십시오.",
+                pow_ghost_title: "고스트 프로토콜",
+                pow_ghost_desc: "어둠 속으로 들어가십시오. 10분 동안 지도에서 보이지 않게 되어 적의 감시를 피해 교통량이 많은 구역에 잠입하십시오.",
+                pow_speed_title: "운동 부스트",
+                pow_speed_desc: "수익률을 증폭시키십시오. 15분간의 고강도 인터벌 동안 달린 모든 미터에 대해 $VERY 토큰 수익률이 두 배가 됩니다."
             }
-            return corners;
-        }
+        };
 
-        function initHexes() {
-            hexes = [];
-            const hexWidth = Math.sqrt(3) * hexSize;
-            const hexHeight = 2 * hexSize;
-            const horizontalDist = hexWidth;
-            const verticalDist = hexHeight * 0.75;
-
-            const rows = Math.ceil(height / verticalDist) + 2;
-            const cols = Math.ceil(width / horizontalDist) + 2;
-
-            for (let r = -1; r < rows; r++) {
-                for (let c = -1; c < cols; c++) {
-                    const xOffset = (r % 2) * (hexWidth / 2);
-                    const x = c * horizontalDist + xOffset;
-                    const y = r * verticalDist;
-
-                    // Randomly assign some to "Enemy" initially
-                    let state = 'empty';
-                    if (Math.random() > 0.9) state = 'enemy';
-
-                    hexes.push({
-                        x, y,
-                        state: state,
-                        opacity: 0,
-                        corners: getHexCorners({ x, y }, hexSize)
-                    });
-                }
-            }
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, width, height);
-
-            // Draw Background
-            ctx.fillStyle = COLOR_BG;
-            ctx.fillRect(0, 0, width, height);
-
-            hexes.forEach(hex => {
-                ctx.beginPath();
-                ctx.moveTo(hex.corners[0].x, hex.corners[0].y);
-                for (let i = 1; i < 6; i++) {
-                    ctx.lineTo(hex.corners[i].x, hex.corners[i].y);
-                }
-                ctx.closePath();
-
-                // Stroke
-                ctx.strokeStyle = COLOR_STROKE;
-                ctx.lineWidth = 1;
-                ctx.stroke();
-
-                // Fill based on state
-                if (hex.state === 'claimed') {
-                    ctx.fillStyle = hex.opacity > 0.4 ? `rgba(143, 255, 64, ${hex.opacity})` : `rgba(143, 255, 64, 0.4)`;
-                    ctx.fill();
-                    // Decay opacity animation
-                    if (hex.opacity > 0.4) hex.opacity -= 0.02;
-                } else if (hex.state === 'enemy') {
-                    ctx.fillStyle = `rgba(255, 59, 48, 0.1)`;
-                    ctx.fill();
+        function setLanguage(lang) {
+            // Update Text
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
                 }
             });
 
-            requestAnimationFrame(draw);
+            // Update HTML Lang Tag
+            document.documentElement.lang = lang;
+
+            // Update Buttons State
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
         }
 
-        // Interaction
-        function getHexAt(mouseX, mouseY) {
-            // Simple distance check for performance
-            let closest = null;
-            let minDist = Infinity;
+        // --- PHONE TILT EFFECT (Existing) ---
+        const container = document.getElementById('tiltContainer');
+        const phone = document.getElementById('tiltPhone');
 
-            hexes.forEach(hex => {
-                const dist = Math.sqrt((hex.x - mouseX) ** 2 + (hex.y - mouseY) ** 2);
-                if (dist < hexSize && dist < minDist) {
-                    minDist = dist;
-                    closest = hex;
-                }
-            });
-            return closest;
-        }
-
-        if (canvas) {
-            canvas.addEventListener('mousemove', (e) => {
-                const rect = canvas.getBoundingClientRect();
-                const mouseX = e.clientX - rect.left;
-                const mouseY = e.clientY - rect.top;
-
-                const hoveredHex = getHexAt(mouseX, mouseY);
-                if (hoveredHex) {
-                    if (hoveredHex.state !== 'claimed') {
-                        hoveredHex.state = 'claimed';
-                        hoveredHex.opacity = 1.0; // Flash effect
-                    }
-                }
-            });
-
-            // Initialize
-            window.addEventListener('resize', resize);
-            resize();
-            draw();
-        }
-
-        // -----------------------------
-        // Mini Script for Phone Mockup Animation
-        // -----------------------------
-        const phoneGrid = document.getElementById('mockupGrid');
-
-        if (phoneGrid) {
-            // Create an SVG string for the phone background to ensure it looks sharp
-            const svgHex = `
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="hexPattern" width="30" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
-                        <path d="M15 0 L30 8.66 L30 25.98 L15 34.64 L0 25.98 L0 8.66 Z" fill="none" stroke="#E5E5EA" stroke-width="1" transform="scale(0.5) translate(15,0)"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#hexPattern)"/>
-                <!-- A simulated 'path' -->
-                <path d="M100,300 Q150,250 190,400 T250,500" stroke="#8FFF40" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0px 4px 6px rgba(143,255,64,0.4));"/>
-                <!-- Current Location -->
-                <circle cx="190" cy="400" r="8" fill="#000" stroke="#fff" stroke-width="3"/>
-            </svg>
-            `;
-
-            // Inject SVG
-            phoneGrid.innerHTML = svgHex;
-        }
-
-        // -----------------------------
-        // NEW: 3D Tilt Script & Scroll Reveal
-        // -----------------------------
-
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal-visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
-        // 3D Tilt Effect
-        const tiltCards = document.querySelectorAll('.tilt-card');
-
-        tiltCards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                // Calculate center
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                // Max tilt rotation
-                const maxRotate = 15;
-
-                // Calculate rotation (dy controls x-rotation, dx controls y-rotation)
-                const rotateX = -((y - centerY) / centerY) * maxRotate;
-                const rotateY = ((x - centerX) / centerX) * maxRotate;
-
-                // Lift effect
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale(1)`;
-            });
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const xPct = (x / rect.width) - 0.5;
+            const yPct = (y / rect.height) - 0.5;
+            phone.style.transform = `perspective(1000px) rotateY(${xPct * 20}deg) rotateX(${-yPct * 20}deg) translateY(50px)`;
         });
 
+        container.addEventListener('mouseleave', () => {
+            phone.style.transform = `perspective(1000px) rotateY(0) rotateX(0) translateY(50px)`;
+        });
     </script>
 </body>
 

@@ -818,3 +818,28 @@ pm2 logs very-network
 ---
 
 **Built with ❤ by the Very Network Integration Team**
+
+## 🏆 StrideonScores Hackathon Integration
+
+### Deployed Contract Addresses (Local Hardhat Network)
+- **StrideonScores**: `0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0`
+- **Mock VERY Token**: `0x5FbDB2315678afecb367f032d93F642f64180aa3`
+- **Mock Price Oracle**: `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
+- **Timelock**: `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`
+
+### How to Run Simulation
+To deploy contracts and simulate gameplay transactions (Approve, Purchase PowerUp, Commit Score):
+
+```bash
+npx hardhat run deploy-hackathon.js --network hardhat
+```
+
+### Steps Performed
+1. **Deploy Mock Token**: Deployed standard ERC20 mock.
+2. **Deploy Mock Oracle**: Deployed mock Chainlink AggregatorV3.
+3. **Deploy StrideonScores**: Initialized with Token, Timelock, and Oracle.
+4. **Simulate Gameplay**:
+   - Approved `100 VERY` for game contract.
+   - Purchased `Shield` PowerUp (Type 1).
+   - Committed a score of `500` points.
+   - Verified player score update on-chain.

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIDEON // INVESTOR DECK</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- STRIDE OS: PITCH DECK THEME --- */
+        :root {
+            --c-void: #050505;
+            --c-depth: #0A0A0A;
+            --c-surface: #141414;
+            --c-text-primary: #FFFFFF;
+            --c-text-secondary: #888888;
+            --c-acid: #D4FF00;
+            --c-acid-glow: rgba(212, 255, 0, 0.15);
+            --c-alert: #FF3B30;
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--c-void);
+            color: var(--c-text-primary);
+            font-family: var(--font-body);
+            overflow: hidden;
+        }
+
+        /* --- SNAP SCROLL CONTAINER --- */
+        .deck-container {
+            height: 100vh;
+            width: 100vw;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* --- SLIDE COMMON STYLES --- */
+        section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .slide-content.center {
+            grid-template-columns: 1fr;
+            text-align: center;
+            justify-items: center;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-head);
+            text-transform: uppercase;
+            line-height: 0.9;
+        }
+
+        .slide-tag {
+            color: var(--c-acid);
+            font-family: var(--font-head);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            display: inline-block;
+            border: 1px solid var(--c-acid);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        h2 {
+            font-size: clamp(3rem, 5vw, 5rem);
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: var(--c-text-secondary);
+            line-height: 1.6;
+            max-width: 60ch;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-acid {
+            color: var(--c-acid);
+        }
+
+        .text-alert {
+            color: var(--c-alert);
+        }
+
+        /* --- VISUAL ELEMENTS --- */
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        .glow-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--c-acid-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: pulse 10s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        /* --- COMPONENTS --- */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 32px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: var(--font-head);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--c-acid);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- NAVIGATION DOTS --- */
+        .nav-dots {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--c-acid);
+            box-shadow: 0 0 10px var(--c-acid);
+            transform: scale(1.5);
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        section.active .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger delays */
+        .d-1 {
+            transition-delay: 0.1s;
+        }
+
+        .d-2 {
+            transition-delay: 0.2s;
+        }
+
+        .d-3 {
+            transition-delay: 0.3s;
+        }
+
+        .d-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* --- DIAGRAMS --- */
+        .diagram-box {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .diagram-arrow {
+            color: #666;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-dots" id="dots"></div>
+
+    <div class="deck-container" id="deck">
+
+        <!-- SLIDE 1: TITLE -->
+        <section id="slide-1" class="active">
+            <div class="grid-bg"></div>
+            <div class="glow-orb" style="top: -20%; right: -10%;"></div>
+            <div class="slide-content">
+                <div>
+                    <div class="slide-tag reveal d-1">iOS NATIVE • VERY NETWORK</div>
+                    <h1 class="reveal d-2" style="font-size: 6rem; margin-bottom: 24px;">
+                        STRIDE<span class="text-acid">//</span>ON
+                    </h1>
+                    <p class="reveal d-3" style="font-size: 1.5rem; color: white;">
+                        The first <span class="text-acid">Kinetic Territory Protocol</span>.<br>
+                        Gamifying the physical world.
+                    </p>
+                </div>
+                <div class="reveal d-3" style="display: flex; justify-content: center;">
+                    <!-- Logo Image -->
+                    <img src="../logo.svg" alt="StrideOn Logo" style="width: 300px; height: auto;">
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: THE PROBLEM -->
+        <section id="slide-2">
+            <div class="slide-content center">
+                <div class="slide-tag reveal d-1">THE PROBLEM</div>
+                <h2 class="reveal d-2">FIXING <span class="text-alert">PONZI-WALK</span> ECONOMICS</h2>
+                <p class="reveal d-3">
+                    Most Move-to-Earn games failed because they paid old users with new users' money.
+                    <br>We solved the "StepN Collapse" by removing the pyramid.
+                </p>
+
+                <div class="stat-grid reveal d-4" style="width: 100%; max-width: 1000px;">
+                    <div class="stat-box">
+                        <div class="stat-num text-alert">95%</div>
+                        <div class="stat-label">Collapse Rate</div>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">Of M2E games relying on inflation.</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num text-white">30d</div>
+                        <div class="stat-label">Web2 Churn</div>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">Fitness apps are boring without stakes.</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num text-acid">0</div>
+                        <div class="stat-label">Real Utility</div>
+                        <p style="font-size: 0.9rem; margin-top: 12px;">Most games have no external revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: THE SOLUTION -->
+        <section id="slide-3">
+            <div class="grid-bg"></div>
+            <div class="slide-content">
+                <div>
+                    <div class="slide-tag reveal d-1">THE SOLUTION</div>
+                    <h2 class="reveal d-2">KINETIC<br><span class="text-acid">HEX-GRIDS</span></h2>
+                    <p class="reveal d-3">
+                        We don't just track steps. We turn your city into a <strong>risk-based strategy game</strong>.
+                        <br><br>
+                        • <strong>Move:</strong> Run to paint H3 Hex-Grids.<br>
+                        • <strong>Sever:</strong> Cut rival lines to steal points.<br>
+                        • <strong>Bank:</strong> Reach physical landmarks to secure crypto.
+                    </p>
+                </div>
+                <div class="reveal d-2">
+                    <!-- Tech Stack Viz -->
+                    <div class="diagram-box">
+                        <h4 style="color: var(--c-acid); margin-bottom: 16px;">HYBRID ARCHITECTURE</h4>
+                        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+                            <div style="background: #222; padding: 12px; border-radius: 8px; flex: 1;">
+                                <div style="color: #888; font-size: 0.8rem;">OFF-CHAIN (SPEED)</div>
+                                <div style="font-weight: 700;">FastAPI + Redis</div>
+                            </div>
+                            <div class="diagram-arrow">→</div>
+                            <div style="background: #222; padding: 12px; border-radius: 8px; flex: 1;">
+                                <div style="color: #888; font-size: 0.8rem;">ON-CHAIN (TRUST)</div>
+                                <div style="font-weight: 700;">Very Network</div>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem;">High-frequency 5Hz GPS tracking meets trustless settlement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: AI INJECTION -->
+        <section id="slide-4">
+            <div class="slide-content center">
+                <div class="slide-tag reveal d-1">DYNAMIC GAMEPLAY</div>
+                <h2 class="reveal d-2">AI-DRIVEN <span class="text-acid">INJECTION</span></h2>
+                <p class="reveal d-3">
+                    The map isn't static. Our AI Manager analyzes player density in real-time.
+                </p>
+
+                <div class="reveal d-4" style="display: flex; gap: 40px; margin-top: 40px; justify-content: center;">
+                    <div class="stat-box" style="text-align: left; max-width: 400px;">
+                        <h3 class="text-acid">🔥 HOTSPOTS</h3>
+                        <p style="font-size: 1rem; margin-top: 10px;">
+                            If runners cluster in a park, the AI spawns a temporary "Gold Rush" chest, forcing immediate
+                            PvP conflict.
+                        </p>
+                    </div>
+                    <div class="stat-box" style="text-align: left; max-width: 400px;">
+                        <h3 class="text-white">🎯 BRAND LOOPS</h3>
+                        <p style="font-size: 1rem; margin-top: 10px;">
+                            AI identifies commercial zones (e.g., Nike Store) and injects "Sponsored Routes" funded by
+                            advertisers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: SUSTAINABLE ECONOMY -->
+        <section id="slide-5">
+            <div class="slide-content center">
+                <div class="slide-tag reveal d-1">REVENUE-FIRST MODEL</div>
+                <h2 class="reveal d-2">SINK & SOURCE</h2>
+                <p class="reveal d-3" style="margin-bottom: 40px;">
+                    We monetize <strong>attention and foot traffic</strong>, not just new users.
+                </p>
+
+                <div class="reveal d-3"
+                    style="display: flex; gap: 20px; align-items: center; justify-content: center; width: 100%;">
+                    <!-- Source -->
+                    <div style="text-align: right; width: 300px;">
+                        <h4 style="color: var(--c-acid); font-size: 1.5rem;">REVENUE SOURCE</h4>
+                        <p style="font-size: 0.9rem; margin-top: 8px;">
+                            • B2B Sponsorships ($50/mo)<br>
+                            • Ad-Injection Fees<br>
+                            • <strong>Pegged to USD (Crash Proof)</strong>
+                        </p>
+                    </div>
+
+                    <!-- Flow -->
+                    <div style="width: 50px; height: 2px; background: #444;"></div>
+                    <div
+                        style="border: 2px solid white; padding: 30px; border-radius: 50%; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; font-weight: 900;">
+                        VAULT
+                    </div>
+                    <div style="width: 50px; height: 2px; background: #444;"></div>
+
+                    <!-- Sink -->
+                    <div style="text-align: left; width: 300px;">
+                        <h4 style="color: var(--c-alert); font-size: 1.5rem;">TOKEN SINK</h4>
+                        <p style="font-size: 0.9rem; margin-top: 8px;">
+                            • Territory Shields (100% Burn)<br>
+                            • PvP Wagers (10% Burn)<br>
+                            • Ghost Mode Power-ups
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: VERY INTEGRATION -->
+        <section id="slide-6">
+            <div class="grid-bg"></div>
+            <div class="slide-content">
+                <div>
+                    <div class="slide-tag reveal d-1">ECOSYSTEM</div>
+                    <h2 class="reveal d-2">DEEP <span class="text-acid">VERY</span> INTEGRATION</h2>
+                    <p class="reveal d-3">
+                        We don't just use the chain; we use the entire stack.
+                    </p>
+                    <ul class="reveal d-4"
+                        style="list-style: none; margin-top: 30px; color: #CCC; font-size: 1.1rem; line-height: 2;">
+                        <li>💬 <strong>VeryChat Identity:</strong> Log in with Chat ID (No Seed Phrase).</li>
+                        <li>🚨 <strong>Social War Room:</strong> Attack alerts sent via Webhooks to DMs.</li>
+                        <li>💳 <strong>VeryPay (Wepin):</strong> Fiat on-ramp for non-crypto users.</li>
+                    </ul>
+                </div>
+                <div class="reveal d-2" style="text-align: center;">
+                    <!-- Phone Mockup Graphic -->
+                    <div
+                        style="border: 4px solid #333; border-radius: 30px; width: 300px; height: 600px; background: #000; margin: 0 auto; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 20px; left: 20px; right: 20px; background: #222; padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 0.7rem; color: #888;">VERYCHAT NOTIFICATION</div>
+                            <div style="color: white; margin-top: 5px; font-weight: 700;">⚠️ SECTOR 17 LOST!</div>
+                            <div style="color: var(--c-acid); font-size: 0.8rem; margin-top: 5px;">Tap to Reclaim</div>
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; height: 400px; background: linear-gradient(to top, var(--c-acid-glow), transparent);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: ROADMAP -->
+        <section id="slide-7">
+            <div class="slide-content center">
+                <div class="slide-tag reveal d-1">EXECUTION</div>
+                <h2 class="reveal d-2">ROADMAP</h2>
+
+                <div class="stat-grid reveal d-3" style="width: 100%; text-align: left;">
+                    <div class="stat-box" style="text-align: left; border-color: var(--c-acid);">
+                        <div class="stat-label" style="color: var(--c-acid); margin-bottom: 16px;">PHASE 1 (NOW)</div>
+                        <h3 style="color: white; margin-bottom: 12px;">HACKATHON BETA</h3>
+                        <ul style="color: #888; list-style-position: inside; line-height: 1.8;">
+                            <li>iOS Alpha Live</li>
+                            <li>Core PvP Loop</li>
+                            <li>VeryChat Alerts</li>
+                        </ul>
+                    </div>
+                    <div class="stat-box" style="text-align: left;">
+                        <div class="stat-label" style="color: #666; margin-bottom: 16px;">PHASE 2 (Q1 2026)</div>
+                        <h3 style="color: white; margin-bottom: 12px;">SQUAD WARS</h3>
+                        <ul style="color: #888; list-style-position: inside; line-height: 1.8;">
+                            <li>Team Battles</li>
+                            <li>Neighborhood DAOs</li>
+                            <li>Fiat On-Ramp</li>
+                        </ul>
+                    </div>
+                    <div class="stat-box" style="text-align: left;">
+                        <div class="stat-label" style="color: #666; margin-bottom: 16px;">PHASE 3 (Q3 2026)</div>
+                        <h3 style="color: white; margin-bottom: 12px;">B2B PLATFORM</h3>
+                        <ul style="color: #888; list-style-position: inside; line-height: 1.8;">
+                            <li>Self-Serve Ads</li>
+                            <li>Global Expansion</li>
+                            <li>Governance Token</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: CTA -->
+        <section id="slide-8">
+            <div class="glow-orb"></div>
+            <div class="slide-content center">
+                <h2 class="reveal d-1">READY TO DEPLOY?</h2>
+                <div class="reveal d-2" style="display: flex; gap: 20px;">
+                    <a href="https://www.youtube.com/watch?v=z3qVbHfGXVc" target="_blank"
+                        style="background: var(--c-acid); color: black; padding: 20px 48px; border-radius: 50px; text-decoration: none; font-weight: 700; font-family: var(--font-head); text-transform: uppercase;">
+                        Watch Demo
+                    </a>
+                    <a href="https://github.com/chandan989/StrideOn" target="_blank"
+                        style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); padding: 20px 48px; border-radius: 50px; text-decoration: none; font-weight: 700; font-family: var(--font-head); text-transform: uppercase;">
+                        View GitHub
+                    </a>
+                </div>
+                <p class="reveal d-3" style="margin-top: 40px; font-size: 0.9rem;">
+                    Built by Team StrideOn for the Very Network Hackathon.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // --- DOT NAVIGATION LOGIC ---
+        const sections = document.querySelectorAll('section');
+        const dotsContainer = document.getElementById('dots');
+        const container = document.getElementById('deck');
+
+        // Create dots
+        sections.forEach((sec, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+
+            dot.addEventListener('click', () => {
+                sec.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            dotsContainer.appendChild(dot);
+        });
+
+        // Update active dot on scroll
+        container.addEventListener('scroll', () => {
+            const dots = document.querySelectorAll('.dot');
+            let current = '';
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                if (container.scrollTop >= (sectionTop - 100)) { // Threshold
+                    current = index;
+                }
+            });
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            if (current !== '') {
+                dots[current].classList.add('active');
+                sections[current].classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
