@@ -9,6 +9,30 @@
     <!-- Fonts: Space Grotesk (Tech), Inter (Readability), Noto Sans KR (Korean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="StrideOn: The first Web3 kinetic territory protocol on Very Network. Run to earn, conquer hex-grids, and dominate your city.">
+    <meta name="keywords" content="Move-to-Earn, Web3, Very Network, H3 Grid, Crypto Game, Fitness, GameFi">
+    <meta name="author" content="StrideOn Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://strideon.vercel.app/">
+    <meta property="og:title" content="STRIDEON // DOMINATE THE MAP">
+    <meta property="og:description"
+        content="Turn every meter into digital assets. The first kinetic warfare protocol on Very Network.">
+    <meta property="og:image" content="Screenshots/Map.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://strideon.vercel.app/">
+    <meta property="twitter:title" content="STRIDEON // DOMINATE THE MAP">
+    <meta property="twitter:description"
+        content="Turn every meter into digital assets. The first kinetic warfare protocol on Very Network.">
+    <meta property="twitter:image" content="Screenshots/Map.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -461,6 +485,10 @@
             transition: all 0.4s var(--ease-smooth);
             position: relative;
             overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .feature-card:hover {
@@ -472,7 +500,7 @@
 
         .feature-icon {
             color: var(--c-acid);
-            margin-bottom: 24px;
+            margin: 0 auto 24px;
             width: 48px;
             height: 48px;
         }
@@ -481,12 +509,14 @@
             font-size: 1.5rem;
             margin-bottom: 12px;
             color: white;
+            text-align: center;
         }
 
         .feature-card p {
             color: var(--c-text-secondary);
             line-height: 1.6;
             font-size: 1rem;
+            text-align: center;
         }
 
         /* Highlight text inside cards */
@@ -545,7 +575,8 @@
             STRIDEON
         </a>
         <nav class="nav-links">
-            <a href="Architectures.pdf" target="_blank" class="nav-link" data-i18n="nav_arch">Architecture</a>
+            <a href="https://www.figma.com/board/VWfoVzh3bKGeelKRRjqLYZ/Untitled?node-id=29-275&t=hvGuG7L11U7VqABI-4"
+                target="_blank" class="nav-link" data-i18n="nav_arch">Architecture</a>
             <a href="PitchDeck.pdf" target="_blank" class="nav-link" data-i18n="nav_pitch">Pitch Deck</a>
             <a href="https://github.com/chandan989/StrideOn" target="_blank" class="nav-link"
                 data-i18n="nav_github">GitHub</a>
@@ -680,6 +711,93 @@
             <div class="marquee-item" data-i18n="marquee">RUN TO EARN /// DOMINATE THE MAP /// VERY NETWORK ///</div>
         </div>
     </div>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-header" data-i18n="sec_how_title">OPERATIONAL SEQUENCE</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; counter-reset: step;">
+
+                <!-- STEP 1 -->
+                <div style="text-align: center; position: relative;">
+                    <div
+                        style="font-family: 'Space Grotesk'; font-size: 4rem; color: rgba(255,255,255,0.05); font-weight: 900; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                        01</div>
+                    <div
+                        style="background: var(--c-acid); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; box-shadow: 0 0 20px var(--c-acid-glow);">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="black">
+                            <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: white;" data-i18n="step_1_title">INITIALIZE</h3>
+                    <p style="color: var(--c-text-secondary); line-height: 1.6;" data-i18n="step_1_desc">
+                        Download the app and login instantly via <strong>VeryChat</strong>. No seed phrases, just social
+                        identity.
+                    </p>
+                </div>
+
+                <!-- STEP 2 -->
+                <div style="text-align: center; position: relative;">
+                    <div
+                        style="font-family: 'Space Grotesk'; font-size: 4rem; color: rgba(255,255,255,0.05); font-weight: 900; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                        02</div>
+                    <div
+                        style="background: #222; border: 1px solid rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: white;" data-i18n="step_2_title">DEPLOY</h3>
+                    <p style="color: var(--c-text-secondary); line-height: 1.6;" data-i18n="step_2_desc">
+                        Go outside. Your physical movement paints the <strong>H3 Hex Grid</strong>. Every step is a
+                        claim.
+                    </p>
+                </div>
+
+                <!-- STEP 3 -->
+                <div style="text-align: center; position: relative;">
+                    <div
+                        style="font-family: 'Space Grotesk'; font-size: 4rem; color: rgba(255,255,255,0.05); font-weight: 900; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                        03</div>
+                    <div
+                        style="background: #222; border: 1px solid rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: white;" data-i18n="step_3_title">CONQUER</h3>
+                    <p style="color: var(--c-text-secondary); line-height: 1.6;" data-i18n="step_3_desc">
+                        Close a loop to capture the sector. Sever enemy trails to steal their pending rewards.
+                    </p>
+                </div>
+
+                <!-- STEP 4 -->
+                <div style="text-align: center; position: relative;">
+                    <div
+                        style="font-family: 'Space Grotesk'; font-size: 4rem; color: rgba(255,255,255,0.05); font-weight: 900; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);">
+                        04</div>
+                    <div
+                        style="background: #222; border: 1px solid rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: white;" data-i18n="step_4_title">HARVEST</h3>
+                    <p style="color: var(--c-text-secondary); line-height: 1.6;" data-i18n="step_4_desc">
+                        Visit a Banking Node (Landmark) to secure your territory and mint <strong>$VERY</strong> tokens.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- PROTOCOL ARCHITECTURE SECTION -->
     <section id="protocol">
