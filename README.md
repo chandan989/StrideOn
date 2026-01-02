@@ -132,29 +132,6 @@ Built exclusively with Swift and SwiftUI for seamless Apple ecosystem integratio
 - **Combine Framework**: Reactive data streams and WebSocket integration
 - **Core Data**: Local persistence and offline capabilities
 
-### Key Implementation
-
-```swift
-class TrailManager: ObservableObject {
-    func startTrailRecording(sessionId: String) {
-        locationProvider.locationUpdates
-            .map { location in 
-                h3Service.latLngToCell(
-                    lat: location.latitude, 
-                    lng: location.longitude
-                ) 
-            }
-            .removeDuplicates()
-            .sink { h3Cell in
-                self.updateActiveTrail(sessionId: sessionId, cell: h3Cell)
-                self.checkForLoopClosure(cell: h3Cell)
-                self.broadcastPositionUpdate(cell: h3Cell)
-            }
-            .store(in: &cancellables)
-    }
-}
-```
-
 ### Deployment
 
 ```bash
