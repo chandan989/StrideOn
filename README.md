@@ -24,6 +24,8 @@ GPS-based territorial warfare protocol that transforms every urban corridor into
 
 ---
 
+StrideonScores: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+VERY Token (Mock): 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ## 💡 How It Works
 
 StrideOn deploys cutting-edge H3 hexagonal spatial indexing to transform urban environments into competitive combat zones with precision territorial control.
